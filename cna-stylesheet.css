@@ -1,0 +1,408 @@
+/************ Higher Logic Resets ************/
+
+/* stop the content overflowing to the sides, especially with negative margins on .row */
+#MPOuterMost {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+/* hide .HtmlFooter and .MPBottomMenu, both of which add extra padding/whitespace */
+.HtmlFooter,
+.MPBottomMenu {
+    display: none;
+}
+/* remove bottom margin from empty paragraphs (eg. in widgets) to avoid whitespace */
+p:empty {
+    margin-bottom: 0;
+}
+/* this one's not HL-specific */
+/* centres all background images created using the bg image JS/ajax calls for images */
+.bg-image,
+.img-container {
+    background-size: cover;
+    background-position: center;
+}
+/* avoids 1px tall sections, especially when they hold JS but no content */
+/* can be less specific, but might break other HL functionality */
+.home .col-md-12[class*="section"] {
+    min-height: 0;
+}
+/* allows for word breaking for emails and profile inbox messages */
+body {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+/* overrides the above word breaking for yes/no toggle buttons in create event */
+#event-additional-details-container {
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+}
+/* resets the padding on col-md-12 full-width sections */
+.row-full .col-md-12[class*="section"] {
+    padding: 0;
+}
+.row-full .col-md-6[class*="section"],
+.row-full .col-md-8[class*="section"],
+.row-full .col-md-4[class*="section"],
+.row-full .col-md-3[class*="section"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* reset alerts to neutral colours */
+.alert-warning, .alert-success, 
+.ideation-home .alert.alert-success, 
+.ideation-detail .alert.alert-success {
+    color: inherit;
+    background-color: #f9f9f9;
+    border-color: #f5f5f5;
+}
+
+/*** fix Add Event button styling ***/
+
+.HLEventList .Content > div[id*="ContentPanel"] > .col-md-12.no-pad > .pull-right {
+    float: none !important;
+    text-align: right;
+}
+.HLEventList .Content > div[id*="ContentPanel"] > .col-md-12.no-pad > .pull-right + br {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .btn-group>.btn, .btn-group-vertical>.btn {
+        float: left;
+    }
+}
+/*** fixing non-responsive images ***/
+img {
+    max-width: 100%;
+}
+
+/*** fixing lack of wrapping on community settings dropdown buttons ***/
+.CommunityManagementGearStatusPaddingL {
+    white-space: normal;
+}
+/****** fix missing left-hand profile page content on my contacts page ******/
+.text-muted-h2.my-contacts .col-md-3.section1 {
+    display: block !important;
+}
+
+/****** CSS Site Load ******/
+
+/*** accordions/expandable text ***/
+.accordion-heading button {
+    font-size: 20px;
+    font-weight: 400;
+    color: #0089a3; /* link colour */
+    background: #fff;
+    padding: 15px 10px;
+    margin: 0;
+    border: none;
+    border-top: 1px solid #f4f4f4;
+    cursor: pointer;
+    transition: .3s;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+.accordion-heading button:hover,
+.accordion-heading button:focus {
+    color: #333; /* link hover colour */
+    transition: .3s;
+}
+.accordion-heading button::before {
+    font-family: CNA; /* change to appropriate kit/unicode */
+    content: '\f00f';
+    color: #333; /* change  icon colour */
+    margin-right: 10px;
+}
+.open .accordion-heading button::before {
+    font-family: CNA; /* change to appropriate kit/unicode */
+    content: '\f010';
+    color:#0089a3; /* change  icon colour */
+}
+.accordion-text {
+    display: none;
+}
+.accordion-wrap .ContentItemHtml, .accordion-wrap .ContentItemHtml:hover {
+    transition: none !important;
+}
+.accordion-wrap {
+    margin-bottom: 15px;
+}
+
+/*** bulleted link lists ***/
+.link-list ul {
+    padding-left: 0;
+    margin-top: 25px;
+}
+.link-list ul li {
+    padding: 20px 10px;
+    border-top: 1px solid #E6E7EA;
+    list-style-type: none;
+}
+.link-list ul li:last-child {
+    border-bottom: 1px solid #E6E7EA;
+}
+.link-list ul li a {
+    font-family: proxima-nova, sans-serif; /* change font/styles */
+    font-weight: 700;
+    text-transform: none;
+    color: #0089a3; /* change colour */
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding-left: 40px;
+    position: relative;
+    display: block;
+}
+.link-list ul li a::before {
+    font-family: CNA; /* change to appropriate kit/unicode */
+    content: '\f017'; /* chain link icon */
+    color: #333; /* change static icon colour */
+    position: absolute;
+    left: 10px;
+}
+.link-list ul li a[target*="blank"]::before {
+    content: '\f012'; /* new window icon */ 
+}
+.link-list ul li a:hover::before,
+.link-list ul li a:focus::before {
+    color: #333; /* change hover icon colour */
+}
+.link-list ul li a:hover,
+.link-list ul li a:focus {
+    color: #333; /* change text hover colour */
+}
+
+/*** interior highlight tile ***/
+.highlight-tile {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.04), 0 0 20px 0 rgba(0,0,0,0.06);
+}
+.highlight-tile {
+    padding: 20px 30px;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.highlight-tile h2,
+.highlight-tile h3 {
+    margin-top: 4px;
+}
+
+/***  interior grey tile ***/
+.grey-tile {
+    background: #fafafa;
+    border-radius: 3px;
+}
+.grey-tile {
+    padding: 20px 30px 15px 30px;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.grey-tile h2,
+.grey-tile h3 {
+    margin-top: 0px;
+}
+ 
+/*** default line style ***/
+hr {
+    border: none;
+    height: 1px;
+    color: #f4f4f4;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*** default image caption ***/
+figure.image {
+    padding: 15px;
+    background-color: rgb(250, 250, 250);
+    margin: 5px 0px;
+}
+/* figure.image img { 
+width: 100%; /* unhide to make full size of layout section */
+} */ 
+figcaption {
+    display: block;
+}
+figcaption {
+    margin-top:12px; 
+    font-family: inherit;
+    color: #666;
+    font-size: 14px;
+}
+
+/*** default table style ***/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 0;
+}
+table th {
+    padding: 10px 15px;
+    vertical-align: middle;
+    color: inherit;
+    border: 0;
+}
+table tr:nth-child(2n) {
+    border-bottom: 2px solid #ededed;
+    background: #fafafa;
+}
+table tr td {
+    padding: 15px;
+    vertical-align: middle;
+    border: 0;
+}
+
+/*** plain table style ***/
+.plain-table tr td {
+    padding: 10px 15px;
+    vertical-align: middle;
+    border: solid;
+    border-width: 1px;
+    background-color: #ffffff;
+    border-color: #ededed;
+}
+.plain-table th {
+    padding: 10px 15px;
+    vertical-align: middle;
+    color: inherit;
+    background-color: #fafafa;
+    border: 1px solid #f5f5f5;
+}
+.plain-table tr:nth-child(2n) {
+    border-bottom: 1px solid #ededed;
+    background: #ffffff;
+}
+
+/*** stick-to-top responsive content ***/
+.stick-to-top {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+    .stick-to-top {
+        flex-direction: column-reverse;
+    }
+}
+
+/*** equal height tile row ***/
+.tile-grow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.tile-grow div[class*="section"] > div {
+    height: 100%;
+    margin: 0;
+}
+
+/*** fix non-responsive images ***/
+img {
+    max-width: 100%;
+}
+
+/****** END PRELOAD ******/
+
+/************ basics ************/
+
+body,
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: trade-gothic-next, sans-serif;
+    color: #4F5266;
+    font-size: 18px;
+    line-height: 1.33;
+}
+h1, .h1,
+.large-h2 h2 {
+    color: #020451;
+    font-size: 44px;
+    line-height: 1.14;
+    font-weight: 400;
+}
+.large-h2 h2::after {
+    display: none;
+}
+h2, .h2,
+.HLLandingControl .heading h2 {
+    color: #020451;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.4;
+    position: relative;
+    display: inline-block;
+}
+h2::after,
+.h2::after {
+    content: '';
+    background: rgba(61,216,163,0.2);
+    width: 100%;
+    height: 22px;
+    left: 10px;
+    top: 22px;
+}
+h3, .h3,
+.HLLandingControl h3 a {
+    font-weight: 300;
+    color: #0E191F;
+    font-size: 18px;
+    line-height: 1.33;
+}
+h4, .h4 {
+    color: #4F5266;
+    font-size: 14px;
+    line-height: 1.43;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/************ responsive ************/
+
+@media (max-width: 768px) {
+    .digest-viewer thead.table-thead-background {
+        display: none;
+    }
+    table.digest-viewer thead>tr>th,
+    table.digest-viewer tbody>tr>th,
+    table.digest-viewer tfoot>tr>th,
+    table.digest-viewer thead>tr>td,
+    table.digest-viewer tbody>tr>td,
+    table.digest-viewer tfoot>tr>td {
+        text-align: left;
+    }
+    table.digest-viewer td.text-right {
+        float: right;
+    }
+    table.digest-viewer .thread-follow-icon-no-float-xs::before {
+        content: 'Following';
+        font-family: inherit;
+        margin-right: 5px;
+    }
+    table.digest-viewer span[id*="lblReplies"] {
+        font-weight: 700;
+    }
+    table.digest-viewer span[id*="lblReplies"]::after {
+        content: 'replies';
+        font-family: inherit;
+        margin-left: 3px;
+        font-weight: 400;
+    }
+    table.digest-viewer abbr.timeago {
+        cursor: default;
+        border-bottom: none;
+        text-decoration: none;
+    }
+    table.digest-viewer .timeago::before {
+        content: 'Posted:';
+        margin-right: 3px;
+        font-family: inherit;
+    }
+}
