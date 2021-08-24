@@ -207,7 +207,7 @@ img {
 .grey-tile h3 {
     margin-top: 0px;
 }
- 
+
 /*** default line style ***/
 hr {
     border: none;
@@ -478,6 +478,17 @@ input:focus {
     background: transparent;
 }
 
+/****** backgrounds ******/
+
+.bg-navy {
+    background: #020451;
+    padding: 50px 0;
+}
+.bg-grey {
+    background: #E6EEF3;
+    padding: 80px 0;
+}
+
 /************ header ***********/
 
 #MPOuterMost.full #HEADER {
@@ -630,6 +641,78 @@ input:focus {
     }
 }
 
+/************ top cards ************/
+
+.top-cards > .col-md-12 {
+    display: flex;
+    max-width: 1230px;
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+.top-card {
+    padding: 15px;
+    flex-basis: 25%;
+    display: flex;
+}
+.top-card .HtmlContent {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    display: flex;
+}
+.top-card a {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    background: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 10px 30px rgba(0, 0, 0, 0.06);
+    color: #020451;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    padding: 20px 20px 30px 20px;
+    text-decoration: none;
+}
+.top-card a::before {
+    font-family: CNA;
+    font-size: 30px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #EFF5F8;
+    text-align: center;
+    line-height: 70px;
+    color: #0089A3;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.top-card.academy a::before {
+    content: '\f01c';
+}
+.top-card.certifications a::before {
+    content: '\f01d';
+}
+.top-card.stethoscope a::before {
+    content: '\f01e';
+}
+.top-card.book a::before {
+    content: '\f01f';
+}
+.top-card a:hover,
+.top-card a:focus {
+    background: #EFF5F8;
+}
+.top-card a:hover::before,
+.top-card a:focus::before {
+    background: #0089A3;
+    color: #fff;
+}
+
 /************ footer ************/
 #MPOuterFooter {
     background: #EFF5F8;
@@ -763,6 +846,12 @@ input:focus {
 }
 
 @media (max-width: 991px) {
+    .top-cards > .col-md-12 {
+        flex-wrap: wrap;
+    }
+    .top-card {
+        flex-basis: 50%;
+    }
     .footer-bottom-row {
         display: block;
     }
@@ -871,5 +960,11 @@ input:focus {
         content: 'Posted:';
         margin-right: 3px;
         font-family: inherit;
+    }
+}
+
+@media (max-width: 550px) {
+    .top-card {
+        flex-basis: 100%;
     }
 }
