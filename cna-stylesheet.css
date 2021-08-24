@@ -91,7 +91,7 @@ img {
 /*** accordions/expandable text ***/
 .accordion-heading button {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
     color: #0089a3; /* link colour */
     background: #fff;
     padding: 15px 10px;
@@ -320,14 +320,14 @@ h1, h2, h3, h4, h5, h6,
     color: #4F5266;
     font-size: 18px;
     line-height: 1.33;
-    font-weight: 400;
+    font-weight: 300;
 }
 h1, .h1,
 .large-h2 h2 {
     color: #020451;
     font-size: 44px;
     line-height: 1.14;
-    font-weight: 400;
+    font-weight: 300;
 }
 .large-h2 h2::after {
     display: none;
@@ -608,7 +608,7 @@ input:focus {
 .navbar-default .navbar-nav>.disabled>a {
     color: #020451; 
     background-color: transparent;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 14px;
     line-height: 18px;
     padding: 0 12px;
@@ -625,7 +625,7 @@ input:focus {
 .navbar-default .navbar-nav>.dropdown>a .caret::before {
     font-family: CNA;
     content: '\f019';
-    font-weight: 400;
+    font-weight: 300;
     color: #0089A3;
 }
 
@@ -689,7 +689,7 @@ input:focus {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    font-weight: 400;
+    font-weight: 300;
 }
 .top-card.academy a::before {
     content: '\f01c';
@@ -711,6 +711,27 @@ input:focus {
 .top-card a:focus::before {
     background: #0089A3;
     color: #fff;
+}
+
+/************ our mission ************/
+
+.our-mission {
+    padding: 80px 55px;
+    margin-bottom: 170px;
+}
+.mission-text {
+    padding-right: 70px;
+}
+.mission-text h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.mission-text h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.mission-video {
+    margin-bottom: -120px;
 }
 
 /************ footer ************/
@@ -852,6 +873,10 @@ input:focus {
     .top-card {
         flex-basis: 50%;
     }
+    .mission-text {
+        padding-right: 0;
+        padding-bottom: 50px;
+    }
     .footer-bottom-row {
         display: block;
     }
@@ -949,7 +974,7 @@ input:focus {
         content: 'replies';
         font-family: inherit;
         margin-left: 3px;
-        font-weight: 400;
+        font-weight: 300;
     }
     table.digest-viewer abbr.timeago {
         cursor: default;
@@ -960,6 +985,9 @@ input:focus {
         content: 'Posted:';
         margin-right: 3px;
         font-family: inherit;
+    }
+    .our-mission {
+        padding: 40px 15px;
     }
 }
 
