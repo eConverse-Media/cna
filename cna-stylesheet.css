@@ -228,7 +228,7 @@ figure.image {
 }
 /* figure.image img { 
 width: 100%; /* unhide to make full size of layout section */
-} */ 
+
 figcaption {
     display: block;
 }
@@ -320,6 +320,7 @@ h1, h2, h3, h4, h5, h6,
     color: #4F5266;
     font-size: 18px;
     line-height: 1.33;
+    font-weight: 400;
 }
 h1, .h1,
 .large-h2 h2 {
@@ -363,8 +364,474 @@ h4, .h4 {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+a,
+a:hover,
+a:focus,
+button,
+button:hover,
+button:focus,
+input,
+input:hover,
+input:focus {
+    transition: .3s;
+}
+
+/************ buttons ************/
+
+.make-buttons em {
+    display: inline-block;
+    margin: -5px;
+}
+.make-buttons em a {
+    display: inline-block;
+    margin: 5px;
+}
+.make-buttons em a,
+.btn {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: transparent;
+    border: 1px solid;
+}
+.make-buttons em a,
+.btn-primary,
+.ideation-home .btn-success,
+.community-radio .btn-group .btn-primary.dropdown-toggle,
+.open .dropdown-toggle.btn-primary,
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, 
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary,
+.post-message-contributed-content .validate-contribution .btn-group .dropdown-toggle.btn-default,
+.new-ideas .ideation-widget > div > div:last-child a,
+.blogs-list .HLLandingControl div[id*="BottomLink"] a {
+    color: #020451;
+    border-color: #020451;
+    background: transparent;
+}
+.make-buttons em a:hover,
+.make-buttons em a:focus,
+.btn-primary:hover,
+.btn-primary:focus,
+.ideation-home .btn-success:hover,
+.ideation-home .btn-success:focus,
+.community-radio .btn-group .btn-primary.dropdown-toggle:hover,
+.community-radio .btn-group .btn-primary.dropdown-toggle:focus,
+.open .dropdown-toggle.btn-primary:hover,
+.open .dropdown-toggle.btn-primary:focus,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:hover,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:focus, 
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:hover,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:focus,
+.post-message-contributed-content .validate-contribution .btn-group .dropdown-toggle.btn-default:hover,
+.post-message-contributed-content .validate-contribution .btn-group .dropdown-toggle.btn-default:focus,
+.new-ideas .ideation-widget > div > div:last-child a:hover,
+.new-ideas .ideation-widget > div > div:last-child a:focus,
+.blogs-list .HLLandingControl div[id*="BottomLink"] a:hover,
+.blogs-list .HLLandingControl div[id*="BottomLink"] a:focus {
+    background: #006F84;
+    border-color: #020451;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12), 0px 4px 14px rgba(0, 0, 0, 0.1);
+}
+.make-buttons.secondary em a,
+.btn-success,
+.btn-info,
+.HL-contact-suggestions .btn-primary,
+.btn-group>.btn-success+.dropdown-toggle,
+.btn-info.disabled, .btn-info[disabled], fieldset[disabled] .btn-info, .btn-info.disabled:hover, .btn-info[disabled]:hover, fieldset[disabled] .btn-info:hover, .btn-info.disabled:focus, .btn-info[disabled]:focus, fieldset[disabled] .btn-info:focus, .btn-info.disabled:active, .btn-info[disabled]:active, fieldset[disabled] .btn-info:active, .btn-info.disabled.active, .btn-info[disabled].active, fieldset[disabled] .btn-info.active,
+.btn-success.disabled, .btn-success[disabled], fieldset[disabled] .btn-success, .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus, .btn-success.disabled:active, .btn-success[disabled]:active, fieldset[disabled] .btn-success:active, .btn-success.disabled.active, .btn-success[disabled].active, fieldset[disabled] .btn-success.active,
+.alert-warning .btn,
+.alert-warning .btn-group > .btn.dropdown-toggle:first-child,
+.library-link a {
+    color: #0089A3;
+    border-color: #0089A3;
+    background: transparent;
+}
+.make-buttons.secondary em a:hover,
+.make-buttons.secondary em a:focus,
+.btn-success:hover,
+.btn-success:active,
+.btn-info:hover,
+.btn-info:active,
+.HL-contact-suggestions .btn-primary:hover,
+.HL-contact-suggestions .btn-primary:active,
+.btn-group>.btn-success+.dropdown-toggle:hover,
+.btn-group>.btn-success+.dropdown-toggle:focus,
+.btn-success:focus,
+.btn-success.active, 
+.open .dropdown-toggle.btn-success,
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus,
+.alert-warning .btn:hover,
+.alert-warning .btn:focus,
+.alert-warning .btn:active,
+.alert-warning .btn-group > .btn.dropdown-toggle:first-child:focus,
+.alert-warning .btn-group > .btn.dropdown-toggle:first-child:hover,
+.alert-warning .btn-group > .btn.dropdown-toggle:first-child:active,
+.HLLandingControl .btn-default:hover,
+.HLLandingControl .btn-default:focus,
+.library-link a:hover,
+.library-link a:focus {
+    color: #0089A3;
+    background: transparent;
+}
+
+/************ header ***********/
+
+#MPOuterMost.full #HEADER {
+    max-width: 100%;
+}
+#MPOuterHeader > .col-md-12,
+#HEADER > .col-md-12,
+#MPheader > div.row > .col-md-12 {
+    padding: 0;
+}
+
+/****** top bar ******/
+#HEADER #MPheader > div.row:first-child {
+    padding: 6px 40px;
+    margin-left: 0;
+    margin-right: 0;
+    background: #020451;
+    font-size: 13px;
+    line-height: 18px;
+}
+.left-top-links {
+    float: left;
+    display: flex;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.left-top-links li {
+    list-style-type: none;
+}
+.left-top-links li,
+#MPAuxNav ul.level1 li {
+    margin-right: 20px;
+}
+.left-top-links li a,
+#MPAuxNav ul.level1 li a,
+#Welcome_LoginLink {
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    text-decoration: none;
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+#Welcome_LoginLink {
+    text-transform: none;
+    letter-spacing: 0;
+}
+.HLWelcome {
+    margin-right: 20px;
+}
+
+/*** search ***/
+.header-search {
+    float: right;
+}
+.search-btn-top {
+    color: #fff;
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 18px;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+.search-btn-top::before {
+    font-family: CNA;
+    content: '\f018';
+}
+
+/*** language button ***/
+
+.language-btn {
+    float: right;
+}
+.language-btn a {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fff;
+    padding: 2px 14px;
+    background: #0089A3;
+    text-decoration: none;
+}
+
+/****** logo ******/
+
+#MPheader > div#Logo {
+    padding: 10px 40px;
+}
+#DesktopLogoDiv {
+    width: 170px;
+}
+
+/****** nav ******/
+
+#NAV,
+.navbar-default {
+    background-color: transparent;
+    border: none;
+}
+
+#NAV {
+    position: absolute;
+    right: 28px;
+    bottom: 40px;
+    margin-right: 0;
+    margin-left: 0;
+}
+#NAV .navbar {
+    min-height: 0;
+}
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.disabled>a {
+    color: #020451; 
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 12px;
+}
+
+/* caret */
+.navbar-default .navbar-nav>.dropdown>a .caret {
+    border: none;
+    width: auto;
+    height: auto;
+    margin-left: 4px;
+    vertical-align: unset;
+}
+.navbar-default .navbar-nav>.dropdown>a .caret::before {
+    font-family: CNA;
+    content: '\f019';
+    font-weight: 400;
+    color: #0089A3;
+}
+
+/* removing extraneous padding on desktop */
+@media (min-width: 992px) {
+    #NAV .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #NAV .col-md-12,
+    .navbar-collapse {
+        padding: 0;
+    }
+}
+
+/************ footer ************/
+#MPOuterFooter {
+    background: #EFF5F8;
+    padding: 40px 0;
+}
+#MPFooterLink {
+    display: none;
+}
+
+/****** logo ******/
+.footer-logo {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.footer-logo img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 65px;
+}
+.footer-logo .HtmlContent {
+    background: #eff5f8;
+    width: 125px;
+    position: relative;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer-logo::before {
+    width: 100%;
+    content: '';
+    height: 1px;
+    background: rgba(7, 51, 117, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+
+/****** contact information ******/
+.footer-contact {
+    color: #001337;
+    margin-bottom: 30px;
+}
+
+/****** social media links ******/
+
+.footer-social .HtmlContent {
+    display: flex;
+    margin: 0 -4px;
+}
+.footer-social a {
+    display: inline-block;
+    margin: 0 4px;
+    background: #3DD8A3;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+.footer-social a:hover,
+.footer-social a:focus {
+    background: #0089A3;
+}
+
+/****** footer links ******/
+.footer-links ul {
+    padding-left: 0;
+}
+.footer-links ul li {
+    list-style-type: none;
+    margin-bottom: 6px;
+}
+.footer-links ul li:last-child {
+    margin-bottom: 0;
+}
+.footer-links ul li a {
+    color: #001337;
+    text-decoration: none;
+}
+.footer-links ul li a:hover,
+.footer-links ul li a:focus {
+    text-decoration: underline;
+    color: #0089A3;
+}
+
+/****** footer copyright ******/
+
+.footer-bottom-row {
+    display: flex;
+}
+.footer-bottom-row > .col-md-4 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+.footer-bottom-row > .col-md-4:last-child {
+    display: flex;
+    flex-direction: column;
+}
+.footer-copyright {
+    margin-top: auto;
+    font-size: 14px;
+    line-height: 20px;
+}
 
 /************ responsive ************/
+
+@media (max-width: 1200px) {
+    #NAV {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-right: 28px;
+    }
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+    #NAV .navbar-nav {
+        float: right;
+    }
+}
+
+@media (max-width: 992px) {
+    .row-wide div[class*="section"] {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .footer-bottom-row {
+        display: block;
+    }
+    .footer-bottom-row > .col-md-4:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    /****** nav ******/ 
+    #NAV {
+        margin-top: -45px;
+        z-index: 10;
+    }
+    #Logo {
+        float: left;
+        z-index: 20;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+        margin-right: 0;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        background: transparent;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-nav {
+        float: none !important;
+        margin: 7.5px 0;
+        max-height: calc(100vh - 90px);
+    }
+    .navbar-nav > li {
+        float: none;
+        max-height: calc(100% - 150vh);
+    }
+    .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+
+    .navbar-collapse.in {
+        overflow-y: scroll;
+    }
+    .collapsing {
+        overflow: hidden !important;
+    }
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+}
 
 @media (max-width: 768px) {
     .digest-viewer thead.table-thead-background {
