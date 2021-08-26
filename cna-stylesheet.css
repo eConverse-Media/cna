@@ -44,7 +44,8 @@ body {
 .row-full .col-md-6[class*="section"],
 .row-full .col-md-8[class*="section"],
 .row-full .col-md-4[class*="section"],
-.row-full .col-md-3[class*="section"] {
+.row-full .col-md-3[class*="section"],
+.row-full .row-wide .col-md-12[class*="section"] {
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -349,13 +350,22 @@ h2::after,
     height: 22px;
     left: 10px;
     top: 22px;
+    position: absolute;
 }
 h3, .h3,
 .HLLandingControl h3 a {
     font-weight: 300;
-    color: #0E191F;
+    color: #020451;
     font-size: 18px;
     line-height: 1.33;
+    text-decoration: none;
+}
+.HLLandingControl h3 a:hover,
+.HLLandingControl h3 a:focus {
+    text-decoration: underline;
+}
+.large-h3 h3 {
+    font-size: 24px;
 }
 h4, .h4 {
     color: #4F5266;
@@ -376,7 +386,7 @@ input:focus {
     transition: .3s;
 }
 
-/************ buttons ************/
+/****** buttons ******/
 
 .make-buttons em {
     display: inline-block;
@@ -388,6 +398,8 @@ input:focus {
 }
 .make-buttons em a,
 .btn {
+    font-style: normal;
+    text-decoration: none;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
@@ -396,6 +408,7 @@ input:focus {
     letter-spacing: 2px;
     background: transparent;
     border: 1px solid;
+    border-radius: 0;
 }
 .make-buttons em a,
 .btn-primary,
@@ -407,7 +420,8 @@ input:focus {
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary,
 .post-message-contributed-content .validate-contribution .btn-group .dropdown-toggle.btn-default,
 .new-ideas .ideation-widget > div > div:last-child a,
-.blogs-list .HLLandingControl div[id*="BottomLink"] a {
+.blogs-list .HLLandingControl div[id*="BottomLink"] a,
+.HLLandingControl .btn-default {
     color: #020451;
     border-color: #020451;
     background: transparent;
@@ -431,7 +445,9 @@ input:focus {
 .new-ideas .ideation-widget > div > div:last-child a:hover,
 .new-ideas .ideation-widget > div > div:last-child a:focus,
 .blogs-list .HLLandingControl div[id*="BottomLink"] a:hover,
-.blogs-list .HLLandingControl div[id*="BottomLink"] a:focus {
+.blogs-list .HLLandingControl div[id*="BottomLink"] a:focus,
+.HLLandingControl .btn-default:hover,
+.HLLandingControl .btn-default:focus {
     background: #006F84;
     border-color: #020451;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12), 0px 4px 14px rgba(0, 0, 0, 0.1);
@@ -477,6 +493,49 @@ input:focus {
     color: #0089A3;
     background: transparent;
 }
+.make-buttons.white em a {
+    color: #fff;
+    border-color: #fff;
+    background: transparent;
+}
+.make-buttons.white em a:hover,
+.make-buttons.white em a:focus {
+    border-color: #fff;
+    background: #fff;
+    color: #0089A3;
+}
+
+/****** links ******/
+
+.make-link em a {
+    font-style: normal;
+    text-decoration: none;
+    color: #0089A3;
+    font-weight: 400;
+    padding: 0 0 8px 0;
+    border-bottom: 1px solid #0089A3;
+    font-size: 16px;
+    line-height: 20px;
+}
+.make-link em a::after {
+    font-family: CNA;
+    content: '\f023';
+    margin-left: 5px;
+    transition: .3s;
+    font-size: 8px;
+    line-height: 20px;
+}
+.make-link em a:hover,
+.make-link em a:focus {
+    color: #020451;
+    border-bottom-color: #3DD8A3;
+}
+.make-link em a:hover::after,
+.make-link em a:focus::after {
+    color: #3DD8A3;
+    margin-left: 14px;
+    transition: .3s;
+}
 
 /****** backgrounds ******/
 
@@ -487,6 +546,37 @@ input:focus {
 .bg-grey {
     background: #E6EEF3;
     padding: 80px 0;
+}
+.bg-grey-light {
+    background: #EFF5F8;
+    padding: 80px 0;
+}
+
+/****** titles ******/
+
+.flex-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/****** rows and margins ******/
+
+@media (min-width: 992px) {
+    .row-5-7 > .col-md-4 {
+        width: 500px;
+    }
+    .row-5-7 > .col-md-8 {
+        width: 700px;
+    }
+}
+.margin-top-60 {
+    margin-top: 60px;
+}
+@media (max-width: 991px) {
+    .margin-bottom-30-mob {
+        margin-bottom: 30px;
+    }
 }
 
 /************ header ***********/
@@ -641,6 +731,181 @@ input:focus {
     }
 }
 
+/************ flex sections ************/
+
+.flex-content-item .HtmlContent {
+    display: flex;
+    align-items: center;
+}
+.flex-content-item .img-container {
+    flex-basis: 40%;
+}
+.flex-content-item .text-container {
+    flex-basis: 60%;
+}
+.flex-content-item .HtmlContent > *:not(:first-child) {
+    padding-left: 40px;
+}
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+
+/************ home spacing between content ************/
+.home h4 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.home .large-h3 h3,
+.home .ContentItemHtml h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.home .HtmlContent p:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+/************ widgets ************/
+
+.HLLandingControl .ByLine,
+.HLLandingControl h5 {
+    color: #4F5266;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.ContentUserControl .HLLandingControl,
+.HLLandingControl .Content {
+    padding: 0;
+    border: none;
+}
+.HLLandingControl h2,
+.HLLandingControl .heading h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/****** latest news ******/
+
+.latest-news-featured {
+    margin-top: 40px;
+}
+.latest-news-featured h4 {
+    margin-bottom: 25px;
+}
+.latest-news-featured h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.latest-news-featured p:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.latest-news-list {
+    margin-top: 50px;
+}
+
+.latest-news-list .HLLandingControl ul {
+    margin: -15px;
+    display: flex;
+}
+.latest-news-list .HLLandingControl ul li {
+    margin: 15px;
+    border-bottom: none;
+    padding: 0;
+}
+.latest-news-list .HLLandingControl ul li h3 {
+    margin-bottom: 30px;
+}
+
+/****** upcoming events ******/
+
+.home .HLEventList {
+    margin-top: 30px;
+    margin-bottom: 70px;
+    position: relative;
+}
+.home .HLEventList div[id*="BottomLink"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.home .HLEventList div[id*="BottomLink"] .col-md-12 {
+    padding: 0;
+}
+.home .HLEventList ul {
+    margin: -15px;
+    display: flex;
+    padding-top: 30px;
+}
+.home .HLEventList ul li {
+    padding: 15px;
+    margin: 0;
+    border: none;
+    flex-basis: 33.3333333333%;
+}
+.home .HLEventList ul li .title-row {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+}
+.home .HLEventList ul li .title-row .col-md-3,
+.home .HLEventList ul li .title-row .col-md-9 {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.home .HLEventList ul li .title-row .col-md-9 {
+    position: static;
+    padding-top: 20px !important;
+}
+.home .HLLandingControl.HLEventList .title-row img {
+    max-height: none;
+    max-width: 100%;
+    width: 100%;
+}
+.home .HLEventList ul li .title-row h3 {
+    margin-bottom: 20px;
+}
+.home .HLEventList ul li .timeAgoFormat,
+.home .HLEventList ul li div[id*="LocationPanel"] {
+    color: #4F5266;
+    font-size: 14px;
+    line-height: 20px;
+}
+.home .HLEventList ul li .timeAgoFormat::before,
+.home .HLEventList ul li div[id*="LocationPanel"]::before {
+    font-family: CNA;
+    color: #3DD8A3;
+    font-size: 16px;
+    width: 26px;
+    display: inline-block;
+}
+.home .HLEventList ul li .timeAgoFormat::before {
+    content: '\f024';
+}
+.home .HLEventList ul li div[id*="LocationPanel"]::before {
+    content: '\f025';
+}
+.home .HLEventList ul li .timeAgoFormat {
+    margin-bottom: 4px;
+}
+.home .HLEventList ul li h4 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #020451;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 12px;
+    background: #3DD8A3;
+    z-index: 10;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /************ top cards ************/
 
 .top-cards > .col-md-12 {
@@ -722,16 +987,135 @@ input:focus {
 .mission-text {
     padding-right: 70px;
 }
-.mission-text h4 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.mission-text h2 {
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
 .mission-video {
     margin-bottom: -120px;
+}
+
+/************ ad space ************/
+
+.ad-space {
+    margin-bottom: 80px;
+}
+.home .ad-space {
+    margin-bottom: 160px;
+}
+.ad-space .HtmlContent:empty {
+    background: #EFF5F8;
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+.ad-space .HtmlContent:empty::before {
+    content: 'Ad Goes Here';
+    color: rgba(14, 25, 31, 0.2);
+    font-size: 22px;
+    line-height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*********** featured event ************/
+
+.featured-event {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 80px;
+}
+.featured-event h4 {
+    color: #3DD8A3;
+}
+.featured-event.large-h3 h3,
+.featured-event p {
+    color: #fff;
+}
+.bg-navy .featured-event .HtmlContent .img-container {
+    flex-basis: 60%;
+    margin-top: -160px;
+}
+.bg-navy .featured-event .HtmlContent .img-container img {
+    width: 100%;
+}
+.featured-event .HtmlContent .text-container {
+    flex-basis: 40%;
+}
+.featured-event .HtmlContent > *:not(:first-child) {
+    padding-left: 80px;
+}
+
+/************ cta buttons ************/
+
+.cta-buttons {
+    margin: -5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cta-button {
+    flex-basis: 50%;
+    padding: 5px;
+}
+.cta-button.make-buttons em {
+    display: block;
+}
+.cta-button.make-buttons em a {
+    display: flex;
+    background: #fff;
+    border: none;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 10px 30px rgba(0, 0, 0, 0.06);
+    color: #020451;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
+    padding: 15px 20px;
+}
+.cta-button.make-buttons em a::after {
+    font-family: CNA;
+    color: #3DD8A3;
+    font-size: 24px;
+    line-height: 26px;
+    margin-left: auto;
+    content: '\f026';
+}
+.cta-button.make-buttons em a:hover,
+.cta-button.make-buttons em a:focus {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/************ CTA tiles ************/
+
+.cta-tile a {
+    display: block;
+    text-decoration: none;
+    padding: 40px 100px 40px 40px;
+    background: #073375;
+    color: #fff;
+    position: relative;
+}
+.cta-tile a h3,
+.cta-tile.large-h3 a h3 {
+    color: #fff;
+}
+.cta-tile a::after {
+    position: absolute;
+    width: 60px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #0089A3;
+    font-family: CNA;
+    content: '\f026';
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cta-tile a:hover,
+.cta-tile a:focus {
+    background: #020451;
 }
 
 /************ footer ************/
@@ -883,6 +1267,9 @@ input:focus {
     .footer-bottom-row > .col-md-4:not(:last-child) {
         margin-bottom: 30px;
     }
+    .home .cta-buttons {
+        margin-top: 40px;
+    }
     /****** nav ******/ 
     #NAV {
         margin-top: -45px;
@@ -948,6 +1335,25 @@ input:focus {
 }
 
 @media (max-width: 768px) {
+    .flex-content-item .HtmlContent,
+    .latest-news-list .HLLandingControl ul,
+    .home .HLEventList ul,
+    .flex-row {
+        display: block;
+    }
+    .featured-event {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+    .flex-content-item .HtmlContent > .text-container:not(:first-child) {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 40px;
+    }
+    .bg-navy .featured-event .HtmlContent .img-container {
+        margin-top: -50px;
+    }
     .digest-viewer thead.table-thead-background {
         display: none;
     }
@@ -992,6 +1398,19 @@ input:focus {
 }
 
 @media (max-width: 550px) {
+    .flex-title,
+    .cta-buttons {
+        display: block;
+    }
+    .home .HLEventList div[id*="BottomLink"] {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 20px;
+    }
+    .flex-title .HtmlContent {
+        margin-top: 20px;
+    }
     .top-card {
         flex-basis: 100%;
     }
