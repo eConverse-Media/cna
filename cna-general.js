@@ -54,6 +54,26 @@ function handleCTATiles() {
     });
 }
 
+function handleTestimonials() {
+    $('.testimonial').wrapAll('<div class="testimonial-slider slick-dotted" />');
+    $('.testimonial-slider').slick({
+        arrows: true,
+        dots: false,
+        autoplay: false,
+        nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="cna cna-arrow-right-2"></i></button>',
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="cna cna-arrow-left"></i></button>'
+    });
+
+    $('.testimonial').each(function () {
+        var self = $(this);
+
+        $(self).find('.HtmlContent > em').wrap('<div class="testimonial-name-img" />');
+        $(self).find('h5').appendTo($(self).find('.testimonial-name-img'));
+        $(self).find('p').appendTo($(self).find('.testimonial-name-img'));
+        $(self).find('.testimonial-name-img h5, .testimonial-name-img p').wrapAll('<div class="testimonial-name" />');
+    });
+}
+
 $(function () {
     handleHeaderLinks();
     handleSearch();
@@ -61,4 +81,5 @@ $(function () {
     handleFlexContentItems();
     handleCTAButtons();
     handleCTATiles();
+    handleTestimonials();
 });
