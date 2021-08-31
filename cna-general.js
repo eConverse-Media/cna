@@ -74,6 +74,39 @@ function handleTestimonials() {
     });
 }
 
+function handleHero() {
+    $('.hero-slide img').wrap('<div class="clip-me" />');
+    $('.hero-slide').each(function () {
+        var self = $(this);
+
+        $(self).find('.clip-me').insertAfter($(self).find('.HtmlContent'));
+    });
+    var heroSlides = $('.hero-slide').toArray(),
+        count = heroSlides.length;
+
+    for (var i = 0; i < heroSlides.length; i++) {
+        var slide = heroSlides[i],
+            h4 = $(slide).find('h4'),
+            text = $(h4).text(),
+            newText = i + 1;
+
+        newText += '/';
+        newText += count;
+        newText += ' — ';
+        newText += text;
+
+        $(h4).text(newText);
+    }
+    $('.hero-slide').wrapAll('<div class="hero-slider slick-dotted" />');
+    $('.hero-slider').slick({
+        dots: true,
+        arrows: true,
+        nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="cna cna-chevron-right"></i></button>',
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="cna cna-chevron-left"></i></button>'
+    });
+
+}
+
 $(function () {
     handleHeaderLinks();
     handleSearch();
@@ -82,4 +115,5 @@ $(function () {
     handleCTAButtons();
     handleCTATiles();
     handleTestimonials();
+    handleHero();
 });

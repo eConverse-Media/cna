@@ -324,7 +324,8 @@ h1, h2, h3, h4, h5, h6,
     font-weight: 300;
 }
 h1, .h1,
-.large-h2 h2 {
+.large-h2 h2,
+.large-h2 h2 a {
     color: #020451;
     font-size: 44px;
     line-height: 1.14;
@@ -332,6 +333,10 @@ h1, .h1,
 }
 .large-h2 h2::after {
     display: none;
+}
+.large-h2 h2 a:hover,
+.large-h2 h2 a:focus {
+    text-decoration: underline;
 }
 h2, .h2,
 .HLLandingControl .heading h2 {
@@ -507,6 +512,18 @@ input:focus {
     border-color: #fff;
     background: #fff;
     color: #0089A3;
+}
+.make-buttons.fill em a {
+    color: #fff;
+    background: #020451;
+    border-color: #020451;
+}
+.make-buttons.fill em a:hover,
+.make-buttons.fill em a:focus {
+    color: #fff;
+    background: #212370;
+    border-color: #212370;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12), 0px 4px 14px rgba(0, 0, 0, 0.1);
 }
 
 /****** links ******/
@@ -817,6 +834,79 @@ td.ProfilePic > a > img {
     .navbar-collapse {
         padding: 0;
     }
+}
+
+/************ hero ************/
+
+.hero-slider.slick-slider.slick-dotted {
+    margin-bottom: 0;
+}
+.hero-slider .slick-track {
+    display: flex;
+}
+.hero-slider .hero-slide.slick-slide {
+    height: auto;
+    background: #EFF5F8;
+    display: flex;
+    align-items: center;
+    padding: 0 135px;
+    overflow: hidden;
+    min-height: 460px;
+}
+.hero-slider .hero-slide.slick-slide .HtmlContent {
+    width: 50%;
+}
+
+/****** arrows ******/
+
+.hero-slider .slick-arrow {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: #3DD8A3;
+    font-size: 40px;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.hero-slider .slick-arrow:hover,
+.hero-slider .slick-arrow:focus {
+    color: #0089A3;
+}
+.hero-slider .slick-arrow.prev-arrow {
+    left: 30px;
+}
+.hero-slider .slick-arrow.next-arrow {
+    right: 30px;
+}
+.hero-slider .hero-slide h4 {
+    color: #020451;
+    margin-top: 60px;
+}
+.hero-slider .hero-slide .HtmlContent em:last-child {
+    margin-bottom: 115px;
+}
+
+/****** dots ******/
+.hero-slider ul.slick-dots {
+    left: 135px;
+    bottom: 60px;
+    text-align: left;
+}
+.hero-slider ul.slick-dots li button {
+    display: none;
+}
+.hero-slider ul.slick-dots li {
+    margin: 0 10px 0 0;
+    width: 60px;
+    height: 6px;
+    border-radius: 0;
+    background: rgba(61, 216, 163, 0.2);;
+}
+.hero-slider ul.slick-dots li.slick-active {
+    background: #3DD8A3;
 }
 
 /************ flex sections ************/
@@ -1359,6 +1449,58 @@ td.ProfilePic > a > img {
     right: 74px;
 }
 
+/*********** join today CTA ************/
+
+.clip-path-svg {
+    position: absolute;
+    z-index: -10;
+}
+.clip-me {
+    display: none;
+}
+@supports (clip-path: url()) {
+    .clip-me {
+        clip-path: url(#logo-clip-path);
+        height: calc(100% + 100px);
+        width: 702px;
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: -100px;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+    .clip-me img {
+        max-width: none;
+        height: 100%;
+    }
+    .clip-me .HtmlContent {
+        height: 100%;
+    }
+}
+.bottom-cta.bg-navy {
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+.bottom-cta.bg-navy.row-full > .col-md-12 {
+    height: 650px;
+    display: flex;
+    align-items: center;
+    padding-left: calc(50% - 600px);
+    padding-right: 80px;
+}
+.bottom-cta > .col-md-12 > .ContentItemHtml:first-child {
+    width: 470px;
+    margin-right: 55px;
+}
+.bottom-cta h2,
+.bottom-cta p {
+    color: #fff;
+}
+
 /************ footer ************/
 #MPOuterFooter {
     background: #EFF5F8;
@@ -1470,12 +1612,30 @@ td.ProfilePic > a > img {
 
 /************ responsive ************/
 
+@media (max-width: 1230px) {
+    .bottom-cta.bg-navy.row-full > .col-md-12 {
+        padding-left: 15px;
+    }
+}
+
 @media (max-width: 1200px) {
     #NAV {
         position: relative;
         bottom: auto;
         right: auto;
         margin-right: 28px;
+    }
+    .hero-slider .hero-slide.slick-slide {
+        padding: 0 60px;
+    }
+    .hero-slider .slick-arrow.prev-arrow {
+        left: 10px;
+    }
+    .hero-slider .slick-arrow.next-arrow {
+        right: 10px;
+    }
+    .hero-slider ul.slick-dots {
+        left: 60px;
     }
 }
 @media (max-width: 1200px) and (min-width: 992px) {
@@ -1492,6 +1652,16 @@ td.ProfilePic > a > img {
 }
 
 @media (max-width: 991px) {
+    .hero-slider .hero-slide.slick-slide {
+        display: block;
+        padding-bottom: 100px;
+    }
+    .hero-slider .hero-slide.slick-slide .HtmlContent {
+        width: 100%;
+    }
+    .hero-slider .hero-slide .HtmlContent em:last-child {
+        margin-bottom: 30px;
+    }
     .top-cards > .col-md-12 {
         flex-wrap: wrap;
     }
@@ -1514,6 +1684,28 @@ td.ProfilePic > a > img {
     }
     .home .cta-buttons {
         margin-top: 40px;
+    }
+    .bottom-cta.bg-navy.row-full > .col-md-12 {
+        display: block;
+        height: auto;
+        padding-top: 40px;
+        padding-right: 15px;
+    }
+    .bottom-cta > .col-md-12 > .ContentItemHtml:first-child {
+        width: 100%;
+        margin-right: 0;
+    }
+    @supports (clip-path: url()) {
+        .clip-me {
+            clip-path: none;
+            display: block;
+            max-width: 100%;
+            margin-top: 0;
+        }
+        .clip-me img {
+            max-width: 100%;
+            height: auto;
+        }
     }
     /****** nav ******/ 
     #NAV {
@@ -1583,8 +1775,13 @@ td.ProfilePic > a > img {
     .flex-content-item .HtmlContent,
     .latest-news-list .HLLandingControl ul,
     .home .HLEventList ul,
-    .flex-row {
+    .flex-row,
+    .bottom-cta.bg-navy.row-full > .col-md-12 {
         display: block;
+    }
+    .bottom-cta > .col-md-12 > .ContentItemHtml:first-child {
+        margin-right: 0;
+        width: 100%;
     }
     .featured-event {
         padding-top: 0;
@@ -1643,6 +1840,16 @@ td.ProfilePic > a > img {
 }
 
 @media (max-width: 550px) {
+    .hero-slider .slick-arrow {
+        display: none !important;
+    }
+    .hero-slider .hero-slide.slick-slide {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .hero-slider ul.slick-dots {
+        left: 20px;
+    }
     .flex-title,
     .cta-buttons {
         display: block;
