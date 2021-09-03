@@ -2,6 +2,15 @@ function showComments() {
     $('.comments').show();
 }
 
+function handleByLineAndImage() {
+    $('.blogs-block div[id*="ByLinePanel"]').closest('h4').addClass('hl-byline-container');
+    $('.blogs-block h4:not(.hl-byline-container)').wrap('<div class="byline-image" />');
+    $('.blogs-block h5').appendTo('.byline-image');
+    $('.blogs-block img').appendTo('.byline-image');
+    $('.blogs-block h6').appendTo('.byline-image');
+    $('.byline-image').prependTo('.blogs-block');
+}
+
 function handleRelatedArticles() {
     var tags = $('.blogs-block .user-content-hashtag').toArray(),
         count = 0;
@@ -34,5 +43,6 @@ function handleRelatedArticles() {
 }
 
 $(function () {
+    handleByLineAndImage();
     handleRelatedArticles();
 });

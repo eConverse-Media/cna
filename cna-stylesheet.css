@@ -640,11 +640,11 @@ td.ProfilePic > a {
     height: 20px;
 }
 .Welcome button.btn-default.btn.imgButton {
-    width: 30px;
-    height: 30px;
-    min-height: 30px;
+    width: 25px;
+    height: 25px;
+    min-height: 25px;
     border: none;
-    margin-left: 10px;
+    margin-left: 0;
 }
 .text-muted-h2 a[id*="ImageControl_lnkDisplay"] {
     width: 140px;
@@ -729,6 +729,14 @@ td.ProfilePic > a > img {
     border: none;
     margin: 0;
 }
+.left-top-links li a:hover,
+.left-top-links li a:focus,
+#MPAuxNav ul.level1 li a:hover,
+#MPAuxNav ul.level1 li a:focus,
+#Welcome_LoginLink:hover,
+#Welcome_LoginLink:focus {
+    text-decoration: underline;
+}
 #Welcome_LoginLink {
     text-transform: none;
     letter-spacing: 0;
@@ -754,6 +762,76 @@ td.ProfilePic > a > img {
     font-family: CNA;
     content: '\f018';
 }
+.search-btn-top:hover,
+.search-btn-top:focus {
+    color: #0089A3;
+}
+.search-bar-top {
+    background-color: #EFF5F8;
+    height: 0;
+    overflow: hidden;
+    padding: 0 calc(50% - 585px);
+    transition: .3s;
+}
+.search-bar-top.open {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100px;
+    transition: .3s;
+}
+#searchColumn {
+    background: #EFF5F8;
+    padding: 15px;
+}
+.search-bar-top .SearchInputs,
+#searchColumn .SearchInputs {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 10px 30px rgba(0, 0, 0, 0.06);
+    background: #fff;
+    height: 60px;
+}
+.search-bar-top .form-control,
+#searchColumn .form-control {
+    height: 60px;
+    padding: 14px 20px;
+    font-size: 24px;
+    line-height: 32px;
+    color: #020451;
+    border: none;
+    border-radius: 0;
+}
+.search-bar-top .form-control::placeholder,
+#searchColumn .form-control::placeholder {
+    font-style: normal;
+}
+.search-bar-top button[id*="SearchButton"],
+#searchColumn button[id*="SearchButton"] {
+    background: #0089A3;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    padding: 0;
+    font-size: 30px;
+    color: #fff;
+    border: none;
+}
+.search-bar-top .glyphicon-search,
+#searchColumn .glyphicon-search {
+    vertical-align: unset !important;
+    top: 0;
+    width: auto;
+}
+.search-bar-top .glyphicon-search::before,
+#searchColumn .glyphicon-search::before {
+    font-family: CNA;
+    content: '\f018';
+}
+
+/*** profile dropdown ***/
+
+#BtnShowProfile {
+    display: none;
+}
 
 /*** language button ***/
 
@@ -762,7 +840,7 @@ td.ProfilePic > a > img {
 }
 .language-btn a {
     display: inline-block;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 13px;
     line-height: 18px;
     color: #fff;
@@ -779,6 +857,9 @@ td.ProfilePic > a > img {
 #DesktopLogoDiv {
     width: 170px;
 }
+#Logo img {
+    width: 100%;
+}
 
 /****** nav ******/
 
@@ -791,7 +872,7 @@ td.ProfilePic > a > img {
 #NAV {
     position: absolute;
     right: 28px;
-    bottom: 40px;
+    bottom: 30px;
     margin-right: 0;
     margin-left: 0;
 }
@@ -806,7 +887,14 @@ td.ProfilePic > a > img {
     font-weight: 300;
     font-size: 14px;
     line-height: 18px;
-    padding: 0 12px;
+    padding: 10px 12px;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.disabled>a:hover, .navbar-default .navbar-nav>.disabled>a:focus,
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: #020451;
+    background-color: #EFF5F8;
 }
 
 /* caret */
@@ -820,8 +908,54 @@ td.ProfilePic > a > img {
 .navbar-default .navbar-nav>.dropdown>a .caret::before {
     font-family: CNA;
     content: '\f019';
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 12px;
     color: #0089A3;
+}
+
+/* dropdowns */
+.navbar-nav>li>.dropdown-menu {
+	background-color: #fff;
+    border: none;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 10px 30px rgba(0, 0, 0, 0.06);
+    border-top: 2px solid #3DD8A3;
+    border-radius: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.navbar-nav .dropdown-menu>li>a {
+    color: #020451;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 6px 42px 6px 12px;
+    font-weight: 300;
+    position: relative;
+}
+.navbar-nav .dropdown-menu>li>a::after {
+    font-family: CNA;
+    content: '\f026';
+    font-size: 16px;
+    line-height: 18px;
+    color: #3DD8A3;
+    opacity: 0;
+    transition: .3s;
+    position: absolute;
+    right: 12px;
+}
+.navbar-nav .dropdown-menu>.active>a,
+.navbar-nav .dropdown-menu>.active>a:hover,
+.navbar-nav .dropdown-menu>.active>a:focus,
+.navbar-nav .dropdown-menu>li>a:hover,
+.navbar-nav .dropdown-menu>li>a:focus {
+	background: #EFF5F8;
+	color: #020451;
+}
+.navbar-nav .dropdown-menu>.active>a:hover::after,
+.navbar-nav .dropdown-menu>.active>a:focus::after,
+.navbar-nav .dropdown-menu>li>a:hover::after,
+.navbar-nav .dropdown-menu>li>a:focus::after {
+    opacity: 1;
+    transition: .3s;
 }
 
 /* removing extraneous padding on desktop */
@@ -1354,19 +1488,28 @@ td.ProfilePic > a > img {
 
 /****** testimonial ******/
 
-.testimonial-slider {
-    margin-left: 115px;
+.testimonial-slider.slick-dotted.slick-slider {
+    margin-left: 85px;
+    margin-right: -30px;
+    margin-top: -30px;
+    margin-bottom: -30px;
 }
 .testimonial-slider .slick-track {
     display: flex;
 }
 .testimonial-slider .testimonial.slick-slide {
     height: auto;
+    display: flex;
 }
-.testimonial {
+.testimonial .HtmlContent {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
     background: #fff;
     padding: 40px;
     position: relative;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 10px 30px rgba(0, 0, 0, 0.06);
+    margin: 30px;
 }
 .testimonial h4 {
     margin-top: 0;
@@ -1404,8 +1547,8 @@ td.ProfilePic > a > img {
     line-height: 20px;
 }
 
-.testimonial::before,
-.testimonial::after {
+.testimonial .HtmlContent::before,
+.testimonial .HtmlContent::after {
     font-family: CNA;
     color: #3DD8A3;
     opacity: 0.1;
@@ -1414,11 +1557,11 @@ td.ProfilePic > a > img {
     font-size: 100px;
     line-height: 1;
 }
-.testimonial::before {
+.testimonial .HtmlContent::before {
     content: '\f029';
     left: 40px;
 }
-.testimonial::after {
+.testimonial .HtmlContent::after {
     content: '\f02a';
     right: 40px;
 }
@@ -1426,7 +1569,7 @@ td.ProfilePic > a > img {
 /*** arrows ***/
 .testimonial-slider .slick-arrow {
     position: absolute;
-    bottom: 10px;
+    bottom: 40px;
     width: 64px;
     height: 64px;
     background: #3DD8A3;
@@ -1443,10 +1586,10 @@ td.ProfilePic > a > img {
     background: #020451;
 }
 .testimonial-slider .slick-arrow.next-arrow {
-    right: 10px;
+    right: 40px;
 }
 .testimonial-slider .slick-arrow.prev-arrow {
-    right: 74px;
+    right: 104px;
 }
 
 /*********** join today CTA ************/
@@ -1612,6 +1755,19 @@ td.ProfilePic > a > img {
 
 /************ responsive ************/
 
+/****** mobile and desktop classes ******/
+
+@media (min-width: 992px) {
+    .mobile {
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    .desktop {
+        display: none;
+    }
+}
+
 @media (max-width: 1230px) {
     .bottom-cta.bg-navy.row-full > .col-md-12 {
         padding-left: 15px;
@@ -1619,6 +1775,10 @@ td.ProfilePic > a > img {
 }
 
 @media (max-width: 1200px) {
+    .search-bar-top {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     #NAV {
         position: relative;
         bottom: auto;
@@ -1672,9 +1832,9 @@ td.ProfilePic > a > img {
         padding-right: 0;
         padding-bottom: 50px;
     }
-    .testimonial-slider {
-        margin-left: 0;
-        margin-top: 60px;
+    .testimonial-slider.slick-dotted.slick-slider {
+        margin-top: 30px;
+        margin-left: -30px;
     }
     .footer-bottom-row {
         display: block;
@@ -1707,21 +1867,85 @@ td.ProfilePic > a > img {
             height: auto;
         }
     }
-    /****** nav ******/ 
+    /****** nav + header ******/ 
+    #HEADER #MPheader > div.row:first-child {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .left-top-links li, #MPAuxNav ul.level1 li {
+        margin-right: 10px;
+    }
+    .left-top-links li a, #MPAuxNav ul.level1 li a, #Welcome_LoginLink {
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 18px;
+    }
+    .HLWelcome {
+        margin-right: 0;
+    }
     #NAV {
-        margin-top: -45px;
+        margin-top: -55px;
         z-index: 10;
+        margin-right: 0;
     }
     #Logo {
         float: left;
         z-index: 20;
+        position: relative;
+    }
+    #MPheader > div#Logo {
+        padding: 10px;
+    }
+    #DesktopLogoDiv {
+        width: 100px;
+    }
+    .search-btn-top {
+        color: #020451;
+        font-size: 16px;
+        position: absolute;
+        bottom: 20px;
+        right: 50px;
+        z-index: 20;
+    }
+    .language-btn {
+        position: absolute;
+        z-index: 20;
+        bottom: 20px;
+        right: 100px;
+    }
+    .language-btn a {
+        background: transparent;
+        padding: 0;
+        color: #0089A3;
+
+    }
+    #NAV > .col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
     }
     .navbar-header {
         float: none;
     }
     .navbar-toggle {
         display: block;
-        margin-right: 0;
+        margin-right: 10px;
+        border: none;
+        background: #E6EEF3;
+        width: 32px;
+        height: 32px;
+        border-radius: 0;
+        color: #020451;
+        font-size: 16px;
+        line-height: 32px;
+        text-align: center;
+        padding: 0;
+    }
+    .navbar-toggle::before {
+        font-family: CNA;
+        content: '\f02d';
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        display: none;
     }
     .navbar-collapse {
         border-top: 1px solid transparent;
@@ -1729,9 +1953,14 @@ td.ProfilePic > a > img {
         background: transparent;
         padding-left: 0;
         padding-right: 0;
+        margin-left: -15px;
+        margin-right: -15px;
     }
     .navbar-collapse.collapse {
         display: none !important;
+    }
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        border-top: 2px solid #3DD8A3;
     }
     .navbar-nav {
         float: none !important;
@@ -1765,13 +1994,27 @@ td.ProfilePic > a > img {
         float: none;
         width: auto;
         margin-top: 0;
-        background-color: transparent;
+        background-color: #E6EEF3;
         border: 0;
         box-shadow: none;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #020451;
+        line-height: 18px;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+        text-decoration: underline;
     }
 }
 
 @media (max-width: 768px) {
+    .navbar-collapse {
+        margin-left: 0;
+        margin-right: 0;
+    }
     .flex-content-item .HtmlContent,
     .latest-news-list .HLLandingControl ul,
     .home .HLEventList ul,
@@ -1865,5 +2108,19 @@ td.ProfilePic > a > img {
     }
     .top-card {
         flex-basis: 100%;
+    }
+    .testimonial .HtmlContent {
+        padding-bottom: 100px;
+        text-align: center;
+    }
+    .testimonial .testimonial-name-img {
+        justify-content: center;
+    }
+    .testimonial-slider .slick-arrow {
+        width: calc(50% - 41px);
+    }
+    .testimonial-slider .slick-arrow.prev-arrow {
+        right: auto;
+        left: 40px;
     }
 }
