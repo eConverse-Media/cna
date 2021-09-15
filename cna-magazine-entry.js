@@ -42,7 +42,22 @@ function handleRelatedArticles() {
     });
 }
 
+function handleAds() {
+    var adContainer = $('.upper-ad-container'),
+        blogViewer = $('.blogs-block'),
+        height = $(blogViewer).height(),
+        numToShow = Math.floor(height / 720);
+
+    for (var i = 1; i < numToShow; i++) {
+        $(adContainer).clone().insertAfter(adContainer);
+    }
+    googletag.pubads().refresh();
+}
+
 $(function () {
     handleByLineAndImage();
     handleRelatedArticles();
+    setTimeout(function () {
+        handleAds();
+    }, 5000);
 });

@@ -134,6 +134,26 @@ function handleMobileHeader() {
     });
 }
 
+function handleAdModules() {
+
+    // handle Ad Module 1
+
+    $('.ad-module-1 .HtmlContent img:first-of-type').wrap('<div class="img-container clip-me" />');
+    $('.ad-module-1 .HtmlContent >*:not(.img-container):not(img)').wrapAll('<div class="text-container" />');
+    $('.ad-module-1 .HtmlContent > img').wrap('<div class="logo-container" />');
+
+    // handle Ad Module 2
+
+    $('.ad-module-2 .HtmlContent img:last-of-type').wrap('<div class="img-container" />');
+    $('.ad-module-2 .HtmlContent > *:not(.img-container):not(img)').wrapAll('<div class="text-container" />');
+    $('.ad-module-2 .HtmlContent > img').wrap('<div class="logo-container" />');
+
+    // handle Ad Module 3
+
+    $('.ad-module-3 .HtmlContent img:last-of-type').wrap('<div class="logo-container" />');
+    $('.ad-module-3 .HtmlContent > *:not(.logo-container)').wrapAll('<div class="text-container" />');
+}
+
 $(function () {
     handleHeaderLinks();
     handleSearch();
@@ -143,4 +163,5 @@ $(function () {
     handleTestimonials();
     handleHero();
     handleMobileHeader();
+    handleAdModules();
 });

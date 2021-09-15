@@ -87,6 +87,13 @@ img {
     display: block !important;
 }
 
+/*** row wide reset ***/
+
+.row-wide,
+#MPOuterMost.full #FOOTER {
+    max-width: 1400px;
+}
+
 /****** CSS Site Load ******/
 
 /*** accordions/expandable text ***/
@@ -324,38 +331,16 @@ h1, h2, h3, h4, h5, h6,
     font-weight: 300;
 }
 h1, .h1,
-.large-h2 h2,
-.large-h2 h2 a {
+h2, .h2,
+.HLLandingControl .heading h2 {
     color: #020451;
     font-size: 44px;
     line-height: 1.14;
     font-weight: 300;
 }
-.large-h2 h2::after {
-    display: none;
-}
-.large-h2 h2 a:hover,
-.large-h2 h2 a:focus {
+h2 a:hover,
+h2 a:focus {
     text-decoration: underline;
-}
-h2, .h2,
-.HLLandingControl .heading h2 {
-    color: #020451;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 1.4;
-    position: relative;
-    display: inline-block;
-}
-h2::after,
-.h2::after {
-    content: '';
-    background: rgba(61,216,163,0.2);
-    width: 100%;
-    height: 22px;
-    left: 10px;
-    top: 22px;
-    position: absolute;
 }
 h3, .h3,
 .HLLandingControl h3 a,
@@ -686,6 +671,9 @@ td.ProfilePic > a > img {
 
 /************ header ***********/
 
+#MPOuterHeader {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 10px 30px rgba(0, 0, 0, 0.06);
+}
 #MPOuterMost.full #HEADER {
     max-width: 100%;
 }
@@ -770,7 +758,7 @@ td.ProfilePic > a > img {
     background-color: #EFF5F8;
     height: 0;
     overflow: hidden;
-    padding: 0 calc(50% - 585px);
+    padding: 0 calc(50% - 685px);
     transition: .3s;
 }
 .search-bar-top.open {
@@ -990,6 +978,13 @@ td.ProfilePic > a > img {
 .hero-slider .hero-slide.slick-slide .HtmlContent {
     width: 50%;
 }
+.hero-slider .hero-slide.slick-slide .clip-me {
+    margin-bottom: -200px;
+}
+.hero-slider .hero-slide.slick-slide .clip-me img {
+    width: 135%;
+    height: auto;
+}
 
 /****** arrows ******/
 
@@ -1166,6 +1161,27 @@ td.ProfilePic > a > img {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+}
+.home .HLEventList ul li .title-row .col-md-3 {
+    position: relative;
+}
+.home .HLEventList ul li .title-row .col-md-3::before {
+    background: linear-gradient(0deg, rgba(2, 4, 81, 0.4), rgba(2, 4, 81, 0.4));
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: .3s;
+}
+.home .HLEventList ul li:hover .title-row .col-md-3::before,
+.home .HLEventList ul li:focus .title-row .col-md-3::before {
+    opacity: 1;
+    z-index: 5;
+    transition: .3s;
 }
 .home .HLEventList ul li .title-row .col-md-9 {
     position: static;
@@ -1604,8 +1620,9 @@ td.ProfilePic > a > img {
 @supports (clip-path: url()) {
     .clip-me {
         clip-path: url(#logo-clip-path);
-        height: calc(100% + 100px);
-        width: 702px;
+        height: 818px;
+        width: 600px;
+        min-width: 600px;
         max-width: 50%;
         display: flex;
         justify-content: center;
@@ -1613,7 +1630,7 @@ td.ProfilePic > a > img {
         flex-direction: column;
         margin-top: -100px;
         overflow-x: hidden;
-        overflow-y: visible;
+        overflow-y: hidden;
     }
     .clip-me img {
         max-width: none;
@@ -1632,16 +1649,19 @@ td.ProfilePic > a > img {
     height: 650px;
     display: flex;
     align-items: center;
-    padding-left: calc(50% - 600px);
+    padding-left: calc(50% - 700px);
     padding-right: 80px;
 }
 .bottom-cta > .col-md-12 > .ContentItemHtml:first-child {
-    width: 470px;
+    width: 670px;
     margin-right: 55px;
 }
 .bottom-cta h2,
 .bottom-cta p {
     color: #fff;
+}
+.bottom-cta .clip-me img {
+    margin-top: 50px;
 }
 
 /************ footer ************/
@@ -1753,6 +1773,89 @@ td.ProfilePic > a > img {
     line-height: 20px;
 }
 
+/************ ad modules ************/
+.ad-module-1,
+.ad-module-2 {
+    background-color: #073375;
+    margin: 20px 25px;
+}
+.ad-module-1 .HtmlContent {
+    display: flex;
+    background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/2f975e7e-4a40-45ca-863c-5ebf0a138d5e/UploadedImages/images/Subtract.png');
+    background-position: bottom left;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding: 20px 20px 20px 95px;
+    height: 260px;
+    overflow: hidden;
+}
+.ad-module-2 .HtmlContent {
+    height: 300px;
+    padding: 20px 505px 20px 80px;
+    position: relative;
+    display: flex;
+    background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/2f975e7e-4a40-45ca-863c-5ebf0a138d5e/UploadedImages/images/ad-bg-swoosh.svg');
+    background-size: auto;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+.ad-module-1 .clip-me {
+    position: relative;
+    margin-top: -150px;
+    margin-bottom: -20px;
+    height: calc(100% + 170px);
+}
+.ad-module-1 .clip-me img {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 115px;
+}
+.ad-module-1 .logo-container,
+.ad-module-2 .logo-container {
+    align-self: flex-end;
+    margin-left: 35px;
+}
+.ad-module-2 .logo-container {
+    margin-right: 20px;
+}
+.ad-module-1 .text-container,
+.ad-module-2 .text-container {
+    align-self: center;
+}
+.ad-module-1 .text-container {
+    max-width: calc(100% - 765px);
+}
+.ad-module-2 .img-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.ad-module-1 h2,
+.ad-module-2 h2 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.ad-module-1.make-buttons em a,
+.ad-module-2.make-buttons em a {
+    color: #fff;
+    background: #0089A3;
+    border-color: #0089A3;
+}
+.ad-module-1.make-buttons em a:hover,
+.ad-module-1.make-buttons em a:focus,
+.ad-module-2.make-buttons em a:hover,
+.ad-module-2.make-buttons em a:focus {
+    background: #fff;
+    border-color: #fff;
+    color: #0089a3;
+}
+
 /************ responsive ************/
 
 /****** mobile and desktop classes ******/
@@ -1768,13 +1871,21 @@ td.ProfilePic > a > img {
     }
 }
 
-@media (max-width: 1230px) {
+@media (min-width: 1200px) {
+    .row-full > .col-md-12,
+    #FOOTER {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1430px) {
     .bottom-cta.bg-navy.row-full > .col-md-12 {
         padding-left: 15px;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     .search-bar-top {
         padding-left: 15px;
         padding-right: 15px;
@@ -1798,7 +1909,7 @@ td.ProfilePic > a > img {
         left: 60px;
     }
 }
-@media (max-width: 1200px) and (min-width: 992px) {
+@media (max-width: 1400px) and (min-width: 992px) {
     #NAV .navbar-nav {
         float: right;
     }
