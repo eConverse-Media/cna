@@ -154,6 +154,106 @@ function handleAdModules() {
     $('.ad-module-3 .HtmlContent > *:not(.logo-container)').wrapAll('<div class="text-container" />');
 }
 
+function handleInteriorMenus() {
+
+    $('#NAV .navbar-nav > li').each(function () {
+        var self = $(this),
+            text = $(self).find('> a').text();
+
+        text = $.trim(text);
+        text = text.toLowerCase();
+        text = text.replace(/\&+/g, '');
+        text = text.replace(/\s+/g, '-');
+
+        $(self).addClass(text);
+    });
+
+    if (!!($('#MainCopy_ContentWrapper').attr('class'))) {
+
+        var classList = $('#MainCopy_ContentWrapper').attr('class').split(' '),
+            klass = classList[0],
+            navItem = $('#NAV .navbar-nav > li.' + klass);
+    
+        $('.menu-container').append('<h2>' + $(navItem).find('> a').text() + '</h2>');
+        $('.menu-container').append($(navItem).find('.dropdown-menu').clone());
+        $('.menu-container .dropdown-menu').addClass('side-menu').removeClass('dropdown-menu');
+        $('.side-menu li.dropdown-submenu').removeClass('dropdown-submenu');
+        $('.side-menu ul.dropdown-submenu').addClass('side-submenu').removeClass('dropdown-submenu');
+    
+        // handle active link
+    
+        var url = window.location.href,
+            menuLinks = $('.side-menu li a').toArray();
+    
+        var urlArray = url.split('/');
+    
+        urlArray.splice(0, 3);
+    
+        url = urlArray.toString();
+    
+        url = url.replace(/\,+/g, '/');
+    
+        url = '/' + url;
+        
+        for (var i = 0; i < menuLinks.length; i++) {
+            var linkUrl = $(menuLinks[i]).attr('href');
+    
+            if (url == linkUrl) {
+                $(menuLinks[i]).parent().addClass('active-item');
+                $(menuLinks[i]).closest('ul.side-menu > li').addClass('active-secondary-nav');
+            }
+        }
+    
+        // handle mobile dropdown
+    
+        $('<button type="button" class="mobile side-dropdown" onclick="toggleSideMenu();">Pages in this section</button>').insertBefore('.menu-container');
+    
+        $('.page-title-h2').clone().addClass('mobile').removeClass('desktop').insertBefore('.side-dropdown');
+    
+        handleMobileWindow();
+    
+        $(window).on('resize orientationChange', function () {
+            handleMobileWindow();
+        });
+    
+        function handleMobileWindow() {
+            if ($(window).width() < 992) {
+                $('.menu-container').slideUp();
+            } else {
+                $('.menu-container').slideDown();
+            }
+    
+        }
+    }
+
+}
+
+function toggleSideMenu() {
+    $('.menu-container').slideToggle(600, 'swing');
+}
+
+function handleLeadership() {
+    $('.leadership').each(function () {
+        // handle leadership HTML
+        var self = $(this);
+
+        $(self).find('.HtmlContent > img').wrap('<div class="img-container" />');
+        $(self).find('.HtmlContent > *:not(.img-container)').wrapAll('<div class="text-container" />');
+        
+        
+        // handle leadership hover
+        $(self).find('a').mouseover(function () {
+            $(self).addClass('is-hovered');
+        });
+        
+        $(self).find('a').mouseout(function () {
+            $(self).removeClass('is-hovered');
+        });
+    });
+    
+
+}
+
 $(function () {
     handleHeaderLinks();
     handleSearch();
@@ -164,4 +264,6 @@ $(function () {
     handleHero();
     handleMobileHeader();
     handleAdModules();
+    handleInteriorMenus();
+    handleLeadership();
 });

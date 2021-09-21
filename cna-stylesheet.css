@@ -325,8 +325,8 @@ body,
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: trade-gothic-next, sans-serif;
-    color: #4F5266;
-    font-size: 18px;
+    color: #0E191F;
+    font-size: 16px;
     line-height: 1.33;
     font-weight: 300;
 }
@@ -342,7 +342,20 @@ h2 a:hover,
 h2 a:focus {
     text-decoration: underline;
 }
-h3, .h3,
+.interior .HtmlContent h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.interior .page-title-h2 h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+h3, .h3 {
+    color: #001337;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.333;
+}
 .HLLandingControl h3 a,
 .testimonial h5 {
     font-weight: 300;
@@ -364,6 +377,16 @@ h4, .h4 {
     line-height: 1.43;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+p {
+    margin-bottom: 15px;
+}
+.p-small {
+    font-size: 14px;
+    line-height: 1.4;
+}
+.p-large {
+    font-size: 18px;
 }
 a,
 a:hover,
@@ -558,12 +581,31 @@ input:focus {
     padding: 80px 0;
 }
 
-/****** titles ******/
+/****** flex ******/
 
 .flex-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.flex-html .HtmlContent {
+    display: flex;
+    align-items: center;
+}
+
+/****** styled bulleted lists ******/
+
+#MainCopy_ContentWrapper .HtmlContent ul {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+#MainCopy_ContentWrapper .HtmlContent ul li {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+#MainCopy_ContentWrapper .HtmlContent ul li::marker {
+    color: #3DD8A3;
 }
 
 /****** rows and margins ******/
@@ -586,6 +628,12 @@ input:focus {
 }
 .margin-top-30 {
     margin-top: 30px;
+}
+.margin-bottom-80 {
+    margin-bottom: 80px;
+}
+.no-pageTitle-padding {
+    padding-top: 60px;
 }
 
 /****** round profile images ******/
@@ -668,6 +716,22 @@ td.ProfilePic > a > img {
     text-align: center;
 }
 
+/****** interior ad space ******/
+
+.ad-space .HtmlContent:empty {
+    background: #EFF5F8;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ad-space .HtmlContent:empty::before {
+    content: 'Ad Goes Here';
+    color: rgba(14, 25, 31, 0.2);
+    font-size: 22px;
+    line-height: 30px;
+}
 
 /************ header ***********/
 
@@ -945,6 +1009,9 @@ td.ProfilePic > a > img {
     opacity: 1;
     transition: .3s;
 }
+.navbar-nav .dropdown-menu ul.dropdown-submenu {
+    display: none;
+}
 
 /* removing extraneous padding on desktop */
 @media (min-width: 992px) {
@@ -1070,6 +1137,9 @@ td.ProfilePic > a > img {
 }
 .home .HtmlContent p {
     margin-bottom: 30px;
+}
+.interior .HtmlContent p {
+    margin-bottom: 20px;
 }
 
 /************ widgets ************/
@@ -1426,8 +1496,12 @@ td.ProfilePic > a > img {
     color: #fff;
     position: relative;
 }
-.cta-tile a h3,
-.cta-tile.large-h3 a h3 {
+.cta-tile.grey a {
+    background: #E6EEF3;
+    color: #0E191F;
+}
+.cta-tile:not(.grey) a h3,
+.cta-tile:not(.grey).large-h3 a h3 {
     color: #fff;
 }
 .cta-tile a::after {
@@ -1448,6 +1522,16 @@ td.ProfilePic > a > img {
 .cta-tile a:hover,
 .cta-tile a:focus {
     background: #020451;
+}
+.cta-tile.grey h3 {
+    transition: .3s;
+}
+.cta-tile.grey a:hover,
+.cta-tile.grey a:focus,
+.cta-tile.grey a:hover h3,
+.cta-tile.grey a:focus h3 {
+    color: #fff;
+    transition: .3s;
 }
 
 /************ membership buttons ************/
@@ -1779,6 +1863,14 @@ td.ProfilePic > a > img {
     background-color: #073375;
     margin: 20px 25px;
 }
+.ad-module-3 {
+    background-color: rgba(0,43,108,0.8);
+    background-blend-mode: multiply;
+    margin: 20px 0;
+    padding: 60px;
+    border-bottom: 10px solid #3DD8A3;
+    position: relative;
+}
 .ad-module-1 .HtmlContent {
     display: flex;
     background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/2f975e7e-4a40-45ca-863c-5ebf0a138d5e/UploadedImages/images/Subtract.png');
@@ -1819,12 +1911,22 @@ td.ProfilePic > a > img {
 .ad-module-2 .logo-container {
     margin-right: 20px;
 }
+.ad-module-3 .logo-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #020451;
+    padding: 20px;
+}
 .ad-module-1 .text-container,
 .ad-module-2 .text-container {
     align-self: center;
 }
 .ad-module-1 .text-container {
     max-width: calc(100% - 765px);
+}
+.ad-module-3 .text-container {
+    max-width: 50%;
 }
 .ad-module-2 .img-container {
     position: absolute;
@@ -1833,7 +1935,8 @@ td.ProfilePic > a > img {
     bottom: 0;
 }
 .ad-module-1 h2,
-.ad-module-2 h2 {
+.ad-module-2 h2,
+.ad-module-3 h2 {
     color: #fff;
     font-size: 32px;
     font-weight: 700;
@@ -1854,6 +1957,114 @@ td.ProfilePic > a > img {
     background: #fff;
     border-color: #fff;
     color: #0089a3;
+}
+
+/************ interior pages ************/
+
+.menu-container {
+    width: 270px;
+}
+.menu-container h2 {
+    margin-top: 60px;
+    font-weight: 300;
+    color: #4F5266;
+    font-size: 20px;
+    line-height: 1.2;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #E6EEF3;
+    margin-bottom: 16px;
+}
+.side-menu {
+    padding-left: 0;
+}
+.side-menu li {
+    list-style-type: none;
+}
+.side-menu > li:not(.active-secondary-nav) ul {
+    display: none;
+}
+.side-menu > li > a {
+    font-size: 17px;
+    line-height: 22px;
+    color: #4F5266;
+    margin-bottom: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    display: block;
+}
+.menu-container .side-menu li.active-item > a {
+    font-weight: 700;
+    color: #073375;
+}
+.side-menu .side-submenu {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    margin-top: -6px;
+}
+.side-menu .side-submenu .side-submenu {
+    margin-top: 8px;
+}
+.side-menu .side-submenu li a {
+    color: #4F5266;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 4px;
+    text-decoration: none;
+    display: block;
+}
+.side-menu > li > a:hover,
+.side-menu > li > a:focus,
+.side-menu .side-submenu li a:hover,
+.side-menu .side-submenu li a:focus {
+    text-decoration: underline;
+    color: #073375;
+}
+.side-menu .caret {
+    display: none;
+}
+
+/************ leadership ************/
+
+.leadership .HtmlContent {
+    display: flex;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #E6EEF3;
+}
+.leadership .img-container {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-right: 40px;
+    border: 2px solid transparent;
+    transition: .3s;
+}
+.leadership.is-hovered .img-container {
+    border-color: #3DD8A3;
+    transition: .3s;
+}
+.leadership .text-container {
+    width: calc(100% - 190px);
+}
+.leadership .text-container h4 {
+    margin-top: 0;
+}
+.leadership .text-container h3 a {
+    color: #020451;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 0;
+}
+.leadership .text-container h3 + p {
+    color: #4F5266;
+}
+.leadership .text-container p {
+    font-size: 16px;
+    line-height: 22px;
 }
 
 /************ responsive ************/
@@ -1882,6 +2093,9 @@ td.ProfilePic > a > img {
 @media (max-width: 1430px) {
     .bottom-cta.bg-navy.row-full > .col-md-12 {
         padding-left: 15px;
+    }
+    .ad-module-3 {
+        margin: 20px;
     }
 }
 
@@ -1916,7 +2130,8 @@ td.ProfilePic > a > img {
 }
 
 @media (max-width: 992px) {
-    .row-wide div[class*="section"] {
+    .row-wide div[class*="section"],
+    .interior .row-wide div[class*="section"] {
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -1972,12 +2187,57 @@ td.ProfilePic > a > img {
             display: block;
             max-width: 100%;
             margin-top: 0;
+            min-width: 0;
         }
         .clip-me img {
             max-width: 100%;
             height: auto;
         }
     }
+    .ad-module-1 .HtmlContent {
+        display: block;
+        height: unset;
+        padding: 40px 30px;
+    }
+    .ad-module-2 .HtmlContent {
+        padding: 40px 30px 190px 30px;
+        display: block;
+        height: unset;
+    }
+    .ad-module-1 .text-container {
+        max-width: 100%;
+    }
+    .ad-module-1 .clip-me {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: auto;
+    }
+    .ad-module-1 .clip-me img {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+    .ad-module-2 .img-container {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: auto;
+        height: 190px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+    }
+    .ad-module-1 .logo-container {
+        margin: 30px 0 0 0;
+    }
+    .ad-module-2 .logo-container {
+        margin: 30px 0 40px 0;
+    }
+
+    /****** interior pages ******/
+
     /****** nav + header ******/ 
     #HEADER #MPheader > div.row:first-child {
         padding-left: 10px;
@@ -2191,6 +2451,13 @@ td.ProfilePic > a > img {
     .our-mission {
         padding: 40px 15px;
     }
+    .ad-module-3 {
+        padding: 30px;
+    }
+    #FOOTER.col-md-12 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @media (max-width: 550px) {
@@ -2233,5 +2500,9 @@ td.ProfilePic > a > img {
     .testimonial-slider .slick-arrow.prev-arrow {
         right: auto;
         left: 40px;
+    }
+    .ad-module-3 .text-container {
+        max-width: 100%;
+        margin-bottom: 100px;
     }
 }
