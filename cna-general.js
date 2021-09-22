@@ -206,7 +206,7 @@ function handleInteriorMenus() {
     
         // handle mobile dropdown
     
-        $('<button type="button" class="mobile side-dropdown" onclick="toggleSideMenu();">' + $('.menu-container h2').text() + '</button>').insertBefore('.menu-container');
+        $('<button type="button" class="mobile side-dropdown" onclick="toggleSideMenu();">' + $('.menu-container h2').text() + '</button>').prependTo('.menu-container');
     
         handleMobileWindow();
     
@@ -216,9 +216,9 @@ function handleInteriorMenus() {
     
         function handleMobileWindow() {
             if ($(window).width() < 992) {
-                $('.menu-container').slideUp();
+                $('.menu-container .side-menu').slideUp();
             } else {
-                $('.menu-container').slideDown();
+                $('.menu-container .side-menu').slideDown();
             }
     
         }
@@ -227,7 +227,8 @@ function handleInteriorMenus() {
 }
 
 function toggleSideMenu() {
-    $('.menu-container').slideToggle(600, 'swing');
+    $('.menu-container .side-menu').slideToggle(600, 'swing');
+    $('button.side-dropdown').toggleClass('open');
 }
 
 function handleLeadership() {
