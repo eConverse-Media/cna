@@ -202,11 +202,11 @@ img {
 
 /***  interior grey tile ***/
 .grey-tile {
-    background: #fafafa;
-    border-radius: 3px;
+    background: #E6EEF3;
+    border-radius: 0;
 }
 .grey-tile {
-    padding: 20px 30px 15px 30px;
+    padding: 30px;
     text-align: left;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -214,6 +214,14 @@ img {
 .grey-tile h2,
 .grey-tile h3 {
     margin-top: 0px;
+    margin-bottom: 10px;
+}
+.grey-tile hr {
+    margin: 30px -30px;
+    background-color: #D0DBE3;
+}
+.grey-tile p:last-of-type {
+    margin-bottom: 0;
 }
 
 /*** default line style ***/
@@ -749,6 +757,14 @@ td.ProfilePic > a > img {
 #HEADER > .col-md-12,
 #MPheader > div.row > .col-md-12 {
     padding: 0;
+}
+.skiplinkholder a, .skiplinkholder a:link, .skiplinkholder a:visited {
+    left: -500%;
+	top: -250px;
+}
+.skiplinkholder a:focus, .skiplinkholder a:active {
+    left: 0;
+	top: 0;
 }
 
 /****** top bar ******/
@@ -2068,6 +2084,46 @@ td.ProfilePic > a > img {
 .leadership .text-container p {
     font-size: 16px;
     line-height: 22px;
+}
+
+/************ blog entries ************/
+
+.blogs-block {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: none;
+}
+.blogs-block #PageTitleH1 {
+    font-size: 34px;
+    line-height: 42px;
+    margin-top: 60px !important;
+    margin-bottom: 30px !important;
+    padding: 0;
+}
+.blogs-block div[id*="UpdatePanel"] > .row.margin-bottom-medium:first-child .col-md-2 {
+    display: none;
+}
+
+/************ blockquote styling ************/
+
+blockquote {
+    border: none;
+    margin-left: 0;
+    background: #EFF5F8;
+    padding: 30px;
+    color: #020451;
+    margin-bottom: 40px;
+}
+blockquote h3 {
+    color: #020451;
+}
+blockquote p {
+    font-size: 16px;
+    line-height: 22px;
+}
+blockquote::before,
+blockquote::after {
+    display: none;
 }
 
 /************ responsive ************/
