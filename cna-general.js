@@ -206,9 +206,7 @@ function handleInteriorMenus() {
     
         // handle mobile dropdown
     
-        $('<button type="button" class="mobile side-dropdown" onclick="toggleSideMenu();">Pages in this section</button>').insertBefore('.menu-container');
-    
-        $('.page-title-h2').clone().addClass('mobile').removeClass('desktop').insertBefore('.side-dropdown');
+        $('<button type="button" class="mobile side-dropdown" onclick="toggleSideMenu();">' + $('.menu-container h2').text() + '</button>').insertBefore('.menu-container');
     
         handleMobileWindow();
     
