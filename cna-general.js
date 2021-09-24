@@ -249,8 +249,45 @@ function handleLeadership() {
             $(self).removeClass('is-hovered');
         });
     });
-    
 
+}
+
+function handleEvents() {
+    $('.home .HLEventList ul li').each(function () {
+        var self = $(this),
+            link = $(self).find('h3 a'),
+            href = $(link).attr('href'),
+            target = $(link).attr('target');
+
+        if (target == '_blank') {
+            $(self).wrapInner('<a href="' + href + '" target="_blank" />');
+        } else {
+            $(self).wrapInner('<a href="' + href + '" />');
+        }
+
+        $(link).contents().unwrap();
+    });
+}
+
+function handleFeaturedNews() {
+    $('.featured-news .Content ul li').each(function () {
+        var self = $(this);
+        handleAjaxCall(self);
+
+        $(self).find('.text-container').prepend('<h4>Featured</h4>');
+        $(self).find('p[id*="Description"] a[id*="ShowMore"]').appendTo($(self).find('.text-container')); 
+    });
+}
+
+function handleACLCommas() {
+    $('.HLLandingControl.SearchResults ul li').each(function() {
+        var byline = $(this).find('.ByLine');
+        var byLineLink = $(byline).find('a[id*="Name"]');
+        if (byLineLink.length === 0) {
+            var trimmedByline = $(byline).text().trim().slice(2, $(byline).text().trim().length);
+            $(byline).text(trimmedByline);
+        }        
+    });
 }
 
 $(function () {
@@ -265,4 +302,7 @@ $(function () {
     handleAdModules();
     handleInteriorMenus();
     handleLeadership();
+    handleEvents();
+    handleFeaturedNews();
+    handleACLCommas();
 });
