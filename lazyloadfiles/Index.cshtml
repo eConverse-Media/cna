@@ -1,0 +1,13 @@
+﻿@model CNA.Feature.Ads.Models.GeneralAdInfo
+@using Sitecore.Mvc
+
+<div class="general-ad__wrapper">
+    <div class="general-ad__container" sliderHeight=@Model.ContainerHeight>
+        <div class="general-ad__slider">
+            <div class="advertisement-text-column">
+                @Sitecore.Globalization.Translate.Text("side-ad-message")
+            </div>
+            @Html.Raw(Model.ScriptlessTag)
+        </div>
+    </div>
+</div>
