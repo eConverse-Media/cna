@@ -54,8 +54,8 @@ body {
 .ideation-home .alert.alert-success, 
 .ideation-detail .alert.alert-success {
     color: inherit;
-    background-color: #f9f9f9;
-    border-color: #f5f5f5;
+    background-color: #E6EEF3;
+    border-color: #D0DBE3;
 }
 
 /*** fix Add Event button styling ***/
@@ -346,16 +346,16 @@ h1, .h1 {
 }
 h2, .h2,
 .HLLandingControl .heading h2,
-h2 a,
-h2 a:hover,
-h2 a:focus {
+h2 a:not(.btn),
+h2 a:not(.btn):hover,
+h2 a:not(.btn):focus {
     color: #020451;
     font-size: 34px;
     line-height: 1.14;
     font-weight: 300;
 }
-h2 a:hover,
-h2 a:focus {
+h2 a:not(.btn):hover,
+h2 a:not(.btn):focus {
     text-decoration: underline;
 }
 .interior .HtmlContent h2 {
@@ -462,6 +462,13 @@ input:focus {
     border-color: #020451;
     background: transparent;
 }
+.btn-primary .caret {
+    border-top-color: #020451;
+}
+.form-control.btn-group .btn-default,
+.post-message-contributed-content .validate-contribution .btn-group .dropdown-toggle.btn-default {
+    background-color: #fff;
+}
 .make-buttons em a:hover,
 .make-buttons em a:focus,
 .btn-primary:hover,
@@ -489,6 +496,10 @@ input:focus {
     color: #fff;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12), 0px 4px 14px rgba(0, 0, 0, 0.1);
 }
+.btn-primary:hover .caret,
+.btn-primary:focus .caret {
+    border-top-color: #fff;
+}
 .make-buttons.secondary em a,
 .btn-success,
 .btn-info,
@@ -503,6 +514,10 @@ input:focus {
     color: #0089A3;
     border-color: #0089A3;
     background: transparent;
+}
+.btn-success .caret,
+.btn-info .caret {
+    border-top-color: #0089a3;
 }
 .make-buttons.secondary em a:hover,
 .make-buttons.secondary em a:focus,
@@ -535,6 +550,12 @@ input:focus {
     color: #fff;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12), 0px 4px 14px rgba(0, 0, 0, 0.1);
 }
+.btn-info:hover .caret,
+.btn-info:focus .caret,
+.btn-success:hover .caret,
+.btn-success:focus .caret {
+    border-top-color: #fff;
+}
 .make-buttons.white em a {
     color: #fff;
     border-color: #fff;
@@ -557,6 +578,23 @@ input:focus {
     background: #212370;
     border-color: #212370;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12), 0px 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/*** interior buttons ***/
+.mail-option .chk-all {
+    padding: 12px 20px;
+}
+.custom-search-form .btn,
+.faceted-search-main .btnSearch,
+div[id*="EmailAddressPanel"] .input-group-btn .btn {
+    padding: 6px 10px 7px 10px;
+}
+.faceted-search-main .input-group-btn>.btn+.btnSearch {
+    margin-left: 0;
+}
+a[id*="MessageDisplay_lnkBackAfter"] {
+    padding: 0;
+    border: none;
 }
 
 /****** links ******/
@@ -1207,6 +1245,10 @@ td.ProfilePic > a > img {
     margin-top: 0;
     margin-bottom: 0;
 }
+.HLLandingControl ul li,
+.HLLandingControl ol li {
+    border-bottom: 1px solid #D0DBE3;
+}
 
 /****** latest news ******/
 
@@ -1302,10 +1344,10 @@ td.ProfilePic > a > img {
     padding: 0;
     flex-basis: calc(33.3333333% - 30px);
 }
-.latest-news-list .SearchResults.HLLandingControl ul li .title-row .col-md-3 {
+.SearchResults.HLLandingControl ul li .title-row .col-md-3 {
     display: none;
 }
-.latest-news-list .SearchResults.HLLandingControl ul li .title-row .col-md-9 {
+.SearchResults.HLLandingControl ul li .title-row .col-md-9 {
     width: 100%;
 }
 .latest-news-list .HLLandingControl ul li h3 {
@@ -2100,9 +2142,9 @@ td.ProfilePic > a > img {
 
 .menu-container {
     width: 270px;
+    margin-top: 65px;
 }
 .menu-container h2 {
-    margin-top: 65px;
     font-weight: 300;
     color: #4F5266;
     font-size: 24px;
@@ -2218,7 +2260,8 @@ td.ProfilePic > a > img {
     margin-bottom: 30px !important;
     padding: 0;
 }
-.blogs-block div[id*="UpdatePanel"] > .row.margin-bottom-medium:first-child .col-md-2 {
+.blogs-block div[id*="UpdatePanel"] div[id*="BackButtonContainer"],
+.blogs-block div[id*="UpdatePanel"] .margin-bottom-medium .col-md-2 {
     display: none;
 }
 
@@ -2242,6 +2285,55 @@ blockquote p {
 blockquote::before,
 blockquote::after {
     display: none;
+}
+
+/************ profile pages ************/
+a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
+    color: #0089A3;
+}
+.welcome-links {
+    white-space: normal;
+}
+.progress-bar-info {
+    background: #0089a3;
+}
+
+/*** nav tabs ***/
+.nav-tabs {
+    border-bottom: 1px solid #eff5f8;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #020451;
+}
+.nav li a .caret,
+.nav .open>a .caret, .nav .open>a:hover .caret, .nav .open>a:focus .caret {
+    border: none;
+    width: auto;
+    height: auto;
+    margin-left: 4px;
+    vertical-align: unset;
+}
+.nav a .caret::before {
+    font-family: CNA;
+    content: '\f019';
+    font-weight: 400;
+    font-size: 12px;
+    color: #0089A3;
+}
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus, .nav .open > a:hover, .nav .open > a:focus,
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    background-color: #EFF5F8;
+    color: #020451;
+    border-color: #eff5f8;
+}
+.dropdown-menu>li>a,
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus,
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+    color: #020451;
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus,
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+    background-color: #eff5f8;
 }
 
 /************ responsive ************/
