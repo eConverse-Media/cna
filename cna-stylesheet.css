@@ -2274,6 +2274,7 @@ blockquote {
     padding: 30px;
     color: #020451;
     margin-bottom: 40px;
+    margin-right: 0;
 }
 blockquote h3 {
     color: #020451;
@@ -2561,6 +2562,9 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
         margin-left: -15px;
         margin-right: -15px;
     }
+    .row > .col-md-6:first-child .ad-space {
+        margin-bottom: 30px;
+    }
     .hero-slider .hero-slide.slick-slide {
         display: block;
         padding-bottom: 100px;
@@ -2570,6 +2574,10 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     }
     .hero-slider .hero-slide .HtmlContent em:last-child {
         margin-bottom: 30px;
+    }
+    .hero-slider .hero-slide.slick-slide .clip-me {
+        margin-bottom: 10px;
+        height: 300px;
     }
     .top-cards > .col-md-12 {
         flex-wrap: wrap;
@@ -2823,7 +2831,7 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
         font-family: inherit;
     }
     .our-mission {
-        padding: 40px 15px;
+        padding: 40px 0;
     }
     .ad-module-3 {
         padding: 30px;
