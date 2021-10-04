@@ -198,10 +198,12 @@ function handleInteriorMenus() {
         for (var i = 0; i < menuLinks.length; i++) {
             var linkUrl = $(menuLinks[i]).attr('href');
     
-            if (url == linkUrl) {
+            if ((url == linkUrl) ||
+             (url.indexOf('blogs') > -1 && 
+            linkUrl.indexOf('news-releases') > -1)) {
                 $(menuLinks[i]).parent().addClass('active-item');
                 $(menuLinks[i]).closest('ul.side-menu > li').addClass('active-secondary-nav');
-            }
+            } 
         }
     
         // handle mobile dropdown
@@ -290,6 +292,25 @@ function handleACLCommas() {
     });
 }
 
+function handleAdSpace() {
+    $('.ad-space.full-width, .ad-space.half-width').wrapAll('<div class="row row-wide ad-wrapper" />');
+    $('.ad-wrapper').appendTo('#MainCopy_ContentWrapper');
+    $('.ad-space.half-width').wrap('<div class="col-md-6" />');
+    $('.ad-space.full-width').wrap('<div class="col-md-12" />');
+    $('.ad-wrapper .col-md-6').wrapAll('<div class="row row-wide" />');
+    $('.ad-wrapper .col-md-12').wrap('<div class="row row-wide" />');
+}
+
+function handleDateThumbnails() {
+    $('.HLLandingControl.HLEventList ul li, .upcoming-events .HLLandingControl ul li').each(function () {
+        var self = $(this),
+            month = $(self).find('.date-block .calendar-month span').text();
+    
+        month = month.substring(0, 3);
+        $(self).find('.date-block .calendar-month span').text(month);
+    });
+}
+
 $(function () {
     handleHeaderLinks();
     handleSearch();
@@ -305,4 +326,6 @@ $(function () {
     handleEvents();
     handleFeaturedNews();
     handleACLCommas();
+    handleAdSpace();
+    handleDateThumbnails();
 });

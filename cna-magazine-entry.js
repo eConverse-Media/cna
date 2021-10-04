@@ -42,8 +42,26 @@ function handleRelatedArticles() {
     });
 }
 
+function handleCategory() {
+    var tags = $('.user-content-hashtag').toArray(),
+        categoryList = ['practice', 'analysis', 'career', 'research', 'profiles', 'opinions'];
+
+    for (var i = 0; i < tags.length; i++) {
+        var tagText = $(tags[i]).text();
+        
+        tagText = tagText.substring(1, tags[i].length);
+        
+        for (var j = 0; j < categoryList.length; j++) {
+            if (tagText == categoryList[j]) {
+                $('.blogs-block').prepend('<h1>' + categoryList[j] + '</h1>');
+            }
+        }
+    }
+}
+
 
 $(function () {
     handleByLineAndImage();
     handleRelatedArticles();
+    handleCategory();
 });
