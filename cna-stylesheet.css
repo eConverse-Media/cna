@@ -1031,6 +1031,10 @@ figure.fig-right {
     background: #0089A3;
     text-decoration: none;
 }
+.language-btn-link,
+.blogs-block pre {
+    display: none;
+}
 
 /****** logo ******/
 
@@ -2808,6 +2812,9 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     .bottom-cta > .col-md-12 > .ContentItemHtml:first-child {
         width: 100%;
         margin-right: 0;
+    }
+    .home .ad-space {
+        margin-bottom: 80px;
     }
     @supports (clip-path: url()) {
         .clip-me {
