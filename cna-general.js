@@ -1,44 +1,3 @@
-function handleHeaderLinks() {
-    var links = $('#MPAuxNav ul.level1 li');
-    $('#MPheader > div.row:first-child > .col-md-12').prepend('<ul class="left-top-links" />')
-    $(links).each(function () {
-        var self = $(this),
-            text = $(self).text();
-
-        text = text.toLowerCase();
-        text = $.trim(text);
-
-        if (text.indexOf('canadian nurse journal') > -1 ||
-        text.indexOf('nursing jobs') > -1) {
-            $(self).appendTo('.left-top-links');
-        }
-
-    });
-}
-
-function handleSearch() {
-    $('#MPheader > div.row:first-child > .col-md-12').append('<div class="header-search"><button class="search-btn-top desktop" onclick="toggleSearch();" type="button" /></div>');
-    $('.search-bar-top .form-control').attr('placeholder', 'Search...');
-    $('#Logo').after('<button class="search-btn-top mobile" onclick="toggleSearch();" type="button" />');
-}
-
-function toggleSearch() {
-    if ($('.search-bar-top').hasClass('open')) {
-        $('.search-bar-top').removeClass('open');
-    } else {
-        $('.search-bar-top').addClass('open');
-        $('.search-bar-top .form-control').focus();
-    }
-}
-
-function handleLanguageButton(windowWidth) {
-    if (windowWidth > 991) {
-        $('.language-btn').prependTo('#MPheader > div.row:first-child > .col-md-12');
-    } else {
-        $('.language-btn').insertAfter('#Logo');
-    }
-}
-
 function handleFlexContentItems() {
     $('.flex-content-item').each(function () {
         var self = $(this).find('.HtmlContent');
@@ -120,18 +79,6 @@ function handleHero() {
         prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="cna cna-chevron-left"></i></button>'
     });
 
-}
-
-function handleMobileHeader() {
-    var width = $(window).width();
-
-    handleLanguageButton(width);
-
-    $(window).on('resize orientationChange', function () {
-        width = $(window).width();
-
-        handleLanguageButton(width);
-    });
 }
 
 function handleAdModules() {
@@ -318,14 +265,11 @@ function handleDateThumbnails() {
 }
 
 $(function () {
-    handleHeaderLinks();
-    handleSearch();
     handleFlexContentItems();
     handleCTAButtons();
     handleCTATiles();
     handleTestimonials();
     handleHero();
-    handleMobileHeader();
     handleAdModules();
     handleInteriorMenus();
     handleLeadership();
