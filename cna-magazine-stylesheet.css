@@ -1,0 +1,119 @@
+/************ basic resets from main stylesheet ************/
+
+/****** header ******/
+
+#HEADER #MPheader > div.row:first-child {
+    background: #073375;
+}
+#HEADER #MPheader > div#Logo.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 20;
+}
+.search-btn-top {
+    color: #0089A3;
+    font-size: 24px;
+    line-height: 1;
+}
+#NAV {
+    left: 210px;
+    right: 210px;
+    z-index: 30;
+    position: absolute;
+    bottom: 20px;
+}
+.navbar-nav {
+    float: none;
+    display: flex;
+    justify-content: center;
+}
+.language-btn a {
+    background: #fff;
+    color: #073375;
+}
+.make-buttons.teal em a {
+    color: #fff;
+    background: #0089A3;
+    border-color: #0089A3;
+}
+.make-buttons.teal em a:hover,
+.make-buttons.teal em a:focus{
+    border-color: #0089a3;
+    color: #0089a3;
+    background: #fff;
+}
+
+/****** megamenu ******/
+.navbar-nav>li>.dropdown-menu {
+    width: 100vw;
+    height: calc(100vh - 105px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.navbar-nav .dropdown-menu ul.dropdown-submenu {
+    display: block;
+    position: absolute;
+    left: 200px;
+    opacity: 0;
+    z-index: -1;
+    top: 0;
+}
+.navbar-nav li.dropdown-submenu {
+    position: static;
+    width: 180px;
+}
+
+.navbar-nav li.dropdown-submenu:hover ul.dropdown-submenu,
+.navbar-nav li.dropdown-submenu:focus ul.dropdown-submenu {
+    opacity: 1;
+    z-index: 10;
+}
+
+/****** margins between sections ******/
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
+/************ ad space ************/
+
+.home .ad-space {
+    margin-bottom: 0;
+}
+
+/************ newsletter subscription ************/
+
+.newsletter-subscription.bg-navy {
+    padding: 85px 0;
+}
+.newsletter-subscription h2,
+.newsletter-subscription p {
+    color: #fff;
+}
+.newsletter-subscription > .col-md-12 > .row-wide {
+    position: relative;
+    min-height: 170px;
+}
+.newsletter-subscription > .col-md-12 > .row-wide::before {
+    font-family: CNA;
+    content: '\f02e';
+    color: #073375;
+    font-size: 170px;
+    line-height: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+}
+
+/************ responsiveness ***********/
+
+@media (max-width: 1430px) {
+    .newsletter-subscription > .col-md-12 > .row-wide::before {
+        right: 15px;
+    }
+}

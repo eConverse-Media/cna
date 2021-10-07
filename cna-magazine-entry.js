@@ -61,7 +61,7 @@ function handleCategory() {
 
 
 $(function () {
-    handleByLineAndImage();
+    // handleByLineAndImage();
     handleRelatedArticles();
     handleCategory();
 });

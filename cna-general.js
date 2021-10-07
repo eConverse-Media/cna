@@ -254,8 +254,8 @@ function handleLeadership() {
 
 }
 
-function handleEvents() {
-    $('.home .HLEventList ul li').each(function () {
+function handleEventsAndLatestNews() {
+    $('.home .HLEventList ul li, .latest-news-list .Content ul li').each(function () {
         var self = $(this),
             link = $(self).find('h3 a'),
             href = $(link).attr('href'),
@@ -272,6 +272,12 @@ function handleEvents() {
 }
 
 function handleFeaturedNews() {
+
+    // handle 'see more news' button on mobile
+    $('.news-title .HtmlContent').clone().addClass('mobile make-buttons').insertAfter('.latest-news-list');
+    $('.news-title .HtmlContent:not(.mobile)').addClass('desktop');
+
+    // handle featured news image
     $('.featured-news .Content ul li').each(function () {
         var self = $(this);
         handleAjaxCall(self);
@@ -323,7 +329,7 @@ $(function () {
     handleAdModules();
     handleInteriorMenus();
     handleLeadership();
-    handleEvents();
+    handleEventsAndLatestNews();
     handleFeaturedNews();
     handleACLCommas();
     handleAdSpace();

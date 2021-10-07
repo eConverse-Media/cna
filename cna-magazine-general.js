@@ -1,5 +1,5 @@
 function handleSearch() {
-    $('#MPheader > div.row:first-child > .col-md-12').append('<div class="header-search"><button class="search-btn-top desktop" onclick="toggleSearch();" type="button" /></div>');
+    $('#MPheader #Logo').append('<div class="header-search"><button class="search-btn-top desktop" onclick="toggleSearch();" type="button" /></div>');
     $('.search-bar-top .form-control').attr('placeholder', 'Search...');
     $('#Logo').after('<button class="search-btn-top mobile" onclick="toggleSearch();" type="button" />');
 }
@@ -33,7 +33,44 @@ function handleMobileHeader() {
     });
 }
 
+function handleHeaderLinks() {
+    var links = $('#MPAuxNav ul.level1 li');
+    $('#MPheader > div.row:first-child > .col-md-12').prepend('<ul class="left-top-links" />')
+    $(links).each(function () {
+        var self = $(this),
+            text = $(self).text();
+
+        text = text.toLowerCase();
+        text = $.trim(text);
+
+        if (text.indexOf('canadian nurses association') > -1 ||
+        text.indexOf('nursing jobs') > -1) {
+            $(self).appendTo('.left-top-links');
+        }
+
+    });
+}
+
+function handleCTATiles() {
+    $('.cta-tile .HtmlContent').each(function () {
+        var self = $(this),
+            link = $(self).find('a'),
+            href = $(link).attr('href'),
+            target = $(link).attr('target');
+
+        if (target == '_blank') {
+            $(self).wrapInner('<a href="' + href + '" target="_blank" rel="noopener" />');
+        } else {
+            $(self).wrapInner('<a href="' + href + '" />');
+        }
+
+        $(link).hide();
+    });
+}
+
 $(function () {
     handleSearch();
     handleMobileHeader();
+    handleHeaderLinks();
+    handleCTATiles();
 });
