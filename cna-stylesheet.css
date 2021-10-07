@@ -1673,7 +1673,7 @@ figure.fig-right {
 .featured-event {
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-right: 80px;
+    padding-right: calc(50% - 685px);
 }
 .featured-event h4 {
     color: #3DD8A3;
@@ -1692,7 +1692,6 @@ figure.fig-right {
 }
 .featured-event .HtmlContent .text-container {
     flex-basis: 50%;
-    padding-right: calc(50% - 685px);
 }
 .featured-event .HtmlContent > *:not(:first-child) {
     padding-left: 80px;
@@ -2590,7 +2589,7 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
         padding-left: 0;
         padding-right: 0;
     }
-    .featured-event .HtmlContent .text-container {
+    .featured-event {
         padding-right: 15px;
     }
 }
