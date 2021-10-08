@@ -54,6 +54,8 @@ function handleHero() {
         var self = $(this);
 
         $(self).find('.clip-me').insertAfter($(self).find('.HtmlContent'));
+        $(self).find('.HtmlContent em').addClass('desktop');
+        $(self).find('em.desktop').clone().insertAfter($(self).find('.clip-me')).addClass('mobile').removeClass('desktop');
     });
     var heroSlides = $('.hero-slide').toArray(),
         count = heroSlides.length;

@@ -2531,12 +2531,12 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
 /****** mobile and desktop classes ******/
 
 @media (min-width: 992px) {
-    .mobile {
+    #MPOuterMost .mobile {
         display: none;
     }
 }
 @media (max-width: 991px) {
-    .desktop {
+    #MPOuterMost .desktop {
         display: none;
     }
 }
