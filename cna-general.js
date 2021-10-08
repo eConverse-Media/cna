@@ -1,3 +1,9 @@
+function handleSearch() {
+    $('#MPheader > div.row:first-child > .col-md-12').append('<div class="header-search"><button class="search-btn-top desktop" onclick="toggleSearch();" type="button" /></div>');
+    $('.search-bar-top .form-control').attr('placeholder', 'Search...');
+    $('#Logo').after('<button class="search-btn-top mobile" onclick="toggleSearch();" type="button" />');
+}
+
 function handleFlexContentItems() {
     $('.flex-content-item').each(function () {
         var self = $(this).find('.HtmlContent');
@@ -267,6 +273,7 @@ function handleDateThumbnails() {
 }
 
 $(function () {
+    handleSearch();
     handleFlexContentItems();
     handleCTAButtons();
     handleCTATiles();

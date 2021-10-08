@@ -1,9 +1,3 @@
-function handleSearch() {
-    $('#MPheader #Logo').append('<div class="header-search"><button class="search-btn-top desktop" onclick="toggleSearch();" type="button" /></div>');
-    $('.search-bar-top .form-control').attr('placeholder', 'Search...');
-    $('#Logo').after('<button class="search-btn-top mobile" onclick="toggleSearch();" type="button" />');
-}
-
 function toggleSearch() {
     if ($('.search-bar-top').hasClass('open')) {
         $('.search-bar-top').removeClass('open');
@@ -76,7 +70,6 @@ function handleMobileHeader() {
 }
 
 $(function () {
-    handleSearch();
     handleMobileHeader();
     handleHeaderLinks();
 });

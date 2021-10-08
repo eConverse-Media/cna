@@ -1,4 +1,8 @@
-
+function handleSearch() {
+    $('#MPheader #Logo').append('<div class="header-search"><button class="search-btn-top desktop" onclick="toggleSearch();" type="button" /></div>');
+    $('.search-bar-top .form-control').attr('placeholder', 'Search...');
+    $('#Logo').after('<button class="search-btn-top mobile" onclick="toggleSearch();" type="button" />');
+}
 
 function handleCTATiles() {
     $('.cta-tile .HtmlContent').each(function () {
@@ -18,5 +22,6 @@ function handleCTATiles() {
 }
 
 $(function () {
+    handleSearch();
     handleCTATiles();
 });
