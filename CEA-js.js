@@ -9,10 +9,10 @@ function handleHero() {
         $(this).find('.HtmlContent > *:not(img)').wrapAll('<div class="text-container" />');
         $(this).find('.HtmlContent > img').wrapAll('<div class="img-container" />');
 
-        var imgContainer = $('.img-container');
-        var ImgSrc = $(this).find('img').attr('src');
-        $(this).find('img').hide();
-        $(this).find(imgContainer).css('background-image', 'url("' + ImgSrc + '")');
+        // var imgContainer = $('.img-container');
+        // var ImgSrc = $(this).find('img').attr('src');
+        // $(this).find('img').hide();
+        // $(this).find(imgContainer).css('background-image', 'url("' + ImgSrc + '")');
     });
 
     $('.hero-slide').wrapAll('<div class="hero-slider slick-dotted" />');
@@ -31,11 +31,12 @@ function handleHomepageBlogs() {
     });
 
     $('.latest-articles .HLRecentBlogs .Content .col-md-12>ul').slick({
+        rows: 2,
         dots: false,
         arrows: true,
         infinite: true,
-        slidesToShow: 6,
-		slidesToScroll: 6,
+        slidesToShow: 3,
+		slidesToScroll: 3,
         nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="cna cna-arrow-right-2"></i></button>',
         prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="cna cna-arrow-left"></i></button>'
     });
@@ -93,9 +94,9 @@ function handleAjaxCall(self, asBackground) {
 
 function handleCTA() {
     $('.cta-section .HtmlContent > *:not(img)').wrapAll('<div class="text-container" />');
-    $('.cta-section .HtmlContent > img').wrapAll('<div class="img-container clip-me" />');
+    $('.cta-section .HtmlContent > img').wrapAll('<div class="img-container" />');
 
-    var imgContainer = $('.img-container');
+    var imgContainer = $('.cta-section .img-container');
     var imgSrc = $('.cta-section img').attr('src');
     $(imgContainer).css('background-image', 'url("' + imgSrc + '")');
 }
