@@ -31,10 +31,14 @@ function handleRelatedArticles() {
                 var text = $(tagsList[k]).text();
 
                 text = $.trim(text);
-                if ((tags[j] == text) && (count < 6)) {
+                if ((tags[j] == text) && (count < 3)) {
                     $(self).show();
                     count++;
                     hasTag = true;
+
+                    // handle JS for link
+                    handleLink(self);
+
                     break;
                 }
             }
@@ -59,9 +63,34 @@ function handleCategory() {
     }
 }
 
+function handleVideo() {
+    $('iframe[src*="youtube"]').wrap('<div class="embed-container" />');
+}
+
+function handleTags() {
+    $('.user-content-hashtag').each(function () {
+        var self = $(this),
+            text = $(self).text();
+
+        text = $.trim(text);
+        text = text.substring(1, text.length);
+
+        $(self).text(text);
+    });
+}
+function handleLatestArticles() {
+    $('.latest-magazine-articles ul li').each(function () {
+        handleAjaxCall(this);
+        handleLink(this);
+    });
+}
+
 
 $(function () {
     // handleByLineAndImage();
     handleRelatedArticles();
     handleCategory();
+    handleVideo();
+    handleTags();
+    handleLatestArticles();
 });
