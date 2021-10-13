@@ -1777,16 +1777,20 @@ figure.fig-right {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .3s;
 }
 .cta-tile a:hover,
-.cta-tile a:focus {
+.cta-tile a:focus,
+.cta-tile.grey a:hover::after,
+.cta-tile.grey a:focus::after {
     background: #020451;
+    transition: .3s;
 }
 .cta-tile.grey h3 {
     transition: .3s;
 }
-.cta-tile.grey a:hover::after,
-.cta-tile.grey a:focus::after {
+.cta-tile.grey a:hover,
+.cta-tile.grey a:focus {
     background: #EFF5F8;
     transition: .3s;
 }
