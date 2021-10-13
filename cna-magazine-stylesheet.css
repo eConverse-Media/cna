@@ -38,6 +38,10 @@
     background: #fff;
 }
 
+.interior #MainCopy_ContentWrapper {
+    padding-bottom: 0;
+}
+
 /*** table reset ***/
 
 table tr td {
@@ -307,11 +311,13 @@ table tr:nth-child(2n) {
     font-size: 16px;
     line-height: 1.5;
 }
-.blogs-block p {
+.blogs-block p,
+.blogs-block li {
     font-size: 18px;
     line-height: 31px;
     color: #0E191F;
     font-weight: 300;
+    margin-bottom: 10px;
 }
 .blogs-block p:first-child {
     font-size: 23px;
@@ -377,16 +383,62 @@ table tr:nth-child(2n) {
 .comments h2 {
     margin-bottom: 20px;
 }
-.comments .panel {
-    border-color: #E6EEF3;
-    padding: 20px;
+.comments .panel,
+.comments .panel .panel-body {
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}
+.comments .comments-block {
+    border: 1px solid #E6EEF3;
+    padding: 20px 20px 60px 20px;
+    position: relative;
     border-radius: 0;
     color: #0E191F;
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 20px;
 }
-.comments .panel .panel-body {
+.comments .comments-block > .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.comments .comments-block > .row:first-child > .col-md-12 {
+    position: static;
     padding: 0;
+}
+.comments .comments-block > .row:first-child > .col-md-12 > p:first-child {
+    display: none;
+}
+.comments .comments-block .ByLine {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.comments .comments-block .timeAgoFormat {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding-right: 0;
+    font-size: 14px;
+    line-height: 20px;
+}
+.comments .comments-block > .row > .col-md-1 {
+    width: 40px;
+    margin-right: 20px;
+    padding: 0;
+    float: left;
+}
+.comments .comments-block > .row > .col-md-11 {
+    width: calc(100% - 60px);
+    padding: 0;
+    float: left;
+}
+.comments .comments-block a[id*="ProfileImage"]:not([id*="NameLink"]):not([id*="ManageDropDown"]) {
+    width: 40px;
+    height: 40px;
 }
 
 /****** related articles ******/
@@ -477,6 +529,19 @@ table tr:nth-child(2n) {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+}
+.upper-ad-container iframe,
+.lower-ad-container iframe,
+.ad-container iframe {
+    margin-left: auto;
+    margin-right: auto;
+    display: inherit;
+}
+.advertisement-text {
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgba(14, 25, 31, 0.2);
+    display: block;
 }
 
 /*** fixing overflow properties breaking the ad styling ***/
@@ -622,6 +687,29 @@ table tr:nth-child(2n) {
     .hero-slider .slick-arrow.next-arrow {
         left: 60px;
         right: unset;
+    }
+    .newsletter-subscription.bg-navy.row-full .col-md-12 .row-wide .col-md-8 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .magazine-articles .HLLandingControl .Content ul {
+        display: block;
+    }
+    .magazine-articles .HLLandingControl {
+        width: 750px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .upper-ad-container {
+        display: none;
+    }
+    .ad-container {
+        padding-bottom: 40px;
+    }
+    .advertisement-text,
+    .lower-ad-container {
+        padding-top: 40px;
     }
 }
 
