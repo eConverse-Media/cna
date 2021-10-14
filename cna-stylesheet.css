@@ -3079,6 +3079,12 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     .ad-module-2 .logo-container {
         margin: 30px 0 40px 0;
     }
+
+    /* fixing bootstrap styling */
+    .navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus {
+        background: #EFF5F8;
+        color: #020451;
+    }
 }
 
 @media (max-width: 550px) {
