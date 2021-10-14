@@ -3082,7 +3082,7 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
 
     /* fixing bootstrap styling */
     .navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus {
-        background: #EFF5F8;
+        background: transparent;
         color: #020451;
     }
 }
