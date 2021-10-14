@@ -1,3 +1,16 @@
+function handleNav() {
+    $('#NAV .navbar-nav > li.dropdown').each(function () {
+        var self = $(this),
+            klass = $(self).find('> a').text();
+
+        klass = klass.toLowerCase();
+        klass = $.trim(klass);
+        klass = klass.replace(/\s+/g, '-');
+
+        $(self).addClass(klass);
+    });
+}
+
 function handleSearch() {
     $('#MPheader #Logo').append('<div class="header-search"><button class="search-btn-top desktop" onclick="toggleSearch();" type="button" /></div>');
     $('.search-bar-top .form-control').attr('placeholder', 'Search...');
@@ -94,6 +107,7 @@ function handleCTA() {
 }
 
 $(function () {
+    handleNav();
     handleSearch();
     handleHero()
     handleCTA();
