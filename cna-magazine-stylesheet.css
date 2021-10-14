@@ -331,6 +331,44 @@ table tr:nth-child(2n) {
     font-weight: 300;
     color: #0E191F;
 }
+.blogs-block h6 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+/****** grey tile + blockquote ******/
+
+.blogs-block .grey-tile {
+    padding: 32px;
+}
+.blogs-block .grey-tile h3 {
+    font-size: 18px;
+    line-height: 1.66;
+    background: #0ecebb;
+    padding: 5px 8px;
+    color: #070707;
+    font-weight: 700;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+.blogs-block blockquote {
+    color: #fff;
+    background: #0ecebb;
+    font-size: 24px;
+    line-height: 1.16;
+    padding: 40px;
+    width: 280px;
+    float: right;
+    margin: 40px 0 40px 20px;
+    font-weight: 700;
+}
+.blogs-block blockquote p {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0;
+}
 
 /****** tags ******/
 
@@ -346,6 +384,11 @@ table tr:nth-child(2n) {
     background: #E6EEF3;
     border-radius: 0;
     margin-right: 10px;
+}
+.blogs-block .user-content-hashtag:hover,
+.blogs-block .user-content-hashtag:focus {
+    background: #0089A3;
+    color: #fff;
 }
 
 /****** stats ******/
@@ -376,9 +419,15 @@ table tr:nth-child(2n) {
     color: #073375;
     font-size: 20px;
     line-height: 26px;
-    border: 1px solid #E6EEF3;
+    background-color: #E6EEF3;
+    border: none;
     padding: 16px 20px;
     border-radius: 0;
+}
+.comments-btn button:hover,
+.comments-btn button:focus {
+    background-color: #0089A3;
+    color: #fff;
 }
 .comments h2 {
     margin-bottom: 20px;
@@ -481,6 +530,10 @@ table tr:nth-child(2n) {
     line-height: 1.3;
     margin-bottom: 0;
 }
+.magazine-articles .HLLandingControl .Content ul li > a:hover h3,
+.magazine-articles .HLLandingControl .Content ul li > a:focus h3 {
+    text-decoration: underline;
+}
 .latest-magazine-articles {
     margin-top: 40px;
 }
@@ -494,6 +547,23 @@ table tr:nth-child(2n) {
     height: 180px;
     width: 100%;
     margin-bottom: 20px;
+}
+.latest-magazine-articles .HLLandingControl ul li .img-container::before {
+    background: linear-gradient(0deg, rgba(2, 4, 81, 0.4), rgba(2, 4, 81, 0.4));
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: .3s;
+}
+.latest-magazine-articles .HLLandingControl ul li a:hover .img-container::before,
+.latest-magazine-articles .HLLandingControl ul li a:focus .img-container::before {
+    opacity: 1;
+    z-index: 10;
 }
 .latest-magazine-articles .HLLandingControl {
     margin-bottom: 0;
