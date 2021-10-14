@@ -70,6 +70,18 @@ table tr:nth-child(2n) {
     margin-top: 40px;
 }
 
+/****** header ******/
+
+.HLWelcome {
+    margin-right: 0;
+}
+#Welcome_LoginLink {
+    margin-right: 20px;
+}
+.Welcome button.btn-default.btn.imgButton {
+    display: none;
+}
+
 /************ ad space ************/
 
 .home .ad-space {

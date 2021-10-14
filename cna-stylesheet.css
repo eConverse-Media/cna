@@ -3052,6 +3052,10 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     .ad-module-3 {
         padding: 30px;
     }
+    #MainCopy_ContentWrapper > .row-wide > .col-md-12 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     /****** hiding homepage content on mobile ******/
     .latest-news-list .Content ul li:last-of-type,
     .home .HLEventList .Content ul li:last-of-type {

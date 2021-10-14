@@ -2,6 +2,39 @@ function showComments() {
     $('.comments').show();
 }
 
+function handleCookie() {
+    var num = 0,
+        cookies = document.cookie.split(';'),
+        pageUrl = window.location.href,
+        addCount = true;
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookieName = cookies[i].substring(0, cookies[i].indexOf('=')),
+            cookieValue = cookies[i].substring(cookies[i].indexOf('=') + 1, cookies[i].length);
+
+        if (cookieName == 'blogViews') {
+            debugger;
+            num = parseInt(cookieValue);
+        }
+
+        if (cookieName.indexOf('cookieUrl') > -1) {
+            if (cookieValue == pageUrl) {
+                addCount = false;
+            }
+        }
+    }
+
+    if (addCount) {
+        debugger;
+        num++;
+        var cookieExpiry = new Date();
+        cookieExpiry.setTime(cookieExpiry.getTime() + (30 * 24 * 60 * 60 * 1000));
+        cookieExpiry = 'expires=' + cookieExpiry.toUTCString();
+        document.cookie = 'blogViews=' + num + ';' + cookieExpiry + ';';
+        document.cookie = 'cookieUrl' + num + '=' + pageUrl + ';' + cookieExpiry + ';';
+    }
+}
+
 function handleByLineAndImage() {
     $('.blogs-block div[id*="ByLinePanel"]').closest('h4').addClass('hl-byline-container');
     $('.blogs-block h4:not(.hl-byline-container)').wrap('<div class="byline-image" />');
@@ -88,6 +121,7 @@ function handleLatestArticles() {
 
 $(function () {
     // handleByLineAndImage();
+    // handleCookie();
     handleRelatedArticles();
     handleCategory();
     handleVideo();
