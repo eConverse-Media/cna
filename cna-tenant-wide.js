@@ -94,8 +94,13 @@ function handleCTATiles() {
     });
 }
 
+function handleCTAButtons() {
+    $('.cta-button').wrapAll('<div class="cta-buttons" />');
+}
+
 $(function () {
     handleMobileHeader();
     handleHeaderLinks();
     handleCTATiles();
+    handleCTAButtons();
 });

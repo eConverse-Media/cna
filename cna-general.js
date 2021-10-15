@@ -13,10 +13,6 @@ function handleFlexContentItems() {
     });
 }
 
-function handleCTAButtons() {
-    $('.cta-button').wrapAll('<div class="cta-buttons" />');
-}
-
 function handleTestimonials() {
     $('.testimonial').wrapAll('<div class="testimonial-slider slick-dotted" />');
     $('.testimonial-slider').slick({
@@ -258,7 +254,6 @@ function handleDateThumbnails() {
 $(function () {
     handleSearch();
     handleFlexContentItems();
-    handleCTAButtons();
     handleTestimonials();
     handleHero();
     handleAdModules();

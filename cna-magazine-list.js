@@ -3,6 +3,7 @@ function handleBlogImages() {
         var self = $(this);
 
         handleAjaxCall(self);
+        handleLink(self);
     });
 }
 
