@@ -95,6 +95,51 @@ table tr:nth-child(2n) {
     margin-top: 40px;
 }
 
+/*** past issues link list ***/
+.issues-list ul {
+    margin-left: -30px;
+    margin-top: 15px;
+}
+.issues-list ul li {
+    padding: 20px 5px 10px 0px;
+    border-top: 1px solid #f4f4f4;
+    list-style-type: none;
+}
+.issues-list ul li:last-child {
+    border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 20px;
+}
+.issues-list ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: none;
+    color: #0089a3;
+    line-height: 5px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding-left: 28px;
+    position: relative;
+    display: block;
+}
+.issues-list ul li a::before {
+    font-family: CNA; /* change to appropriate kit/unicode */
+    content: '\f017'; /* chain link icon */
+    color: #333; /* change static icon colour */
+    position: absolute;
+    left: 0px;
+}
+.issues-list ul li a[target*="blank"]::before {
+    content: '\f012'; /* new window icon */ 
+}
+.issues-list ul li a:hover::before,
+.issues-list ul li a:focus::before {
+    color: #333; /* change hover icon colour */
+}
+.issues-list ul li a:hover,
+.issues-list ul li a:focus {
+    color: #333; /* change text hover colour */
+}
+
 /****** grey tiles with images ******/
 
 .grey-tile.img-tile {
