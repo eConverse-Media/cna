@@ -135,6 +135,29 @@ table tr:nth-child(2n) {
     display: none;
 }
 
+/*** nav ***/
+.navbar-nav>li>.dropdown-menu {
+    padding: 20px 0;
+}
+.navbar-nav .dropdown-menu>li>a {
+    color: #0E191F;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 1px 20px;
+}
+.navbar-nav .dropdown-menu>li>a::after {
+    display: none;
+}
+.navbar-nav .dropdown-menu>.active>a,
+.navbar-nav .dropdown-menu>.active>a:hover,
+.navbar-nav .dropdown-menu>.active>a:focus,
+.navbar-nav .dropdown-menu>li>a:hover,
+.navbar-nav .dropdown-menu>li>a:focus {
+    background: transparent;
+    text-decoration: underline !important;
+    color: #073375;
+}
+
 /************ ad space ************/
 
 .home .ad-space {
@@ -397,6 +420,10 @@ table tr:nth-child(2n) {
     font-family: CNA;
     margin-right: 10px;
     content: '\f02b';
+}
+.blogs-block .back-button:hover,
+.blogs-block .back-button:focus {
+    color: #073375;
 }
 .blogs-block h1 {
     color: #020451;

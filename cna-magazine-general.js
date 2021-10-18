@@ -117,58 +117,6 @@ function handleImageTiles() {
     });
 }
 
-var navOpen;
-
-function createObserver(elem) {
-    var observer = new MutationObserver(callback),
-        opts = {
-            attributes: true,
-            // childList: true,
-            subtree: true,
-            attributeFilter: ['class']
-        };
-    
-    function callback (mutations) {
-
-        if (!!($('#NAV .navbar-nav > li.open').html()) &&
-        !($('NAV').hasClass('nav-open'))) {
-            $('#NAV').addClass('nav-open');
-        } else if (!($('#NAV .navbar-nav > li.open').html()) &&
-        $('#NAV').hasClass('nav-open')) {
-            $('#NAV').removeClass('nav-open');
-        }
-
-        // for (let mutation of mutations) {
-        //     if (mutation.type === 'attributes') {
-        //         var classList = mutation.target.classList;
-        //         for (var i = 0; i < classList.length; i++) {
-        //             if (classList[i] == 'open') {
-        //                 navOpen = true;
-        //             }
-        //         }
-        //     }
-        // }
-
-        // if (!!navOpen && (!($('#NAV').hasClass('nav-open')))) {
-        //     $('#NAV').addClass('nav-open');
-        // } else if (!navOpen &&
-        //     $('#NAV').hasClass('nav-open')) {
-        //     $('#NAV').removeClass('nav-open');
-        // }
-    }
-    
-    observer.observe(elem, opts);
-}
-
-function handleNav() {
-
-    createObserver($('#NAV')[0]);
-
-    // $('#NAV .navbar-nav > li').each(function () {
-    //     createObserver(this);
-    // });
-}
-
 $(function () {
     handleNav();
     handleSearch();
@@ -176,5 +124,4 @@ $(function () {
     handleCTA();
     handleHomepageBlogs()
     handleImageTiles();
-    // handleNav();
 });
