@@ -58,6 +58,7 @@ function handleCategory() {
         for (var j = 0; j < categoryList.length; j++) {
             if (tagText == categoryList[j]) {
                 $('.blogs-block').prepend('<h1>' + categoryList[j] + '</h1>');
+                $('.blogs-block').prepend('<a class="back-button" href="' + categoryList[j] + '">Back</a>')
             }
         }
     }

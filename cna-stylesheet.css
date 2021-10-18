@@ -717,10 +717,12 @@ a[id*="MessageDisplay_lnkBackAfter"] {
 /****** rows and margins ******/
 
 @media (min-width: 992px) {
-    .row-5-7 > .col-md-4 {
+    .row-5-7 > .col-md-4,
+    .row-7-5 > .col-md-4 {
         width: 500px;
     }
-    .row-5-7 > .col-md-8 {
+    .row-5-7 > .col-md-8,
+    .row-7-5 > .col-md-8 {
         width: 700px;
     }
 }

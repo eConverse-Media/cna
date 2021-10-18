@@ -106,10 +106,22 @@ function handleCTA() {
     $(imgContainer).css('background-image', 'url("' + imgSrc + '")');
 }
 
+function handleImageTiles() {
+    $('.img-tile').each(function () {
+        var self = $(this),
+            image = $(self).find('img');
+
+        $(image).wrap('<div class="img-container" />');
+        handleBgImage($(self).find('.img-container'), $(self).find('.img-container'));
+        $(self).find('.img-container').prependTo(self);
+    });
+}
+
 $(function () {
     handleNav();
     handleSearch();
     handleHero()
     handleCTA();
     handleHomepageBlogs()
+    handleImageTiles();
 });
