@@ -739,6 +739,9 @@ a[id*="MessageDisplay_lnkBackAfter"] {
     margin-bottom: 80px;
 }
 .no-pageTitle-padding {
+    padding-top: 0;
+}
+.no-pageTitle-padding #MainCopy_ContentWrapper {
     padding-top: 60px;
 }
 

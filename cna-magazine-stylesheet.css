@@ -615,6 +615,9 @@ table tr:nth-child(2n) {
     width: 100%;
     margin-bottom: 20px;
 }
+.magazine-articles .HLLandingControl ul li .img-container.no-ajax-image {
+    background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/9ef06977-db41-454b-9e4c-2f6b1f15dcda/UploadedImages/Interior_Page_Images/default_blog.png');
+}
 .magazine-articles .HLLandingControl ul li .img-container::before {
     background: linear-gradient(0deg, rgba(2, 4, 81, 0.4), rgba(2, 4, 81, 0.4));
     content: '';
@@ -706,6 +709,21 @@ table tr:nth-child(2n) {
 }
 
 /************ article landing pages ************/
+
+.no-pageTitle-padding #MainCopy_ContentWrapper.article-landing-page {
+    padding-top: 0;
+}
+
+.landing-page-title {
+    background: rgba(2,4,81,0.85);
+    padding: 55px calc( 50% - 685px);
+    color: #fff;
+}
+.landing-page-title.large-h2 h2 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
 
 .article-landing-page .magazine-articles .Content {
     margin-left: -15px;
@@ -805,6 +823,14 @@ table tr:nth-child(2n) {
         margin-bottom: 10px;
         padding: 0;
     }
+    .navbar-nav li.topic .dropdown-menu li.dropdown-submenu > a:hover,
+    .navbar-nav li.topic .dropdown-menu li.dropdown-submenu > a:focus,
+    .navbar-nav li.sujets .dropdown-menu li.dropdown-submenu > a:hover,
+    .navbar-nav li.sujets .dropdown-menu li.dropdown-submenu > a:focus {
+        text-decoration: underline !important;
+        color: #073375;
+        background: transparent;
+    }
     .navbar-nav li.topic .dropdown-menu ul.dropdown-submenu li,
     .navbar-nav li.sujets .dropdown-menu ul.dropdown-submenu li {
         margin-bottom: 2px;
@@ -815,6 +841,13 @@ table tr:nth-child(2n) {
         font-size: 14px;
         line-height: 20px;
         font-weight: 300;
+    }
+    .navbar-nav li.topic .dropdown-menu ul.dropdown-submenu li a:hover,
+    .navbar-nav li.topic .dropdown-menu ul.dropdown-submenu li a:focus,
+    .navbar-nav li.sujets .dropdown-menu ul.dropdown-submenu li a:hover,
+    .navbar-nav li.sujets .dropdown-menu ul.dropdown-submenu li a:focus {
+        color: #073375;
+        text-decoration: underline;
     }
 }
 
