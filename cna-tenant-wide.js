@@ -47,7 +47,8 @@ function handleHeaderLinks() {
         if (text.indexOf('canadian nurse journal') > -1 ||
         text.indexOf('canadian nurses association') > -1 ||
         text.indexOf('nursing jobs') > -1) {
-            $(self).appendTo('.left-top-links');
+            $(self).addClass('mobile-link');
+            $(self).clone().removeClass('mobile-link').addClass('desktop-link').appendTo('.left-top-links');
         }
 
     });

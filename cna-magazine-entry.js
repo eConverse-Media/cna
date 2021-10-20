@@ -86,6 +86,10 @@ function handleLatestArticles() {
     });
 }
 
+function handlePageClass() {
+    $('#MPOuterMost').addClass('blog-viewer');
+}
+
 
 $(function () {
     // handleByLineAndImage();
@@ -94,4 +98,5 @@ $(function () {
     handleVideo();
     handleTags();
     handleLatestArticles();
+    handlePageClass();
 });

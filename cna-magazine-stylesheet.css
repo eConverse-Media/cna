@@ -23,6 +23,9 @@
     justify-content: space-between;
     position: relative;
     z-index: 20;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 25px;
 }
 
 .search-btn-top {
@@ -480,7 +483,7 @@ table tr:nth-child(2n) {
     margin-top: 30px;
     margin-bottom: 0;
 }
-.blogs-block h3 {
+.article-page .blogs-block h3 {
     color: #020451;
     font-size: 32px;
     line-height: 38px;
@@ -577,7 +580,8 @@ table tr:nth-child(2n) {
 .blogs-block .user-content-hashtag + br {
     display: none;
 }
-.blogs-block .user-content-hashtag {
+.blogs-block .user-content-hashtag,
+.content-tags a.label-search-tag {
     color: #073375;
     font-weight: 300;
     font-size: 14px;
@@ -586,17 +590,23 @@ table tr:nth-child(2n) {
     background: #E6EEF3;
     border-radius: 0;
     margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: none;
 }
 .blogs-block .user-content-hashtag:hover,
-.blogs-block .user-content-hashtag:focus {
+.blogs-block .user-content-hashtag:focus,
+.content-tags a.label-search-tag:hover,
+.content-tags a.label-search-tag:focus {
     background: #0089A3;
     color: #fff;
+    text-decoration: none;
 }
 
 /****** stats ******/
 
 .blogs-block div[id*="StatsContainer"] {
-    margin-top: 60px;
+    margin-top: 50px;
     margin-bottom: 60px;
 }
 .blogs-block div[id*="StatsContainer"] .label {
@@ -702,9 +712,6 @@ table tr:nth-child(2n) {
     margin-bottom: 20px;
     padding: 0;
 }
-.magazine-articles .HLLandingControl .Content {
-    overflow: hidden;
-}
 .magazine-articles .HLLandingControl .Content ul {
     margin: -15px;
     display: flex;
@@ -754,7 +761,8 @@ table tr:nth-child(2n) {
     width: 100%;
     margin-bottom: 20px;
 }
-.magazine-articles .HLLandingControl ul li .img-container.no-ajax-image {
+.magazine-articles .HLLandingControl ul li .img-container.no-ajax-image,
+.latest-articles .HLLandingControl ul li .img-container.no-ajax-image {
     background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/9ef06977-db41-454b-9e4c-2f6b1f15dcda/UploadedImages/Interior_Page_Images/default_blog.png');
 }
 .magazine-articles .HLLandingControl ul li .img-container::before {
@@ -824,7 +832,7 @@ table tr:nth-child(2n) {
 }
 
 /*** fixing overflow properties breaking the ad styling ***/
-#MPOuterMost {
+#MPOuterMost.blog-viewer {
     overflow-x: unset;
     overflow-y: unset;
 }
@@ -853,12 +861,17 @@ table tr:nth-child(2n) {
     padding-top: 0;
 }
 
-.landing-page-title {
+.landing-page-title,
+.topic-title {
     background: rgba(2,4,81,0.85);
     padding: 55px calc( 50% - 685px);
     color: #fff;
 }
-.landing-page-title.large-h2 h2 {
+.topic-title {
+    background: #020451;
+}
+.landing-page-title.large-h2 h2,
+.topic-title.large-h2 h2 {
     color: #fff;
     margin-top: 0;
     margin-bottom: 10px;
@@ -1027,7 +1040,8 @@ table tr:nth-child(2n) {
 /****** smaller screens only ******/
 
 @media (max-width: 1400px) {
-    .landing-page-title {
+    .landing-page-title,
+    .topic-title {
         padding-left: 15px;
         padding-right: 15px;
     }

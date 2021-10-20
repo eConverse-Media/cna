@@ -848,6 +848,10 @@ td.ProfilePic > a > img {
     line-height: 30px;
 }
 
+.ad-space {
+    text-align: center;
+}
+
 /****** left and right floated images ******/
 
 figure.fig-left {
@@ -2549,6 +2553,32 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
         display: none;
     }
 }
+@media (min-width: 551px) {
+    .mobile-link {
+        display: none;
+    }
+}
+@media (max-width: 550px) {
+    .desktop-link {
+        display: none;
+    }
+    #MPheader > .row:first-child > .col-md-12 > .pull-right:last-child {
+        float: none !important;
+    }
+    #MPAuxNav {
+        display: block;
+    }
+    #MPAuxNav ul.level1 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #MPAuxNav ul.level1 li,
+    #AuxMenu,
+    #MPAuxNav ul.level1 {
+        float: none !important;
+    }
+}
 
 @media (min-width: 1200px) {
     .row-full > .col-md-12,
@@ -2571,6 +2601,16 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     }
     .home .HLEventList div[id*="BottomLink"] {
         right: 60px;
+    }
+}
+
+@media (max-width: 1670px) {
+    .hero-slider.slick-slider.slick-dotted {
+        padding-left: 135px;
+        padding-right: 135px;
+    }
+    .hero-slider ul.slick-dots {
+        left: 135px;
     }
 }
 
@@ -2985,6 +3025,9 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
 }
 
 @media (max-width: 768px) {
+    .desktop-img img {
+        display: none;
+    }
     .navbar-collapse {
         margin-left: 0;
         margin-right: 0;
