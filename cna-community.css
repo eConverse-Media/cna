@@ -1,0 +1,78 @@
+.hero .HtmlContent {
+    display: flex;
+    flex-wrap: wrap;
+    background: #020451;
+}
+
+.hero .HtmlContent>div:first-of-type {
+    flex-basis: 41.66666%;
+}
+
+.hero .HtmlContent>div:last-of-type {
+    flex-basis: 58.33333%;
+}
+
+.hero .HtmlContent .text-container {
+    align-self: center;
+    position: relative;
+    padding-left: calc(50% - 585px);
+    background: #020451;
+}
+
+.hero .HtmlContent .text-container>* {
+    margin: 0;
+    color: #fff;
+}
+
+.hero .HtmlContent .text-container h1 {
+    margin-bottom: 10px;
+}
+
+.hero .HtmlContent .text-container>em {
+    margin-top: 30px;
+}
+
+.hero.make-buttons em:first-of-type a {
+    border-color: transparent;
+    background: #0089A3;
+    color: #fff;
+}
+
+.hero.make-buttons em:last-of-type a {
+    border-color: #fff;
+    background-color: #fff;
+    color: #020451;
+}
+
+
+/* featured member */
+
+.featured-member .HtmlContent {
+    background: #020451;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 10px 30px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+}
+
+.featured-member .HtmlContent * {
+    color: #fff;
+    margin: 0;
+}
+
+.featured-member .HtmlContent .img-container img {
+    display: none;
+}
+
+.featured-member .HtmlContent .member-info {
+    display: flex;
+}
+
+.featured-member .HtmlContent .member-details {
+    margin-left: 20px;
+}
+
+.featured-member .HtmlContent .member-info>div:first-of-type {
+    border: 2px solid #3DD8A3;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+}
