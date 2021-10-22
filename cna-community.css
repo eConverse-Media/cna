@@ -2,7 +2,8 @@
 
 .small-h2 h2,
 .small-h2 .HLLandingControl h2,
-.small-h2 .HLLandingControl .heading h2 {
+.small-h2 .HLLandingControl .heading h2,
+.current-members .panel-heading .panel-title {
     color: #4F5266;
     font-size: 14px;
     line-height: 20px;
@@ -13,7 +14,11 @@
 
 .make-buttons.teal em a,
 .home .HLRecentBlogs div[id*="BottomLink"] a,
-.community-resources div[id*="MoreLink"] a {
+.community-resources div[id*="MoreLink"] a,
+.latest-files .HLLandingControl a[id*="More"]:hover,
+.latest-files .HLLandingControl a[id*="More"]:focus,
+.latest-discussions .HLLandingControl a[id*="More"]:hover,
+.latest-discussions .HLLandingControl a[id*="More"]:focus {
     color: #fff;
     background: #0089A3;
     border-color: #0089A3;
@@ -35,6 +40,31 @@
     padding: 7px 19px;
     font-size: 12px;
     line-height: 15px;
+}
+.pagination>li>a, .pagination>li>span {
+    font-size: 14px;
+    line-height: 19px;
+    color: #0E191F;
+    font-weight: 700;
+    padding: 8px 12px;
+    border: 1px solid #DBE0E4;
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span,
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+    border-radius: 0;
+}
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+    background: #0089A3;
+    border: 1px solid #DBE0E4;
+}
+.form-control {
+    color: #2D2D2D;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid #E8EBED;
 }
 
 /****** header ******/
@@ -93,7 +123,8 @@
 
 /****** homepage ******/
 
-.home #MainCopy_ContentWrapper {
+.home #MainCopy_ContentWrapper,
+.community #MainCopy_ContentWrapper {
     background-color: #EFF5F8;
 }
 
@@ -436,7 +467,8 @@
     width: 100%;
 }
 .recent-discussions ul li .title-row .col-md-2.col-sm-2 a[id*="ProfileImage"],
-.home .HLEngagement ul li .title-row a[id*="ProfileLink"] {
+.home .HLEngagement ul li .title-row a[id*="ProfileLink"],
+.latest-files .HLLandingControl ul li .title-row .col-md-2.col-sm-2 a[id*="ProfileImage"] {
     border: 2px solid #3DD8A3;
     width: 50px;
     height: 50px;
@@ -522,30 +554,43 @@
 /****** upcoming events ******/
 
 .upcoming-events,
-.home .HLEngagement {
+.home .HLEngagement,
+.latest-files,
+.latest-discussions {
     background: #fff;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 10px 30px rgba(0, 0, 0, 0.06);
     padding: 0;
 }
-.upcoming-events .HLEventList {
+.upcoming-events .HLEventList,
+.latest-files .HLLandingControl,
+.latest-discussions .HLLandingControl {
     padding: 0;
     margin: 0;
 }
 .upcoming-events .HLLandingControl h2,
-.home .HLEngagement h2 {
+.home .HLEngagement h2,
+.latest-files .HLLandingControl h2,
+.latest-discussions .HLLandingControl h2,
+.current-members .panel-heading .panel-title {
     padding: 10px 20px;
     border-bottom: 1px solid rgba(33,35,112,0.1);
 }
 .upcoming-events .HLLandingControl .Content,
-.home .HLEngagement .Content {
+.home .HLEngagement .Content,
+.latest-files .HLLandingControl .Content,
+.latest-discussions .HLLandingControl .Content {
     padding: 20px;
 }
-.upcoming-events .HLLandingControl .Content ul {
+.upcoming-events .HLLandingControl .Content ul,
+.latest-files .HLLandingControl .Content ul,
+.latest-discussions .HLLandingControl .Content ul {
     display: block;
     margin: 0;
     padding: 0;
 }
-.upcoming-events .HLLandingControl .Content ul li {
+.upcoming-events .HLLandingControl .Content ul li,
+.latest-files .HLLandingControl .Content ul li,
+.latest-discussions .HLLandingControl .Content ul li {
     padding: 0 0 20px 0;
 }
 .upcoming-events .HLEventList div[id*="BottomLink"] {
@@ -553,22 +598,37 @@
     top: auto;
     right: auto;
 }
-.upcoming-events .HLLandingControl .Content ul li p.break-word {
+.upcoming-events .HLLandingControl .Content ul li p.break-word,
+.latest-files .HLLandingControl .Content ul li p {
     margin-bottom: 0;
 }
 .upcoming-events .HLEventList ul li .title-row h3 {
     margin-bottom: 4px;
+}
+.upcoming-events .HLEventList ul li .timeAgoFormat,
+.upcoming-events .HLEventList ul li div[id*="LocationPanel"] {
+    color: #4F5266;
+    font-size: 14px;
+    line-height: 20px;
 }
 .upcoming-events .HLEventList ul li .timeAgoFormat::before, 
 .upcoming-events .HLEventList ul li div[id*="LocationPanel"]::before {
     display: none;
 }
 .upcoming-events a[id*="LinkToCalendar"],
-.home .HLEngagement .mam-button em a {
+.upcoming-events a[id*="LinkToCommunityCalendar"],
+.home .HLEngagement .mam-button em a,
+.latest-files .HLLandingControl a[id*="More"],
+.latest-discussions .HLLandingControl a[id*="More"] {
     display: block;
     background-color: #EFF5F8;
     border-color: #EFF5F8;
     text-align: center;
+}
+.upcoming-events div[id*="More"],
+.latest-files .HLLandingControl div[id*="BottomLink"] .col-md-12,
+.latest-discussions .HLLandingControl div[id*="BottomLink"] .col-md-12 {
+    padding: 0;
 }
 
 /****** most active members ******/
@@ -759,6 +819,87 @@
     content: '\f038';
 }
 
+/************ community landing page ************/
+
+
+/****** announcement ******/
+
+.announcement {
+    background: #020451;
+}
+.announcement .HLLandingControl .heading h2 {
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 10px 20px;
+}
+.announcement .HLLandingControl ul li {
+    padding: 20px 20px 50px 20px;
+    border: none;
+    margin: 0;
+}
+.announcement .HLLandingControl ul li,
+.announcement .HLLandingControl ul li h3 a,
+.announcement .HLLandingControl ul li .ByLine {
+    color: #fff;
+}
+.announcement .HLLandingControl ul li h3 {
+    margin-bottom: 10px;
+}
+
+/****** community members ******/
+
+.current-members div[id*="UpdatePanel"] > .panel {
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 10px 30px rgba(0, 0, 0, 0.06);
+    padding: 0;
+}
+.current-members .panel-body {
+    padding: 20px;
+}
+.current-members span[id*="MemberCountLink"] {
+    font-weight: 300 !important;
+    color: #2D2D2D;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.current-members .panel-heading {
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+.current-members .panel-member {
+    border: 1px solid #E8EBED;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 145px;
+    padding: 20px;
+}
+.current-members .panel-member .GroupMemberName a {
+    color: #17171C;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+}
+.current-members .panel-member .GroupMemberName a:hover
+.current-members .panel-member .GroupMemberName a:focus {
+    text-decoration: underline;
+}
+.current-members .label-admin {
+    color: #073375;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 8px;
+    border-radius: 30px;
+    background-color: #E6EEF3;
+    border: none;
+}
+
 /************ responsive ************/
 
 /****** larger screens only *****/
@@ -843,7 +984,7 @@
         width: 350px;
     }
     .hero::after {
-        background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Dev_Files/tablet.png');
+        background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Dev_Files/tablet__1_.png');
         width: auto;
         left: 0;
         bottom: unset;
@@ -891,6 +1032,13 @@
     }
     .hero::after {
         top: 10px;
+    }
+    .member-dashboard::before {
+        bottom: 60px;
+    }
+    .member-dashboard::after {
+        background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Dev_Files/tablet.png');
+        background-position: left center;
     }
 }
 
