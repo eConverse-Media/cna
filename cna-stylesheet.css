@@ -471,8 +471,6 @@ input:focus {
 .community-radio .btn-group .btn-primary.dropdown-toggle,
 .open .dropdown-toggle.btn-primary,
 .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active,
-.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, 
-.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary,
 .post-message-contributed-content .validate-contribution .btn-group .dropdown-toggle.btn-default,
 .btn-default,
 .btn.alert-warning,
@@ -500,10 +498,8 @@ input:focus {
 .community-radio .btn-group .btn-primary.dropdown-toggle:focus,
 .open .dropdown-toggle.btn-primary:hover,
 .open .dropdown-toggle.btn-primary:focus,
-.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:hover,
-.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:focus, 
-.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:hover,
-.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:focus,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, 
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary,
 .post-message-contributed-content .validate-contribution .btn-group .dropdown-toggle.btn-default:hover,
 .post-message-contributed-content .validate-contribution .btn-group .dropdown-toggle.btn-default:focus,
 .new-ideas .ideation-widget > div > div:last-child a:hover,
@@ -539,7 +535,11 @@ input:focus {
 .alert-warning .btn,
 .alert-warning .btn-group > .btn.dropdown-toggle:first-child,
 .library-link a,
-.make-buttons.secondary-last em a:last-child {
+.make-buttons.secondary-last em a:last-child,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:hover,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:focus, 
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:hover,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:focus, {
     color: #0089A3;
     border-color: #0089A3;
     background: transparent;
