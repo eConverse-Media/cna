@@ -288,7 +288,8 @@ table tr:nth-child(2n) {
 
 /* latest news */
 
-.HLRecentBlogs .Content .slick-list {
+.HLRecentBlogs .Content .slick-list,
+.SearchResults .Content .slick-list {
     margin: 0 -15px 0 -15px;
 }
 
@@ -310,7 +311,7 @@ table tr:nth-child(2n) {
     transition: 0.3s;
 }
 
-.editors-picks .HLRecentBlogs .Content .slick-track li {
+.editors-picks .HLLandingControl .Content .slick-track li {
     border: none;
     padding: 15px;
     margin: 0;
@@ -321,12 +322,14 @@ table tr:nth-child(2n) {
     transition: 0.3s;
 }
 
-.HLRecentBlogs .Content .slick-track li .img-container {
+.HLRecentBlogs .Content .slick-track li .img-container,
+.SearchResults .Content .slick-track li .img-container {
     height: 180px;
     margin-bottom: 20px;
 }
 
-.HLRecentBlogs .Content .slick-slider .slick-arrow {
+.HLRecentBlogs .Content .slick-slider .slick-arrow,
+.SearchResults .Content .slick-slider .slick-arrow {
     background: #0089A3;
     border: none;
     padding: 10px 60px;
@@ -338,11 +341,13 @@ table tr:nth-child(2n) {
     z-index: 10;
 }
 
-.HLRecentBlogs .Content .slick-slider .slick-arrow.prev-arrow {
+.HLRecentBlogs .Content .slick-slider .slick-arrow.prev-arrow,
+.SearchResults .Content .slick-slider .slick-arrow.prev-arrow {
     right: calc(50% - 540px);
 }
 
-.HLRecentBlogs .Content .slick-slider .slick-arrow.next-arrow {
+.HLRecentBlogs .Content .slick-slider .slick-arrow.next-arrow,
+.SearchResults .Content .slick-slider .slick-arrow.next-arrow {
     right: calc(50% - 685px);
 }
 
