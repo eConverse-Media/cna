@@ -823,6 +823,40 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .hero {
+        background-size: 100% auto;
+        background-position: top center;
+        padding-top: 250px;
+    }
+    .hero .HtmlContent {
+        padding-right: 15px;
+        width: 100%;
+        background-color: #020451;
+        padding-top: 0;
+    }
+    .hero::before {
+        background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Dev_Files/Vector.png');
+        bottom: unset;
+        top: 182px;
+        height: 60px;
+        width: 350px;
+    }
+    .hero::after {
+        background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Dev_Files/tablet.png');
+        width: auto;
+        left: 0;
+        bottom: unset;
+        height: 251px;
+        top: 0;
+        background-size: 100% auto;
+        background-position: bottom center;
+    }
+    .hero-row > .col-md-12::before {
+        display: none;
+    }
+}
+
 @media (max-width: 1150px) {
     #MPOuterMost .search-btn-top.desktop {
         display: none;
@@ -855,6 +889,9 @@
     .member-dashboard .greeting {
         margin-bottom: 40px;
     }
+    .hero::after {
+        top: 10px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -862,6 +899,15 @@
     .community-resources .HLLandingControl .Content ul,
     .home .my-communities div[id*="UpdatePanel"] {
         display: block;
+    }
+    .hero {
+        padding-top: 180px;
+    }
+    .hero::before {
+        top: 120px;
+    }
+    .hero::after {
+        height: 180px;
     }
 }
 
@@ -887,5 +933,20 @@
         padding: 0;
         width: calc(100% - 70px);
         float: left;
+    }
+    h1, .h1 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .hero {
+        padding-top: 125px;
+    }
+    .hero::before {
+        top: 55px;
+    }
+    .hero::after {
+        background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Dev_Files/mobile.png');
+        height: 125px;
+        top: 0;
     }
 }

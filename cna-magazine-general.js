@@ -33,7 +33,7 @@ function handleHero() {
 }
 
 function handleHomepageBlogs() {
-    $('.home .HLRecentBlogs ul li').each(function () {
+    $('.latest-articles .HLLandingControl ul li, .editors-picks .HLLandingControl ul li').each(function () {
         var self = $(this);
         handleAjaxCall(self, false);
     });
@@ -58,6 +58,7 @@ function handleHomepageBlogs() {
             {
                 breakpoint: 550,
                 settings: {
+                    rows: 3,
                     slidesToShow: 1,
                     slidesToScroll: 1
                 }
@@ -65,7 +66,7 @@ function handleHomepageBlogs() {
         ]
     });
 
-    $('.editors-picks .HLRecentBlogs .Content .col-md-12>ul').slick({
+    $('.editors-picks .HLLandingControl .Content ul').slick({
         dots: false,
         arrows: true,
         infinite: true,
@@ -79,7 +80,10 @@ function handleHomepageBlogs() {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3
-                },
+                }
+            },
+            {
+
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
