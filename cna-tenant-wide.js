@@ -12,18 +12,17 @@ function handleLink(self) {
         href = $(link).attr('href'),
         target = $(link).attr('target');
 
-        if (target == '_blank') {
-            $(self).wrapInner('<a href="' + href + '" target="_blank" rel="noopener" />');
-        } else {
-            $(self).wrapInner('<a href="' + href + '" />');
-        }
+    if (target == '_blank') {
+        $(self).wrapInner('<a href="' + href + '" target="_blank" rel="noopener" />');
+    } else {
+        $(self).wrapInner('<a href="' + href + '" />');
+    }
 
-        if ($(link).parent().is('h3')) {
-            $(link).contents().unwrap();
-        } 
-        else {
-            $(link).hide();
-        }
+    if ($(link).parent().is('h3')) {
+        $(link).contents().unwrap();
+    } else {
+        $(link).hide();
+    }
 }
 
 function handleLanguageButton(windowWidth) {
@@ -37,7 +36,7 @@ function handleLanguageButton(windowWidth) {
 function handleHeaderLinks() {
     var links = $('#MPAuxNav ul.level1 li');
     $('#MPheader > div.row:first-child > .col-md-12').prepend('<ul class="left-top-links" />')
-    $(links).each(function () {
+    $(links).each(function() {
         var self = $(this),
             text = $(self).text();
 
@@ -45,8 +44,10 @@ function handleHeaderLinks() {
         text = $.trim(text);
 
         if (text.indexOf('canadian nurse') > -1 ||
-        text.indexOf('canadian nurses association') > -1 ||
-        text.indexOf('nursing jobs') > -1) {
+            text.indexOf('canadian nurses association') > -1 ||
+            text.indexOf('association des infirmières ') > -1 ||
+            text.indexOf('emplois en soins infirmiers') > -1 ||
+            text.indexOf('nursing jobs') > -1) {
             $(self).addClass('mobile-link');
             $(self).clone().removeClass('mobile-link').addClass('desktop-link').appendTo('.left-top-links');
         }
@@ -82,7 +83,7 @@ function handleMobileHeader() {
 
     handleLanguageButton(width);
 
-    $(window).on('resize orientationChange', function () {
+    $(window).on('resize orientationChange', function() {
         width = $(window).width();
 
         handleLanguageButton(width);
@@ -90,7 +91,7 @@ function handleMobileHeader() {
 }
 
 function handleCTATiles() {
-    $('.cta-tile .HtmlContent').each(function () {
+    $('.cta-tile .HtmlContent').each(function() {
         handleLink(this);
     });
 }
@@ -99,7 +100,7 @@ function handleCTAButtons() {
     $('.cta-button').wrapAll('<div class="cta-buttons" />');
 }
 
-$(function () {
+$(function() {
     handleMobileHeader();
     handleHeaderLinks();
     handleCTATiles();
