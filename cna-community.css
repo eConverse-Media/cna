@@ -152,7 +152,8 @@
     background-color: #073375;
     position: relative;
 }
-.member-dashboard::after {
+.member-dashboard::after,
+.community-page-heading::after {
     background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Images/dashboard-vector-1.svg');
     position: absolute;
     right: 0;
@@ -165,7 +166,8 @@
     display: block;
     background-size: auto;
 }
-.member-dashboard::before {
+.member-dashboard::before,
+.community-page-heading::before {
     content: '';
     background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Images/green-swoop-dashboard.svg');
     position: absolute;
@@ -452,21 +454,26 @@
     border-top: 1px solid rgba(33,35,112,0.1);
     padding-top: 20px;
 }
-.recent-discussions ul li {
+.recent-discussions ul li,
+.latest-discussions ul li {
     padding-left: 70px;
     position: relative;
 }
-.recent-discussions ul li .title-row .col-md-2.col-sm-2 {
+.recent-discussions ul li .title-row .col-md-2.col-sm-2,
+.latest-discussions ul li .title-row .col-md-2.col-sm-2 {
     position: absolute;
     left: 0;
     top: 0;
     width: 50px;
 }
-.recent-discussions ul li .title-row .col-md-10.col-sm-10 {
+.recent-discussions ul li .title-row .col-md-10.col-sm-10,
+.latest-discussions ul li .title-row .col-md-10.col-sm-10 {
     padding: 0;
     width: 100%;
 }
 .recent-discussions ul li .title-row .col-md-2.col-sm-2 a[id*="ProfileImage"],
+.home .HLEngagement ul li .title-row a[id*="ProfileLink"],
+.latest-discussions ul li .title-row .col-md-2.col-sm-2 a[id*="ProfileImage"],
 .home .HLEngagement ul li .title-row a[id*="ProfileLink"],
 .latest-files .HLLandingControl ul li .title-row .col-md-2.col-sm-2 a[id*="ProfileImage"] {
     border: 2px solid #3DD8A3;
@@ -589,8 +596,7 @@
     padding: 0;
 }
 .upcoming-events .HLLandingControl .Content ul li,
-.latest-files .HLLandingControl .Content ul li,
-.latest-discussions .HLLandingControl .Content ul li {
+.latest-files .HLLandingControl .Content ul li {
     padding: 0 0 20px 0;
 }
 .upcoming-events .HLEventList div[id*="BottomLink"] {
@@ -599,7 +605,8 @@
     right: auto;
 }
 .upcoming-events .HLLandingControl .Content ul li p.break-word,
-.latest-files .HLLandingControl .Content ul li p {
+.latest-files .HLLandingControl .Content ul li p,
+.HLDiscussions .Content ul li .break-word p {
     margin-bottom: 0;
 }
 .upcoming-events .HLEventList ul li .title-row h3 {
@@ -821,6 +828,46 @@
 
 /************ community landing page ************/
 
+/****** page title ******/
+
+.community-page-heading {
+    padding: 60px calc(50% - 685px) 70px calc(50% - 685px);
+    background-color: #073375;
+    position: relative;
+}
+.community-page-heading::after {
+    background-size: auto 100%;
+}
+.community-page-heading #PageTitleH1,
+.community-page-heading .summary-edit {
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.community-page-heading #PageTitleH1 {
+    max-width: 1400px;
+    padding: 0 0 10px 0;
+}
+.community-page-heading .summary-edit {
+    width: 50%;
+}
+.community-page-heading .CommunityManagementGear .btn-default,
+.JoinLeaveLink a[id*="communityJoinLeave"] {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #020451;
+    border-radius: 0;
+}
+.JoinLeaveLink {
+    position: absolute;
+    right: calc(50% - 685px);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.JoinLeaveLink a[id*="communityJoinLeave"] {
+    padding: 12px 21.5px;
+}
 
 /****** announcement ******/
 
