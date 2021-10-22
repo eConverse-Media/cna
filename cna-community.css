@@ -41,6 +41,16 @@
     font-size: 12px;
     line-height: 15px;
 }
+.community-page-heading .CommunityManagementGear .btn-default:hover,
+.community-page-heading .CommunityManagementGear .btn-default:focus,
+.JoinLeaveLink a[id*="communityJoinLeave"]:hover,
+.JoinLeaveLink a[id*="communityJoinLeave"]:focus,
+.member-dashboard .make-buttons em a:hover,
+.member-dashboard .make-buttons em a:focus {
+    background-color: #E6EEF3;
+    border-color: #E6EEF3;
+    color: #073375;
+}
 .pagination>li>a, .pagination>li>span {
     font-size: 14px;
     line-height: 19px;
@@ -831,7 +841,7 @@
 /****** page title ******/
 
 .community-page-heading {
-    padding: 60px calc(50% - 685px) 70px calc(50% - 685px);
+    padding: 60px calc(50% - 685px) 95px calc(50% - 685px);
     background-color: #073375;
     position: relative;
 }
@@ -842,14 +852,15 @@
 .community-page-heading .summary-edit {
     color: #fff;
     position: relative;
-    z-index: 10;
 }
 .community-page-heading #PageTitleH1 {
     max-width: 1400px;
     padding: 0 0 10px 0;
+    z-index: 20;
 }
 .community-page-heading .summary-edit {
     width: 50%;
+    z-index: 10;
 }
 .community-page-heading .CommunityManagementGear .btn-default,
 .JoinLeaveLink a[id*="communityJoinLeave"] {
@@ -867,6 +878,46 @@
 }
 .JoinLeaveLink a[id*="communityJoinLeave"] {
     padding: 12px 21.5px;
+}
+
+/****** tabs ******/
+
+#CommunityTabsContainer.nav-tabs {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 685px);
+    border: none;
+    margin: 0;
+    z-index: 10;
+}
+.nav-tabs>li>a {
+    font-size: 16px;
+    line-height: 20px;
+    color: #020451;
+    font-weight: 700;
+    border-radius: 6px 6px 0px 0px;
+    background: rgba(239, 245, 248, 0.86);
+    margin-right: 10px;
+}
+.nav-tabs>li>a .caret {
+    float: right;
+}
+.nav-tabs > li > a .badge {
+    color: #4F5266;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 0 3px;
+    background: #ECECF2;
+    border-radius: 20px;
+    margin-left: 6px;
+    margin-top: 4px;
+    float: right;
+    min-width: 25px;
+}
+.nav-tabs > li > a:hover .badge,
+.nav-tabs > li > a:focus .badge {
+    background-color: #fff;
 }
 
 /****** announcement ******/
@@ -988,6 +1039,10 @@
     .member-dashboard > .col-md-12::before {
         width: 10%;
     }
+    .bg-grey > .col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 1430px) {
@@ -1002,6 +1057,19 @@
     }
     .member-dashboard::after {
         background-size: auto 100%;
+    }
+}
+
+@media (max-width: 1400px) {
+    #CommunityTabsContainer.nav-tabs {
+        left: 15px;
+    }
+    .community-page-heading {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .JoinLeaveLink {
+        right: 0;
     }
 }
 
@@ -1083,7 +1151,8 @@
     .member-dashboard::before {
         bottom: 60px;
     }
-    .member-dashboard::after {
+    .member-dashboard::after,
+    .community-page-heading::after {
         background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Dev_Files/tablet.png');
         background-position: left center;
     }
@@ -1103,6 +1172,16 @@
     }
     .hero::after {
         height: 180px;
+    }
+    .community-page-heading .summary-edit {
+        width: 100%;
+    }
+    .JoinLeaveLink {
+        position: relative;
+        transform: none;
+        top: auto;
+        right: auto;
+        margin-top: 30px;
     }
 }
 
