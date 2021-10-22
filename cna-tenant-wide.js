@@ -44,7 +44,7 @@ function handleHeaderLinks() {
         text = text.toLowerCase();
         text = $.trim(text);
 
-        if (text.indexOf('canadian nurse journal') > -1 ||
+        if (text.indexOf('canadian nurse') > -1 ||
         text.indexOf('canadian nurses association') > -1 ||
         text.indexOf('nursing jobs') > -1) {
             $(self).addClass('mobile-link');

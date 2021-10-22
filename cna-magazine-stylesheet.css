@@ -39,6 +39,11 @@
     color: #073375;
 }
 
+.language-btn a:hover,
+.language-btn a:focus {
+    background: #E6EEF3;
+}
+
 .make-buttons.teal em a,
 .make-buttons.green em a:hover,
 .make-buttons.green em a:focus {
@@ -229,13 +234,13 @@ table tr:nth-child(2n) {
     justify-content: space-between;
     height: 100%;
     position: relative;
-    padding-left: calc(50% - 685px);
     background-color: #020451;
     border-bottom: 40px solid #fff;
 }
 
 .hero-slide .HtmlContent .text-container {
-    width: 480px;
+    padding-left: calc(50% - 685px);
+    padding-right: 55%;
 }
 
 .hero-slide .HtmlContent .text-container *,
@@ -942,6 +947,38 @@ table tr:nth-child(2n) {
     margin: 0;
 }
 
+/************ top level topic landing page ************/
+
+#PageTitleH1 {
+    max-width: 1400px;
+    margin-top: 80px !important;
+    padding: 0 15px;
+    margin-bottom: 40px !important;
+}
+.interior #MainCopy_ContentWrapper.topic-landing {
+    padding-bottom: 80px;
+}
+.topic-landing .row-wide .col-md-12 {
+    column-count: 3;
+    column-gap: 30px;
+}
+.topic-landing .row-wide .col-md-12 br {
+    display: none;
+}
+.topic-landing a {
+    color: #0E191F;
+    font-size: 18px;
+    line-height: 31px;
+    display: inline-block;
+    margin: 2px 0;
+    text-decoration: none;
+}
+.topic-landing a:hover,
+.topic-landing a:focus {
+    text-decoration: underline;
+    color: #073375;
+}
+
 /************ responsiveness ***********/
 
 /****** larger screens only ******/
@@ -1164,6 +1201,9 @@ table tr:nth-child(2n) {
     }
     .grey-tile.img-tile {
         flex-direction: column;
+    }
+    .topic-landing .row-wide .col-md-12 {
+        column-count: 1;
     }
 }
 

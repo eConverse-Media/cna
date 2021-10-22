@@ -117,6 +117,10 @@ function handleImageTiles() {
     });
 }
 
+function handleTopicLandingPages() {
+    $('.topic-landing .row-wide .col-md-12 a').wrap('<div />');
+}
+
 $(function () {
     handleNav();
     handleSearch();
@@ -124,4 +128,5 @@ $(function () {
     handleCTA();
     handleHomepageBlogs()
     handleImageTiles();
+    handleTopicLandingPages();
 });
