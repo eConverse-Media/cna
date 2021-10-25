@@ -885,6 +885,11 @@
     color: #020451;
     border-radius: 0;
 }
+.page-heading .CommunityManagementGear ul .btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    line-height: 15px;
+}
 .JoinLeaveLink {
     position: absolute;
     right: calc(50% - 685px);

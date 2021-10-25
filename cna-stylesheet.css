@@ -466,6 +466,7 @@ input:focus {
     border-radius: 0;
 }
 .make-buttons em a,
+.btn,
 .btn-primary,
 .ideation-home .btn-success,
 .community-radio .btn-group .btn-primary.dropdown-toggle,
@@ -490,6 +491,8 @@ input:focus {
 }
 .make-buttons em a:hover,
 .make-buttons em a:focus,
+.btn:hover,
+.btn:focus,
 .btn-primary:hover,
 .btn-primary:focus,
 .ideation-home .btn-success:hover,
