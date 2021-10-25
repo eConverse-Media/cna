@@ -1,0 +1,64 @@
+#MPOuterHeader,
+#MPOuterFooter,
+#MPFooterLink {
+    display: none;
+}
+
+#MainCopy_ContentWrapper {
+    background-color: #E6EEF3;
+    background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/f2d388fd-c4de-4ffe-86ec-aeda6d31b2b4/UploadedImages/splash-screen-bg.png');
+    background-size: auto 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 100vh;
+}
+#MainCopy_ContentWrapper > .row.row-wide {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+}
+
+/****** buttons ******/
+.make-buttons em {
+    margin: -5px;
+    display: inline-block;
+}
+.make-buttons em a {
+    margin: 5px;
+    display: inline-block;
+    text-decoration: none;
+    font-style: normal;
+    color: #020451;
+    border: 1px solid #020451;
+    padding: 12px 20px;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+.make-buttons em a:hover,
+.make-buttons em a:focus {
+    background-color: #020451;
+    color: #fff;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12), 0px 4px 14px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+/****** splash content ******/
+
+.splash-content img {
+    margin-bottom: 20px;
+    width: 400px;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .splash-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

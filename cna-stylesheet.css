@@ -539,7 +539,7 @@ input:focus {
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:hover,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:focus, 
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:hover,
-.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:focus, {
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:focus {
     color: #0089A3;
     border-color: #0089A3;
     background: transparent;
