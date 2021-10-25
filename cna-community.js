@@ -78,6 +78,10 @@ function handleLoggedInContent() {
     $('.home .bg-grey .col-md-12[class*="section"]:empty').closest('.bg-grey').hide();
 }
 
+function handlePageTitles() {
+    $('#PageTitleH1:not([style*="display: none;"]').wrap('<div class="page-heading" />');
+}
+
 $(function() {
     handleSearch();
     handleByLinePostedIn();
@@ -86,4 +90,5 @@ $(function() {
     handleResources();
     handleBlogs();
     handleLoggedInContent();
+    handlePageTitles();
 });
