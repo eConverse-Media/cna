@@ -465,6 +465,11 @@ input:focus {
     border: 1px solid;
     border-radius: 0;
 }
+.btn.btn-sm {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 8px 12px;
+}
 .make-buttons em a,
 .btn,
 .btn-primary,

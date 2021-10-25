@@ -1058,6 +1058,35 @@
 .form-horizontal .control-label {
     text-align: left;
 }
+@media (min-width: 992px) {
+    div[id*="MessagePanel"] > .row.row-border-bottom:first-child > .col-md-4 {
+        width: 25%;
+        padding-left: 0;
+    }
+    div[id*="MessagePanel"] > .row.row-border-bottom:first-child > .col-md-9 {
+        padding-right: 0;
+    }
+}
+
+.hltags ul.tagit {
+    padding: 6px 5px 6px 0;
+}
+
+ul.DiscussionContentContainer>li .pnl-row-item {
+    background: #fff;
+}
+#MessageListContainer div.row.drItemSubHeader {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(33,35,112,0.1);
+}
+
+/****** small buttons ******/
+
+div[id*="MessagePanel"]  .col-md-9 .form-group a[id*="lnkPostMessage"] {
+    padding: 8px 12px;
+    font-size: 12px;
+    line-height: 15px;
+}
 
 /************ responsive ************/
 
