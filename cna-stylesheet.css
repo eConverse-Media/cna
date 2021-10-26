@@ -420,12 +420,17 @@ p {
 .p-large {
     font-size: 18px;
 }
-a {
+a,
+#MPOuterMost .bootstrap-4 .btn-inline-link-primary {
     color: #073375;
     text-decoration: underline;
 }
 a:hover,
-a:focus {
+a:focus,
+#MPOuterMost .bootstrap-4 .btn-inline-link-primary:focus, 
+#MPOuterMost .bootstrap-4 .btn-inline-link-primary.focus, 
+#MPOuterMost .bootstrap-4 .btn-inline-link-primary:hover:not(:disabled), 
+#MPOuterMost .bootstrap-4 .btn-inline-link-primary.hover {
     color: #164A98;
     text-decoration: none;
 }
@@ -443,6 +448,9 @@ input:focus {
 
 /****** buttons ******/
 
+.bootstrap-switch {
+    white-space: nowrap;
+}
 .make-buttons em {
     display: inline-block;
     margin: -5px;
@@ -451,8 +459,12 @@ input:focus {
     display: inline-block;
     margin: 5px;
 }
+.btn:not(.dropdown-toggle) {
+	white-space: normal;
+}
 .make-buttons em a,
-.btn {
+.btn,
+#MPOuterMost .bootstrap-4 .btn:not(.hl-carousel-arrow):not(select) {
     font-style: normal;
     text-decoration: none;
     font-weight: 700;
@@ -465,10 +477,14 @@ input:focus {
     border: 1px solid;
     border-radius: 0;
 }
-.btn.btn-sm {
+.btn.btn-sm,
+#MPOuterMost .bootstrap-4 .btn.btn-sm {
     font-size: 12px;
     line-height: 15px;
     padding: 8px 12px;
+}
+#MPOuterMost .bootstrap-4 .btn.btn-icon-primary:not(select):not(.hl-carousel-arrow) {
+    border: none;
 }
 .make-buttons em a,
 .btn,
@@ -482,12 +498,16 @@ input:focus {
 .btn.alert-warning,
 .new-ideas .ideation-widget > div > div:last-child a,
 .blogs-list .HLLandingControl div[id*="BottomLink"] a,
-.HLLandingControl .btn-default {
+.HLLandingControl .btn-default,
+#MPOuterMost .bootstrap-4 .btn:not(.hl-carousel-arrow):not(select),
+#MPOuterMost .bootstrap-4 .btn-primary,
+#MPOuterMost .bootstrap-4 .btn-default {
     color: #020451;
     border-color: #020451;
     background: transparent;
 }
-.btn-primary .caret {
+.btn-primary .caret,
+#MPOuterMost .bootstrap-4 .btn .caret {
     border-top-color: #020451;
 }
 .form-control.btn-group .btn-default,
@@ -498,6 +518,7 @@ input:focus {
 .make-buttons em a:focus,
 .btn:hover,
 .btn:focus,
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default,
 .btn-primary:hover,
 .btn-primary:focus,
 .ideation-home .btn-success:hover,
@@ -515,20 +536,30 @@ input:focus {
 .blogs-list .HLLandingControl div[id*="BottomLink"] a:hover,
 .blogs-list .HLLandingControl div[id*="BottomLink"] a:focus,
 .HLLandingControl .btn-default:hover,
-.HLLandingControl .btn-default:focus {
+.HLLandingControl .btn-default:focus,
+#MPOuterMost .bootstrap-4 .btn:not(.hl-carousel-arrow):not(select):hover,
+#MPOuterMost .bootstrap-4 .btn:not(.hl-carousel-arrow):not(select):focus,
+#MPOuterMost .bootstrap-4 .btn-primary:hover,
+#MPOuterMost .bootstrap-4 .btn-primary:focus,
+#MPOuterMost .bootstrap-4 .btn-default:hover,
+#MPOuterMost .bootstrap-4 .btn-default:focus {
     background: #020451;
     border-color: #020451;
     color: #fff;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12), 0px 4px 14px rgba(0, 0, 0, 0.1);
 }
 .btn-primary:hover .caret,
-.btn-primary:focus .caret {
+.btn-primary:focus .caret,
+.btn-default:hover .caret,
+.btn-default:focus .caret,
+#MPOuterMost .bootstrap-4 .btn:hover .caret,
+#MPOuterMost .bootstrap-4 .btn:focus .caret,
+.open .btn-primary .caret,
+.open .btn-default .caret {
     border-top-color: #fff;
 }
-.btn-default:hover,
-.btn-default:focus,
 .btn.alert-warning:hover,
-.btn.alert-warning:Focus {
+.btn.alert-warning:focus {
     border-color: #020451;
     color: #020451;
     background-color: #ebebeb;
@@ -547,13 +578,15 @@ input:focus {
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:hover,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:focus, 
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:hover,
-.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:focus {
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:focus,
+#MPOuterMost .bootstrap-4 .btn-success {
     color: #0089A3;
     border-color: #0089A3;
     background: transparent;
 }
 .btn-success .caret,
-.btn-info .caret {
+.btn-info .caret,
+#MPOuterMost .bootstrap-4 .btn-success .caret {
     border-top-color: #0089a3;
 }
 .make-buttons.secondary em a:hover,
@@ -581,7 +614,9 @@ input:focus {
 .library-link a:hover,
 .library-link a:focus,
 .make-buttons.secondary-last em a:last-child:hover,
-.make-buttons.secondary-last em a:last-child:focus {
+.make-buttons.secondary-last em a:last-child:focus,
+#MPOuterMost .bootstrap-4 .btn-success:hover,
+#MPOuterMost .bootstrap-4 .btn-success:focus {
     background: #0089A3;
     border-color: #0089a3;
     color: #fff;
@@ -590,7 +625,11 @@ input:focus {
 .btn-info:hover .caret,
 .btn-info:focus .caret,
 .btn-success:hover .caret,
-.btn-success:focus .caret {
+.btn-success:focus .caret,
+#MPOuterMost .bootstrap-4 .btn-success:hover .caret,
+#MPOuterMost .bootstrap-4 .btn-success:focus .caret,
+.open .btn-info .caret,
+.open .btn-success .caret {
     border-top-color: #fff;
 }
 .make-buttons.white-fill em a {
@@ -611,7 +650,9 @@ input:focus {
     background: #fff;
     color: #0089A3;
 }
-.make-buttons.fill em a {
+.make-buttons.fill em a,
+#MPOuterMost .bootstrap-4 fieldset.icon-radio-group label input[aria-checked=true] + *,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success {
     color: #fff;
     background: #020451;
     border-color: #020451;

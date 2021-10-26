@@ -455,6 +455,11 @@
     line-height: 1.5;
     font-weight: 300;
 }
+.HLLandingControl .Content ul.dropdown-menu li {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
 
 /****** recent discussions ******/
 
@@ -1079,13 +1084,55 @@ ul.DiscussionContentContainer>li .pnl-row-item {
     background-color: #fff;
     border-bottom: 1px solid rgba(33,35,112,0.1);
 }
+.btn-recommend-no {
+    margin-right: -3px;
+}
+
+.community a[id*="backButton"] {
+    margin-bottom: 15px;
+}
+.community .ContentItemReact > .row.heading > .col-md-12.no-pad {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+#MPOuterMost .hl-carousel .hl-carousel-arrow {
+    background-color: rgba(239, 245, 248, 0.86);
+    color: #020451;
+}
+#MPOuterMost .hl-carousel .hl-carousel-arrow:hover,
+#MPOuterMost .hl-carousel .hl-carousel-arrow:focus {
+    background-color: #020451;
+    color: #fff;
+}
+#MPOuterMost .library-content .content-with-panels .left-panel {
+    background-color: #fff;
+    border-right: 1px solid rgba(33,35,112,0.1);
+}
+#MPOuterMost .bootstrap-4 .bg-bg1 {
+    background-color: #fff !important;
+    border-top: 1px solid rgba(33,35,112,0.1);
+    border-bottom: 1px solid rgba(33,35,112,0.1);
+}
+#MPOuterMost .library-rows-grid .layout-grid-cell:hover,
+#MPOuterMost .library-rows-grid .layout-grid-cell:focus {
+    background-color: transparent;
+}
+.HLLandingControl.HLEventList .title-row img {
+    max-width: 100%;
+    max-height: unset;
+}
 
 /****** small buttons ******/
 
-div[id*="MessagePanel"]  .col-md-9 .form-group a[id*="lnkPostMessage"] {
+#MPOuterMost .library-grid .page-go-to .input-group-append .btn-secondary,
+div[id*="MessagePanel"]  .col-md-9 .form-group a[id*="lnkPostMessage"],
+.input-group-btn input[id*="OwnerLookupButton"] {
     padding: 8px 12px;
     font-size: 12px;
     line-height: 15px;
+}
+#MPOuterMost .library-grid .page-go-to .input-group-append .btn-secondary {
+    padding-top: 7px;
 }
 
 /************ responsive ************/
