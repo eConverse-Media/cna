@@ -495,13 +495,15 @@ input:focus {
 .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active,
 .post-message-contributed-content .validate-contribution .btn-group .dropdown-toggle.btn-default,
 .btn-default,
+.bootstrap-select .btn-default,
 .btn.alert-warning,
 .new-ideas .ideation-widget > div > div:last-child a,
 .blogs-list .HLLandingControl div[id*="BottomLink"] a,
 .HLLandingControl .btn-default,
 #MPOuterMost .bootstrap-4 .btn:not(.hl-carousel-arrow):not(select),
 #MPOuterMost .bootstrap-4 .btn-primary,
-#MPOuterMost .bootstrap-4 .btn-default {
+#MPOuterMost .bootstrap-4 .btn-default,
+.community-notifications .email-settings .btn-group .btn-default {
     color: #020451;
     border-color: #020451;
     background: transparent;
@@ -519,6 +521,9 @@ input:focus {
 .btn:hover,
 .btn:focus,
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default,
+.bootstrap-select .btn-default:hover,
+.bootstrap-select .btn-default:focus,
+.bootstrap-select .btn-default:active, .bootstrap-select.open .dropdown-toggle.btn-default,
 .btn-primary:hover,
 .btn-primary:focus,
 .ideation-home .btn-success:hover,
@@ -542,7 +547,11 @@ input:focus {
 #MPOuterMost .bootstrap-4 .btn-primary:hover,
 #MPOuterMost .bootstrap-4 .btn-primary:focus,
 #MPOuterMost .bootstrap-4 .btn-default:hover,
-#MPOuterMost .bootstrap-4 .btn-default:focus {
+#MPOuterMost .bootstrap-4 .btn-default:focus,
+.community-notifications .email-settings .btn-group .btn-default:hover,
+.community-notifications .email-settings .btn-group .btn-default:focus,
+.community-notifications .email-settings .btn-group .btn-default:active,
+.community-notifications .email-settings .btn-group .btn-default.open {
     background: #020451;
     border-color: #020451;
     color: #fff;
@@ -575,10 +584,6 @@ input:focus {
 .alert-warning .btn-group > .btn.dropdown-toggle:first-child,
 .library-link a,
 .make-buttons.secondary-last em a:last-child,
-.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:hover,
-.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:focus, 
-.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:hover,
-.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:focus,
 #MPOuterMost .bootstrap-4 .btn-success {
     color: #0089A3;
     border-color: #0089A3;
@@ -616,7 +621,11 @@ input:focus {
 .make-buttons.secondary-last em a:last-child:hover,
 .make-buttons.secondary-last em a:last-child:focus,
 #MPOuterMost .bootstrap-4 .btn-success:hover,
-#MPOuterMost .bootstrap-4 .btn-success:focus {
+#MPOuterMost .bootstrap-4 .btn-success:focus,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:hover,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:focus, 
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:hover,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:focus {
     background: #0089A3;
     border-color: #0089a3;
     color: #fff;
@@ -1159,7 +1168,8 @@ figure.fig-right {
 }
 
 /* dropdowns */
-.navbar-nav>li>.dropdown-menu {
+.navbar-nav>li>.dropdown-menu,
+.nav-tabs > li > .dropdown-menu {
 	background-color: #fff;
     border: none;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 10px 30px rgba(0, 0, 0, 0.06);
@@ -1168,7 +1178,8 @@ figure.fig-right {
     padding-top: 0;
     padding-bottom: 0;
 }
-.navbar-nav .dropdown-menu>li>a {
+.navbar-nav .dropdown-menu>li>a,
+.nav-tabs .dropdown-menu > li > a {
     color: #020451;
     font-size: 14px;
     line-height: 18px;

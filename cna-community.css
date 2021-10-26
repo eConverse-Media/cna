@@ -1,5 +1,9 @@
 /****** basic resets ******/
 
+.text-muted-h2 h2 {
+    color: #020451;
+}
+
 .small-h2 h2,
 .small-h2 .HLLandingControl h2,
 .small-h2 .HLLandingControl .heading h2,
@@ -120,23 +124,31 @@
 }
 
 /*** nav ***/
-.navbar-nav>li>.dropdown-menu {
+.navbar-nav>li>.dropdown-menu,
+.nav-tabs > li > .dropdown-menu {
     padding: 20px 0;
 }
-.navbar-nav .dropdown-menu>li>a {
+.navbar-nav .dropdown-menu>li>a,
+.nav-tabs .dropdown-menu > li > a {
     color: #0E191F;
     font-size: 14px;
     line-height: 20px;
     padding: 1px 20px;
 }
-.navbar-nav .dropdown-menu>li>a::after {
+.navbar-nav .dropdown-menu>li>a::after,
+.nav-tabs .dropdown-menu > li > a::after {
     display: none;
 }
 .navbar-nav .dropdown-menu>.active>a,
 .navbar-nav .dropdown-menu>.active>a:hover,
 .navbar-nav .dropdown-menu>.active>a:focus,
 .navbar-nav .dropdown-menu>li>a:hover,
-.navbar-nav .dropdown-menu>li>a:focus {
+.navbar-nav .dropdown-menu>li>a:focus,
+.nav-tabs .dropdown-menu>.active>a,
+.nav-tabs .dropdown-menu>.active>a:hover,
+.nav-tabs .dropdown-menu>.active>a:focus,
+.nav-tabs .dropdown-menu>li>a:hover,
+.nav-tabs .dropdown-menu>li>a:focus {
     background: transparent;
     text-decoration: underline !important;
     color: #073375;
@@ -1077,17 +1089,36 @@
     padding: 6px 5px 6px 0;
 }
 
+div[id*="tdMessages"],
 ul.DiscussionContentContainer>li .pnl-row-item {
     background: #fff;
 }
-#MessageListContainer div.row.drItemSubHeader {
+.community .ContentUserControl:not(.upcoming-events) .HLEventList {
+    background: #fff;
+    padding: 20px;
+}
+#MessageListContainer div.row.drItemSubHeader,
+.digest-viewer .table-thead-background > tr > th {
     background-color: #fff;
     border-bottom: 1px solid rgba(33,35,112,0.1);
+}
+div[id*="MessagePanel"] .row.row-border-bottom {
+    border-bottom: none;
+}
+.digest-viewer.table>thead>tr>th, 
+.digest-viewer.table>tbody>tr>th, 
+.digest-viewer.table>tfoot>tr>th, 
+.digest-viewer.table>thead>tr>td, 
+.digest-viewer.table>tbody>tr>td, 
+.digest-viewer.table>tfoot>tr>td {
+    border-top: none;
 }
 .btn-recommend-no {
     margin-right: -3px;
 }
-
+div[id*="likeRatingContainer"] {
+    margin-bottom: 5px;
+}
 .community a[id*="backButton"] {
     margin-bottom: 15px;
 }
@@ -1121,12 +1152,67 @@ ul.DiscussionContentContainer>li .pnl-row-item {
     max-width: 100%;
     max-height: unset;
 }
+.followed-content-results .followed-content-item td.ProfilePic,
+.followed-content-results .followed-content-item td {
+    padding: 10px;
+}
+.followed-content-results .followed-content-item .text-muted,
+.ItemContent.search-results.row .text-muted {
+    color: #0E191F;
+}
+.text-muted {
+    color: #4F5266;
+}
+.followed-content-results .followed-content-item td > div:not(:last-child) {
+    margin-bottom: 10px;
+}
+.ItemContent.search-results.row td {
+    padding: 0;
+}
+.ItemContent.search-results.row {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.ItemContent.search-results.row td .PostedBy,
+.ItemContent.search-results.row td .FoundIn {
+    display: block;
+    margin-bottom: 10px;
+}
+.ItemContent.search-results.row td .FoundIn br {
+    display: none;
+}
+.ItemContent.search-results.row td h3 {
+    margin-bottom: 10px !important;
+}
+.ItemContent.search-results.row td .label.label-default {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+#PrivacyProfilePreferences .privacySettingsRow {
+    padding: 20px 0;
+}
+#PrivacyProfilePreferences .privacySettingsRow .form-group {
+    margin-bottom: 0;
+}
+.email-preferences h3 {
+    margin-top: 15px;
+}
+.email-preferences.container {
+    padding-left: 0;
+    padding-right: 0;
+}
 
 /****** small buttons ******/
 
+.message-list-reply .btn-group .btn {
+    border-radius: 0;
+}
+
 #MPOuterMost .library-grid .page-go-to .input-group-append .btn-secondary,
 div[id*="MessagePanel"]  .col-md-9 .form-group a[id*="lnkPostMessage"],
-.input-group-btn input[id*="OwnerLookupButton"] {
+.input-group-btn input[id*="OwnerLookupButton"],
+.contributions-list-header .btn.dropdown-toggle.btn-default,
+.email-overrides .btn {
     padding: 8px 12px;
     font-size: 12px;
     line-height: 15px;
@@ -1137,11 +1223,25 @@ div[id*="MessagePanel"]  .col-md-9 .form-group a[id*="lnkPostMessage"],
 
 /************ responsive ************/
 
+@media (max-width: 1200px) and (min-width: 769px) {
+    .text-muted-h2 .col-md-3 .row,
+    .text-muted-h2 .col-md-9 .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
 /****** larger screens only *****/
 
 @media (min-width: 992px) {
     .recent-discussions {
         padding-right: 75px;
+    }
+    .SearchResults .HeaderStatusBar .ResultStatus {
+        padding-left: 0;
+    }
+    .SearchResults .HeaderStatusBar > .col-md-9 {
+        padding-right: 0;
     }
 }
 
@@ -1250,6 +1350,7 @@ div[id*="MessagePanel"]  .col-md-9 .form-group a[id*="lnkPostMessage"],
     }
 }
 
+
 @media (max-width: 1150px) {
     #MPOuterMost .search-btn-top.desktop {
         display: none;
@@ -1306,6 +1407,16 @@ div[id*="MessagePanel"]  .col-md-9 .form-group a[id*="lnkPostMessage"],
     .text-muted-h2 .UserControl .text-center {
         text-align: left;
     }
+    .text-muted-h2 a.pull-right[id*="MessagesCount"],
+    .community-list div[id*="pnlAttributes"] .pull-right,
+    .community-list a.pull-right[id*="AllCommunities"],
+    .contributions-list-header > .col-md-8 > .inline.pull-right {
+        float: none !important;
+    }
+    .text-muted-h2 a.pull-right[id*="MessagesCount"],
+    .contributions-list-header > .col-md-8 > .inline.pull-right {
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1335,6 +1446,10 @@ div[id*="MessagePanel"]  .col-md-9 .form-group a[id*="lnkPostMessage"],
     }
     .bg-grey {
         padding: 40px 0;
+    }
+    .email-preferences .row .col-sm-2 .text-right {
+        text-align: left;
+        margin-bottom: 15px;
     }
 }
 
