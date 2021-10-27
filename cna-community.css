@@ -1,5 +1,23 @@
 /****** basic resets ******/
 
+.label.label-default {
+    color: #4F5266;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: #ECECF2;
+}
+
+.ui-widget {
+    font-family: trade-gothic-next, sans-serif;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #EFF5F8;
+}
+
 .text-muted-h2 h2 {
     color: #020451;
 }
@@ -16,13 +34,27 @@
     letter-spacing: 2px;
 }
 
+.profile-button a {
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 12px 20px;
+    border: 1px solid;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    text-align: center;
+}
 .make-buttons.teal em a,
 .home .HLRecentBlogs div[id*="BottomLink"] a,
 .community-resources div[id*="MoreLink"] a,
 .latest-files .HLLandingControl a[id*="More"]:hover,
 .latest-files .HLLandingControl a[id*="More"]:focus,
 .latest-discussions .HLLandingControl a[id*="More"]:hover,
-.latest-discussions .HLLandingControl a[id*="More"]:focus {
+.latest-discussions .HLLandingControl a[id*="More"]:focus,
+.profile-button a {
     color: #fff;
     background: #0089A3;
     border-color: #0089A3;
@@ -35,7 +67,9 @@
 .home .HLRecentBlogs div[id*="BottomLink"] a:focus,
 .community-resources div[id*="MoreLink"] a:focus,
 .recent-discussions .HLLandingControl h2 input:hover,
-.recent-discussions .HLLandingControl h2 input:focus {
+.recent-discussions .HLLandingControl h2 input:focus,
+.profile-button a:hover,
+.profile-button a:focus {
     border-color: #073375;
     background-color: #073375;
     color: #fff;
@@ -138,6 +172,33 @@
 }
 
 /*** nav ***/
+.nav-tabs > li,
+.nav-tabs.ui-tabs-nav > li.ui-state-default {
+    background: transparent;
+    border: none;
+    margin: 0;
+}
+
+.nav-tabs.ui-tabs-nav .ui-state-default a, 
+.nav-tabs.ui-tabs-nav .ui-state-default a:link, 
+.nav-tabs.ui-tabs-nav .ui-state-default a:visited {
+    color: #020451;
+    padding: 10px 15px;
+    border: none;
+}
+.nav-tabs.ui-tabs-nav .ui-state-active a,
+.nav-tabs.ui-tabs-nav .ui-state-active a:link,
+.nav-tabs.ui-tabs-nav .ui-state-active a:visited,
+.nav-tabs.ui-tabs-nav>li.ui-state-default.active>a, 
+.nav-tabs.ui-tabs-nav>li.ui-state-default.active>a:focus, 
+.nav-tabs.ui-tabs-nav>li.ui-state-default.active>a:hover, 
+.nav-tabs.ui-tabs-nav>li.ui-state-default>a:focus, 
+.nav-tabs.ui-tabs-nav>li.ui-state-default>a:hover {
+    color: #fff;
+    background-color: #020451;
+    border: none;
+    padding: 10px 15px;
+}
 .navbar-nav>li>.dropdown-menu,
 .nav-tabs > li > .dropdown-menu {
     padding: 20px 0;
@@ -1138,9 +1199,11 @@ ul.DiscussionContentContainer>li .pnl-row-item {
     background: #fff;
     padding: 20px;
 }
-#MessageListContainer div.row.drItemSubHeader,
-.digest-viewer .table-thead-background > tr > th,
 .entry-title.title-row-background {
+    background: transparent;
+}
+#MessageListContainer div.row.drItemSubHeader,
+.digest-viewer .table-thead-background > tr > th {
     background-color: #fff;
     border-bottom: 1px solid rgba(33,35,112,0.1);
 }
@@ -1283,6 +1346,15 @@ div[id*="likeRatingContainer"] {
     right: 0;
 }
 
+.library-entry a[id*="imgProfile"] {
+    width: 70px;
+    height: 70px;
+}
+.library-entry .HLLibraryEntryActions {
+    float: right;
+    margin-right: 10px;
+}
+
 /****** small buttons ******/
 
 .message-list-reply .btn-group .btn {
@@ -1301,6 +1373,13 @@ div[id*="InboxDetails"] > .row:first-of-type .btn {
 }
 #MPOuterMost .library-grid .page-go-to .input-group-append .btn-secondary {
     padding-top: 7px;
+}
+.RSSTabsHead .ui-widget {
+    border-radius: 0;
+    border-color: #E6EEF3;
+}
+.RSSTabsHead legend {
+    border-bottom: none;
 }
 
 /************ responsive ************/
@@ -1335,6 +1414,9 @@ div[id*="InboxDetails"] > .row:first-of-type .btn {
     }
     .SearchResults .HeaderStatusBar > .col-md-9 {
         padding-right: 0;
+    }
+    .library-entry .HLDocumentEntryFileList .col-md-12 {
+        margin-left: 13.8888888889%;
     }
 }
 
@@ -1588,6 +1670,17 @@ div[id*="InboxDetails"] > .row:first-of-type .btn {
     .DiscussionContentContainer .text-center {
         text-align: left;
         padding-left: 15px;
+    }
+    .library-entry .col-md-10 .col-md-2.text-center {
+        text-align: left;
+    }
+    .library-entry > .row-wide {
+        position: relative;
+    }
+    .library-entry > .row-wide > .col-md-2 {
+        position: absolute;
+        right: 80px;
+        top: -5px;
     }
 }
 
