@@ -47,7 +47,8 @@ function handleHeaderLinks() {
             text.indexOf('canadian nurses association') > -1 ||
             text.indexOf('association des infirmières ') > -1 ||
             text.indexOf('emplois en soins infirmiers') > -1 ||
-            text.indexOf('nursing jobs') > -1) {
+            text.indexOf('nursing jobs') > -1 ||
+            text.indexOf('la revue infirmière canadienne') > -1) {
             $(self).addClass('mobile-link');
             $(self).clone().removeClass('mobile-link').addClass('desktop-link').appendTo('.left-top-links');
         }

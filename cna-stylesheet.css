@@ -53,7 +53,8 @@ body {
 /* reset alerts to neutral colours */
 .alert-warning, .alert-success, 
 .ideation-home .alert.alert-success, 
-.ideation-detail .alert.alert-success {
+.ideation-detail .alert.alert-success,
+.well {
     color: inherit;
     background-color: #E6EEF3;
     border-color: #D0DBE3;
@@ -482,6 +483,9 @@ input:focus {
     font-size: 12px;
     line-height: 15px;
     padding: 8px 12px;
+}
+.btn-group-sm>.btn {
+    border-radius: 0;
 }
 #MPOuterMost .bootstrap-4 .btn.btn-icon-primary:not(select):not(.hl-carousel-arrow) {
     border: none;
