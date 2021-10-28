@@ -787,7 +787,7 @@ table tr:nth-child(2n) {
 }
 .magazine-articles .HLLandingControl ul li .img-container.no-ajax-image,
 .latest-articles .HLLandingControl ul li .img-container.no-ajax-image {
-    background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/9ef06977-db41-454b-9e4c-2f6b1f15dcda/UploadedImages/Interior_Page_Images/default_blog.png');
+    background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/9ef06977-db41-454b-9e4c-2f6b1f15dcda/UploadedImages/Interior_Page_Images/no-image_article_defaults_in_feeds_with_flames.png');
 }
 .magazine-articles .HLLandingControl ul li .img-container::before {
     background: linear-gradient(0deg, rgba(2, 4, 81, 0.4), rgba(2, 4, 81, 0.4));
