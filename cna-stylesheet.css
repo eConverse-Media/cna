@@ -319,12 +319,14 @@ table tr td {
 .tile-grow {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 30px;
 }
 .tile-grow .col-md-4 {
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 33.333333%;
+}
+.tile-grow div[class*="section"] {
+    padding: 15px;
 }
 .tile-grow div[class*="section"] > div {
     height: 100%;
@@ -3108,6 +3110,12 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
 @media (max-width: 768px) {
     .desktop-img img {
         display: none;
+    }
+    .tile-grow {
+        flex-wrap: wrap;
+    }
+    .tile-grow .col-md-4 {
+        flex-basis: 100%;
     }
     .navbar-collapse {
         margin-left: 0;
