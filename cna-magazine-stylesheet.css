@@ -10,6 +10,9 @@
     font-weight: 300;
     color: #020451;
 }
+h4, .h4 {
+    font-size: 18px;
+}
 
 /****** header ******/
 
@@ -563,7 +566,7 @@ table tr:nth-child(2n) {
 .blogs-block h6 {
     font-size: 16px;
     line-height: 24px;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 /****** grey tile + blockquote ******/

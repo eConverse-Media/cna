@@ -251,6 +251,22 @@ function handleDateThumbnails() {
     });
 }
 
+function handleProfileAndLogoutLinks() {
+    
+    var isLoggedIn = !!($('#ProfileContainer').html());
+
+    if (isLoggedIn) {
+        var logoutLink = '<li class="logout-link"><a href="logout">Logout</a></li>';
+        $(logoutLink).appendTo('#MPAuxNav ul.level1');
+        
+        var profileLink = '<li class="profile-link"><a href="https://mem.cna-aiic.ca/myaccount">Hi, ' + $('#ProfileContainer h4').text() + '</a></li>';
+        $(profileLink).insertBefore('.logout-link');
+
+        $('.HLWelcome').hide();
+    }
+    
+}
+
 $(function () {
     handleSearch();
     handleFlexContentItems();
@@ -264,4 +280,5 @@ $(function () {
     handleACLCommas();
     handleAdSpace();
     handleDateThumbnails();
+    handleProfileAndLogoutLinks();
 });

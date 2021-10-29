@@ -973,7 +973,9 @@ figure.fig-right {
 }
 .left-top-links li a,
 #MPAuxNav ul.level1 li a,
-#Welcome_LoginLink {
+#Welcome_LoginLink,
+.logout-link a,
+.profile-link a {
     color: #fff;
     font-weight: 700;
     font-size: 13px;
@@ -988,15 +990,23 @@ figure.fig-right {
 #MPAuxNav ul.level1 li a:hover,
 #MPAuxNav ul.level1 li a:focus,
 #Welcome_LoginLink:hover,
-#Welcome_LoginLink:focus {
+#Welcome_LoginLink:focus,
+.logout-link a:hover,
+.logout-link a:focus,
+.profile-link a:hover,
+.profile-link a:focus {
     text-decoration: underline;
     background: transparent;
+    color: #fff;
 }
 #Welcome_LoginLink {
     text-transform: none;
     letter-spacing: 0;
+    margin-right: 20px;
 }
-.HLWelcome {
+.logout-link,
+.profile-link {
+    float: left;
     margin-right: 20px;
 }
 
@@ -2514,6 +2524,7 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     height: auto;
     margin-left: 4px;
     vertical-align: unset;
+    float: right;
 }
 .nav a .caret::before {
     font-family: CNA;

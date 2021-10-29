@@ -10,7 +10,13 @@ function updateFeaturedNews() {
     });
 }
 
+function updateProfileAndLogoutLinks() {
+    $('.logout-link a').text('Déconnexion');
+    $('.profile-link a').text('Bonjour, ' + $('#ProfileContainer h4').text());
+}
+
 $(function () {
     updateSearch();
     updateFeaturedNews();
+    updateProfileAndLogoutLinks();
 });

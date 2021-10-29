@@ -9,6 +9,9 @@
     border-radius: 20px;
     background: #ECECF2;
 }
+.HLWelcome {
+    margin-right: 20px;
+}
 
 .ui-widget {
     font-family: trade-gothic-next, sans-serif;
@@ -186,6 +189,10 @@
 .language-btn a:hover,
 .language-btn a:focus {
     background: #E6EEF3;
+}
+
+#ProfileContainer .panel {
+    padding: 0;
 }
 
 /*** nav ***/
@@ -1058,10 +1065,12 @@
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover, .nav-tabs>li>a:focus, .nav-tabs>li>a:hover {
     background: #020451;
     color: #fff;
+    border-color: #020451;
 }
 #CommunityTabsContainer.nav-tabs>li.active>a, #CommunityTabsContainer.nav-tabs>li.active>a:focus, #CommunityTabsContainer.nav-tabs>li.active>a:hover, #CommunityTabsContainer.nav-tabs>li>a:focus, #CommunityTabsContainer.nav-tabs>li>a:hover {
     color: #020451;
     background-color: #EFF5F8;
+    border-bottom-color: #eff5f8;
 }
 
 .nav-tabs > li > a .badge {
@@ -1137,8 +1146,12 @@
     border: 1px solid #E8EBED;
     border-radius: 0;
     box-shadow: none;
-    min-height: 145px;
+    height: 145px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .current-members .panel-member .GroupMemberName a {
     color: #17171C;
@@ -1186,6 +1199,10 @@
 
 .panel {
     padding: 20px;
+}
+.panel-footer {
+    background: #fff;
+    border-top: 1px solid rgba(33,35,112,0.1);
 }
 .form-horizontal .control-label {
     text-align: left;
@@ -1724,6 +1741,21 @@ div[id*="InboxDetails"] > .row:first-of-type .btn {
     }
     .member-directory .member-row > .col-sm-4 {
         flex-basis: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    a.btn-community-stats-static span.badge {
+        width: auto;
+        margin-top: 5px;
+        border: none;
+        margin-left: 0;
+    }
+    .my-communities a.btn-community-stats-static span.badge {
+        margin-top: 0;
+    }
+    #ProfileContainer {
+        width: 290px;
     }
 }
 
