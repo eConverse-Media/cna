@@ -79,7 +79,14 @@ function handleLoggedInContent() {
 }
 
 function handlePageTitles() {
-    $('#PageTitleH1:not([style*="display: none;"]').wrap('<div class="page-heading" />');
+    var text = $('#PageTitleH1').text();
+
+    text = $.trim(text);
+    
+    if (!!text.length &&
+        !($('#PageTitleH1[style*="display: none;"]').html())) {
+            $('#PageTitleH1').wrap('<div class="page-heading" />');
+        }
 }
 
 $(function() {

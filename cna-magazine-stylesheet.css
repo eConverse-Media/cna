@@ -267,7 +267,7 @@ table tr:nth-child(2n) {
 
 .hero-slider .slick-arrow {
     bottom: 20px;
-    top: unset;
+    top: auto;
     transform: none;
     background-color: #3DD8A3;
     color: #fff;
@@ -279,7 +279,7 @@ table tr:nth-child(2n) {
 
 .hero-slider .slick-arrow.prev-arrow {
     right: calc(45% - 85px);
-    left: unset;
+    left: auto;
 }
 
 .hero-slider .slick-arrow.next-arrow {
@@ -1005,6 +1005,29 @@ table tr:nth-child(2n) {
     text-decoration: underline;
     color: #073375;
 }
+
+/************ library resources ************/
+
+.entry-title.title-row-background {
+    background: transparent;
+}
+.library-entry a[id*="imgProfile"] {
+    width: 70px;
+    height: 70px;
+}
+.library-entry .HLLibraryEntryActions {
+    float: right;
+    margin-right: 10px;
+}
+@media (min-width: 992px) {
+    .library-entry .HLDocumentEntryFileList .col-md-12 {
+        margin-left: 13.8888888889%;
+    }
+}
+.btn-recommend-no {
+    margin-right: -3px;
+}
+
 
 /************ responsiveness ***********/
 

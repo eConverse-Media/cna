@@ -229,6 +229,11 @@ function handleAdPlacement() {
 }
 
 $(function () {
-    handleAdPlacement();
+    var ua = window.navigator.userAgent,
+        isIE = /MSIE|Trident/.test(ua);
+
+    if ( !isIE ) {
+        handleAdPlacement();
+    }
     
 });

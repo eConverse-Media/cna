@@ -77,6 +77,11 @@ function handleLanguageButton(windowWidth) {
     } else {
         $('.language-btn').insertAfter('#Logo');
     }
+
+    // deal with 404 text in language button
+    var content = $('.language-btn .HtmlContent').outerHTML;
+
+    $('.language-btn').innerHTML = content;
 }
 
 function handleMobileHeader() {
