@@ -13,8 +13,10 @@ function handleByLineAndImage() {
 
 function handleRelatedArticles() {
     var tags = $('.blogs-block .user-content-hashtag').toArray(),
-        count = 0;
+        count = 0,
+        blogTitle = $('.blogTitle').text();
 
+    blogTitle = $.trim(blogTitle);
     for (var i = 0; i < tags.length; i++) {
         tags[i] = $(tags[i]).text().substring(1, tags[i].length);
     }
@@ -24,14 +26,18 @@ function handleRelatedArticles() {
     $('.related-articles ul li').each(function () {
         var self = $(this),
             tagsList = $(self).find('.label-search-tag').toArray(),
-            hasTag;
+            hasTag,
+            selfTitle = $(self).find('h3 a').text();
+
+        selfTitle = $.trim(selfTitle);
 
         for (var j = 0; j < tags.length && !hasTag; j++) {
             for (var k = 0; k < tagsList.length && !hasTag; k++) {
                 var text = $(tagsList[k]).text();
 
                 text = $.trim(text);
-                if ((tags[j] == text) && (count < 3)) {
+                if ((tags[j] == text) && (count < 3) &&
+                !(blogTitle == selfTitle)) {
                     $(self).show();
                     count++;
                     hasTag = true;
