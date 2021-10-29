@@ -990,6 +990,7 @@ figure.fig-right {
 #Welcome_LoginLink:hover,
 #Welcome_LoginLink:focus {
     text-decoration: underline;
+    background: transparent;
 }
 #Welcome_LoginLink {
     text-transform: none;

@@ -806,9 +806,12 @@ table tr:nth-child(2n) {
     opacity: 1;
     z-index: 10;
 }
-.latest-articles .HLLandingControl ul li .text-container,
-.magazine-articles .HLLandingControl ul li .text-container {
+.latest-articles .HLLandingControl ul li .text-container {
     height: 50px;
+    overflow: hidden;
+}
+.magazine-articles .HLLandingControl ul li .text-container {
+    height: 55px;
     overflow: hidden;
 }
 .latest-magazine-articles .HLLandingControl {
