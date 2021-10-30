@@ -1065,6 +1065,8 @@ table tr:nth-child(2n) {
         transform: translateX(-50%);
         padding: 30px 95px;
         border-top: none;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
     .navbar-nav>li.topic.open>.dropdown-menu,
     .navbar-nav>li.sujets.open>.dropdown-menu {
