@@ -54,7 +54,7 @@ function handleRelatedArticles() {
 
 function handleCategory() {
     var tags = $('.user-content-hashtag').toArray(),
-        categoryList = ['practice', 'analysis', 'career', 'research', 'profiles', 'opinions', 'pratique', 'analyse', 'carrière', 'recherce', 'profils'];
+        categoryList = ['practice', 'analysis', 'career', 'research', 'profiles', 'opinions', 'pratique', 'analyse', 'carrière', 'recherche', 'profils'];
 
     for (var i = 0; i < tags.length; i++) {
         var tagText = $(tags[i]).text();
