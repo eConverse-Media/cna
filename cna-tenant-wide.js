@@ -69,6 +69,15 @@ function handleLanguageButton(windowWidth) {
         languageBtnLink = languageBtnLink.substring(6, languageBtnLink.length - 7);
     }
 
+    var location = window.location.href,
+        isProfile = !!(location.indexOf('?UserKey') > -1);
+
+    if (isProfile) {
+        var userKey = location.substring(location.indexOf('?UserKey'), location.length);
+
+        languageBtnLink += userKey;
+    }
+
     $('.language-btn a').attr('href', languageBtnLink);
 
     // language button location
