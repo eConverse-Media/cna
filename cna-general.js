@@ -158,6 +158,10 @@ function handleInteriorMenus() {
             }
     
         }
+
+        // handle mobile page title
+
+        $('.desktop.page-title-h2').clone().addClass('mobile').removeClass('desktop').insertBefore('.menu-container');
     }
 
 }

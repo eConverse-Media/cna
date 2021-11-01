@@ -86,9 +86,35 @@ function handleTags() {
     });
 }
 function handleLatestArticles() {
+    var otherTitles = $('.related-articles ul li:not([style*="display: none;"]) h3').toArray(),
+        articleCount = 0;
+    
+    otherTitles.push($('.blogTitle'));
+
     $('.latest-magazine-articles ul li').each(function () {
-        handleAjaxCall(this);
-        handleLink(this);
+        var self = $(this),
+            selfTitle = $(self).find('h3 a').text(),
+            showMe = true;
+
+        selfTitle = $.trim(selfTitle);
+
+        for (var j = 0; j < otherTitles.length; j++) {
+            otherTitle = $.trim($(otherTitles[j]).text());
+
+            if (selfTitle == otherTitle) {
+                showMe = false;
+            }
+        }
+
+        if (!!showMe &&
+            articleCount < 3) {
+                articleCount++;
+                handleAjaxCall(self);
+                handleLink(self);
+        } else {
+            $(self).hide();
+        }
+
     });
 }
 

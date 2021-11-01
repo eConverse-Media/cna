@@ -286,7 +286,7 @@
 }
 .member-dashboard::after,
 .page-heading::after {
-    background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Images/dashboard-vector-1.svg');
+    background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Images/dashboard-vector-1-no-ar.svg');
     position: absolute;
     right: 0;
     top: 0;
@@ -296,7 +296,7 @@
     background-repeat: no-repeat;
     content: '';
     display: block;
-    background-size: auto;
+    background-size: 100% 100%;
 }
 .member-dashboard::before,
 .page-heading::before {
@@ -312,7 +312,7 @@
     display: block;
     background-size: auto 100%;
 }
-.member-dashboard > .col-md-12::before,
+/* .member-dashboard > .col-md-12::before,
 .hero-row > .col-md-12::before {
     content: '';
     position: absolute;
@@ -321,7 +321,7 @@
     bottom: 0;
     width: 45%;
     background-color: #020451;
-}
+} */
 .member-dashboard .dashboard-img {
     display: none;
 }
@@ -361,6 +361,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: -5px;
+    padding-right: 5px;
 }
 .member-dashboard .make-buttons {
     margin: 5px;
@@ -421,6 +422,11 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
+}
+.btn-community-stats-static,
+.btn-community-stats-static:hover,
+.btn-community-stats-static:focus {
+    box-shadow: none;
 }
 .community-list .btn-community-stats-static,
 .community-list .btn-community-stats-static:hover,
@@ -1479,16 +1485,7 @@ div[id*="InboxDetails"] > .row:first-of-type .btn {
 /****** smaller screens only ******/
 
 
-@media (max-width: 1930px) {
-    .member-dashboard > .col-md-12::before {
-        width: 30%;
-    }
-}
-
 @media (max-width: 1520px) {
-    .member-dashboard > .col-md-12::before {
-        width: 10%;
-    }
     .bg-grey > .col-md-12 {
         padding-left: 0;
         padding-right: 0;
@@ -1498,15 +1495,6 @@ div[id*="InboxDetails"] > .row:first-of-type .btn {
 @media (max-width: 1430px) {
     .hero .HtmlContent {
         padding-left: 15px;
-    }
-}
-
-@media (max-width: 1415px) {
-    .member-dashboard > .col-md-12::before {
-        display: none;
-    }
-    .member-dashboard::after {
-        background-size: auto 100%;
     }
 }
 
@@ -1603,11 +1591,11 @@ div[id*="InboxDetails"] > .row:first-of-type .btn {
         top: 10px;
     }
     .member-dashboard::before {
-        bottom: 60px;
+        bottom: 0;
     }
     .member-dashboard::after,
     .page-heading::after {
-        background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Dev_Files/tablet.png');
+        background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/bcd58c49-4000-4df8-ab7d-64be5e30bf9d/UploadedImages/Images/dashboard-tablet-swoop-no-ar.svg');
         background-position: left bottom;
     }
     .event-list .date-block  {
@@ -1723,6 +1711,12 @@ div[id*="InboxDetails"] > .row:first-of-type .btn {
 }
 
 @media (max-width: 650px) {
+    .member-dashboard::after,
+    .page-heading::after {
+        background-size: 100% auto;
+        top: auto;
+        height: 250px;
+    }
     .member-dashboard .make-buttons {
         flex-basis: calc(100% - 30px);
     }

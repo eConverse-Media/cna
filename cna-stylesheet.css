@@ -3290,4 +3290,15 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     .upcoming-events .HLLandingControl .Content ul li .title-row .calendary-number {
         font-size: 32px;
     }
+    .leadership .HtmlContent {
+        flex-direction: column;
+    }
+    .leadership .HtmlContent .text-container {
+        width: 100%;
+    }
+    .leadership .HtmlContent .img-container {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
