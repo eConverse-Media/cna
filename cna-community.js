@@ -82,11 +82,15 @@ function handlePageTitles() {
     var text = $('#PageTitleH1').text();
 
     text = $.trim(text);
-    
+
     if (!!text.length &&
         !($('#PageTitleH1[style*="display: none;"]').html())) {
             $('#PageTitleH1').wrap('<div class="page-heading" />');
         }
+}
+
+function handlePublishButton() {
+    $('.publish-btn').appendTo('.recent-discussions .SearchResults.HLLandingControl h2');
 }
 
 $(function() {
@@ -98,4 +102,5 @@ $(function() {
     handleBlogs();
     handleLoggedInContent();
     handlePageTitles();
+    handlePublishButton();
 });

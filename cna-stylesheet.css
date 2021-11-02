@@ -2440,6 +2440,9 @@ figure.fig-right {
     border: 2px solid transparent;
     transition: .3s;
 }
+.leadership .img-container img {
+    width: 100%;
+}
 .leadership.is-hovered .img-container {
     border-color: #3DD8A3;
     transition: .3s;

@@ -1,10 +1,11 @@
-#MPOuterHeader,
-#MPOuterFooter,
-#MPFooterLink {
+.home #MPOuterHeader,
+.home #MPOuterFooter,
+.home #MPFooterLink,
+#MPCopyright {
     display: none;
 }
 
-#MainCopy_ContentWrapper {
+.home #MainCopy_ContentWrapper {
     background-color: #E6EEF3;
     background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/f2d388fd-c4de-4ffe-86ec-aeda6d31b2b4/UploadedImages/splash-screen-bg.png');
     background-size: auto 100%;
@@ -13,11 +14,17 @@
     overflow: hidden;
     height: 100vh;
 }
-#MainCopy_ContentWrapper > .row.row-wide {
+.home #MainCopy_ContentWrapper > .row.row-wide {
     height: 100vh;
     display: flex;
     align-items: center;
 
+}
+#DesktopLogoDiv {
+    width: 350px;
+}
+#NAV {
+    right: 50px;
 }
 
 /****** buttons ******/

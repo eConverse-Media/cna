@@ -71,6 +71,8 @@
 .community-resources div[id*="MoreLink"] a:focus,
 .recent-discussions .HLLandingControl h2 input:hover,
 .recent-discussions .HLLandingControl h2 input:focus,
+.recent-discussions .HLLandingControl h2 .make-buttons em a:hover,
+.recent-discussions .HLLandingControl h2 .make-buttons em a:focus,
 .profile-button a:hover,
 .profile-button a:focus {
     border-color: #073375;
@@ -608,13 +610,28 @@
     margin-top: 0;
     margin-bottom: 20px;
 }
-.recent-discussions .HLLandingControl h2 input {
+.recent-discussions .HLLandingControl h2 .make-buttons {
+    float: right;
+    margin-top: 10px;
+}
+.recent-discussions .HLLandingControl h2 .make-buttons .HtmlContent {
+    padding-left: 0;
+    padding-right: 0;
+}
+.recent-discussions .HLLandingControl h2 input,
+.recent-discussions .HLLandingControl h2 .make-buttons em a {
     float: right;
     padding: 8px 10px;
     font-size: 12px;
     line-height: 15px;
     background: #0089A3;
     color: #fff;
+    border-color: #0089A3;
+}
+.recent-discussions .HLLandingControl h2 .make-buttons em a:hover,
+.recent-discussions .HLLandingControl h2 .make-buttons em a:focus {
+    text-decoration: none;
+    font-weight: 700;
 }
 .recent-discussions ul {
     border-top: 1px solid rgba(33,35,112,0.1);
@@ -625,6 +642,9 @@
     padding-left: 70px;
     position: relative;
 }
+.recent-discussions ul li .title-row > .col-md-12 {
+    position: static;
+}
 .recent-discussions ul li .title-row .col-md-2.col-sm-2,
 .latest-discussions ul li .title-row .col-md-2.col-sm-2 {
     position: absolute;
@@ -633,11 +653,14 @@
     width: 50px;
 }
 .recent-discussions ul li .title-row .col-md-10.col-sm-10,
-.latest-discussions ul li .title-row .col-md-10.col-sm-10 {
+.latest-discussions ul li .title-row .col-md-10.col-sm-10,
+.recent-discussions ul li .title-row .col-md-7.col-sm-7,
+.latest-discussions ul li .title-row .col-md-7.col-sm-7 {
     padding: 0;
     width: 100%;
 }
 .recent-discussions ul li .title-row .col-md-2.col-sm-2 a[id*="ProfileImage"],
+.recent-discussions ul li .title-row .col-md-2.col-sm-2 a[id*="imgProfPic"],
 .home .HLEngagement ul li .title-row a[id*="ProfileLink"],
 .latest-discussions ul li .title-row .col-md-2.col-sm-2 a[id*="ProfileImage"],
 .home .HLEngagement ul li .title-row a[id*="ProfileLink"],
@@ -652,12 +675,15 @@
 .recent-discussions div[id*="BottomLink"] .col-md-12 {
     padding: 0;
 }
-.recent-discussions div[id*="BottomLink"] a {
+.recent-discussions div[id*="BottomLink"] a,
+.recent-discussions div[id*="MoreLink"] a {
     background: #020451;
     color: #fff;
 }
 .recent-discussions div[id*="BottomLink"] a:hover,
-.recent-discussions div[id*="BottomLink"] a:focus {
+.recent-discussions div[id*="BottomLink"] a:focus,
+.recent-discussions div[id*="MoreLink"] a:hover,
+.recent-discussions div[id*="MoreLink"] a:focus {
     background: transparent;
     color: #020451;
     border-color: #020451;
@@ -994,6 +1020,12 @@
 }
 
 /************ community landing page ************/
+
+/****** hide nested communities ******/
+
+a[id*="NestedCommunity_BreadCrumbs"] {
+    display: none;
+}
 
 /****** page title ******/
 
