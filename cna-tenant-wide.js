@@ -78,7 +78,10 @@ function handleLanguageButton(windowWidth) {
         languageBtnLink += userKey;
     }
 
-    $('.language-btn a').attr('href', languageBtnLink);
+    if (!!languageBtnLink) {
+        $('.language-btn a').attr('href', languageBtnLink);
+    }
+
 
     // language button location
     if (windowWidth > 991) {
