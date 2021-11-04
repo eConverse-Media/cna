@@ -1838,7 +1838,29 @@ figure.fig-right {
 
 /************ CTA tiles ************/
 
+@media (min-width: 992px) {
+    .cta-tiles {
+        display: flex;
+    }
+    .cta-tiles .col-md-6 {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 50%;
+        display: flex;
+    }
+    .cta-tiles .cta-tile,
+    .cta-tiles .HtmlContent {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        display: flex;
+    }
+}
+
 .cta-tile a {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
     display: block;
     text-decoration: none;
     padding: 40px 100px 40px 40px;
