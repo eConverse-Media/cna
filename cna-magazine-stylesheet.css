@@ -568,6 +568,16 @@ table tr:nth-child(2n) {
     line-height: 24px;
     font-weight: 700;
 }
+.blogs-block div[id*="TitleContainer"] + .row.margin-bottom-medium {
+    margin-bottom: 0;
+}
+.blogs-block div[id*="TitleContainer"] + .row > .col-md-8 {
+    font-size: 0;
+}
+.blogs-block div[id*="TitleContainer"] + .row > .col-md-8 h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 /****** grey tile + blockquote ******/
 

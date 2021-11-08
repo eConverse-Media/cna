@@ -3,8 +3,8 @@ function handleBlogImages() {
         var self = $(this),
             href = $(self).find('h3 a').attr('href');
 
-        if (href.indexOf('cna-aiic.ca') > -1) {
-            href = href.substring(33, href.length);
+        if (href.indexOf('dev-cn') > -1) {
+            href = href.substring(40, href.length);
 
             href = 'https://www.canadian-nurse.com' + href;
         }
