@@ -1035,6 +1035,9 @@ a[id*="NestedCommunity_BreadCrumbs"] {
     position: relative;
     overflow: hidden;
 }
+.community .page-heading {
+    overflow: visible;
+}
 .page-heading::after {
     background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Dev_Files/CLP_swoosh.png');
 }
