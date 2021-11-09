@@ -1033,6 +1033,7 @@ a[id*="NestedCommunity_BreadCrumbs"] {
     padding: 60px calc(50% - 685px) 60px calc(50% - 685px);
     background-color: #073375;
     position: relative;
+    overflow: hidden;
 }
 .page-heading::after {
     background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/203bfd2b-a19e-4cbf-a4b5-7811753a92a5/UploadedImages/Dev_Files/CLP_swoosh.png');
