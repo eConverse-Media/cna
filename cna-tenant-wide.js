@@ -120,9 +120,19 @@ function handleCTAButtons() {
     $('.cta-button').wrapAll('<div class="cta-buttons" />');
 }
 
+function handleAlertBar() {
+    $('.alert-bar').prependTo('#MPOuterHeader');
+    $('.alert-bar .HtmlContent').append('<button type="button" title="Close Alert" onclick="closeAlert();"><i class="cna cna-close"></i></button>');
+}
+
+function closeAlert() {
+    $('.alert-bar').hide();
+}
+
 $(function() {
     handleMobileHeader();
     handleHeaderLinks();
     handleCTATiles();
     handleCTAButtons();
+    handleAlertBar();
 });

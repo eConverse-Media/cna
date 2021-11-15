@@ -486,7 +486,8 @@ input:focus {
     border-radius: 0;
 }
 .btn.btn-sm,
-#MPOuterMost .bootstrap-4 .btn.btn-sm {
+#MPOuterMost .bootstrap-4 .btn.btn-sm,
+.make-buttons.small em a {
     font-size: 12px;
     line-height: 15px;
     padding: 8px 12px;
@@ -2647,6 +2648,43 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     padding: 0;
 }
 
+/************ alert bar ************/
+
+.alert-bar {
+    background-color: #0089A3;
+}
+.alert-bar .HtmlContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    position: relative;
+}
+.alert-bar .HtmlContent > *:not(button) {
+    padding: 0 15px;
+}
+.alert-bar .HtmlContent p {
+    margin-bottom: 0;
+}
+.alert-bar button {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    line-height: 1;
+    color: rgba(255,255,255,0.3);
+}
+.alert-bar button:hover,
+.alert-bar button:focus {
+    color: #fff;
+}
+
 /************ responsive ************/
 
 /****** mobile and desktop classes ******/
@@ -3250,6 +3288,13 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     .navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus {
         background: transparent;
         color: #020451;
+    }
+}
+
+@media (max-width: 650px) {
+    .alert-bar .HtmlContent {
+        display: block;
+        text-align: center;
     }
 }
 
