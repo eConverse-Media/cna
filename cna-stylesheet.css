@@ -3023,7 +3023,7 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
             height: auto;
         }
         .hero-slider .hero-slide.slick-slide .clip-me {
-            height: auto;
+            height: 500px;
         }
         .clip-me img {
             max-width: 100%;
@@ -3309,6 +3309,9 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     .hero-slider.slick-slider.slick-dotted {
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .hero-slider .hero-slide.slick-slide .clip-me  {
+        height: 300px;
     }
     .hero-slider ul.slick-dots {
         left: 20px;

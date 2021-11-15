@@ -20,7 +20,8 @@ function handleTestimonials() {
         dots: false,
         autoplay: false,
         nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="cna cna-arrow-right-2"></i></button>',
-        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="cna cna-arrow-left"></i></button>'
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="cna cna-arrow-left"></i></button>',
+        touchMove: false
     });
 
     $('.testimonial').each(function () {
@@ -63,7 +64,8 @@ function handleHero() {
         dots: true,
         arrows: true,
         nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="cna cna-chevron-right"></i></button>',
-        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="cna cna-chevron-left"></i></button>'
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="cna cna-chevron-left"></i></button>',
+        touchMove: false
     });
 
 }
@@ -260,7 +262,7 @@ function handleProfileAndLogoutLinks() {
     var isLoggedIn = !!($('#ProfileContainer').html());
 
     if (isLoggedIn) {
-        var logoutLink = '<li class="logout-link"><a href="logout">Logout</a></li>';
+        var logoutLink = '<li class="logout-link"><a href="https://mem.cna-aiic.ca/logout">Logout</a></li>';
         $(logoutLink).appendTo('#MPAuxNav ul.level1');
         
         var profileLink = '<li class="profile-link"><a href="https://mem.cna-aiic.ca/myaccount">Hi, ' + $('#ProfileContainer h4').text() + '</a></li>';

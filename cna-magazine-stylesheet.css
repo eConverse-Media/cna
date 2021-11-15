@@ -1196,16 +1196,17 @@ table tr:nth-child(2n) {
 @media (max-width: 991px) {
     .hero-slider .hero-slide.slick-slide {
         padding-bottom: 0;
+        background-color: #020451;
     }
     .hero-slider .hero-slide.slick-slide .HtmlContent {
-        padding-top: 60px;
+        padding-bottom: 60px;
         border-bottom: none;
-        flex-direction: column;
-        justify-content: space-between;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
     }
     .hero-slide .HtmlContent .text-container {
         width: 100%;
-        padding-bottom: 40px;
+        padding-top: 40px;
         padding-right: 15px;
     }
     .hero-slide .img-container {
@@ -1216,10 +1217,9 @@ table tr:nth-child(2n) {
         left: auto;
         right: auto;
         bottom: auto;
-        margin-top: auto;
     }
     .hero-slider ul.slick-dots {
-        bottom: 420px;
+        bottom: 40px;
     }
     .hero-slider .slick-arrow.prev-arrow {
         left: 15px;
