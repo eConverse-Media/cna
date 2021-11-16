@@ -1283,6 +1283,9 @@ table tr:nth-child(2n) {
 }
 
 @media (max-width: 650px) {
+    .hero-slider .hero-slide.slick-slide h2 a {
+        font-size: 26px;
+    }
     .editors-picks,
     .latest-articles {
         padding-bottom: 60px;
