@@ -1061,6 +1061,9 @@ a[id*="NestedCommunity_BreadCrumbs"] {
     width: 50%;
     z-index: 10;
 }
+#MainCopy_ContentWrapper .summary-edit {
+    display: none;
+}
 .page-heading .CommunityManagementGear .btn-default,
 .JoinLeaveLink a[id*="communityJoinLeave"] {
     background: #fff;

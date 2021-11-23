@@ -54,12 +54,14 @@ function handleRelatedArticles() {
 
 function handleCategory() {
     var tags = $('.user-content-hashtag').toArray(),
-        categoryList = ['practice', 'analysis', 'career', 'research', 'profiles', 'opinions', 'pratique', 'analyse', 'carrière', 'recherche', 'profils'];
+        categoryList = ['practice', 'analysis', 'career', 'research', 'profiles', 'opinions', 'pratique', 'analyse', 'carriere', 'recherche', 'profils'];
 
     for (var i = 0; i < tags.length; i++) {
         var tagText = $(tags[i]).text();
         
         tagText = tagText.substring(1, tags[i].length);
+
+        tagText = tagText.replace(/è/g, 'e');
         
         for (var j = 0; j < categoryList.length; j++) {
             if (tagText == categoryList[j]) {

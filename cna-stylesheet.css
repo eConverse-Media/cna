@@ -707,7 +707,7 @@ a[id*="MessageDisplay_lnkBackAfter"] {
 /****** links ******/
 
 .make-link em a,
-.featured-news .text-container a[id*="ShowMore"] {
+.featured-news a[id*="ShowMore"] {
     font-style: normal;
     text-decoration: none;
     color: #0089A3;
@@ -718,7 +718,7 @@ a[id*="MessageDisplay_lnkBackAfter"] {
     line-height: 20px;
 }
 .make-link em a::after,
-.featured-news .text-container a[id*="ShowMore"]::after {
+.featured-news a[id*="ShowMore"]::after {
     font-family: CNA;
     content: '\f023';
     margin-left: 5px;
@@ -728,15 +728,15 @@ a[id*="MessageDisplay_lnkBackAfter"] {
 }
 .make-link em a:hover,
 .make-link em a:focus,
-.featured-news .text-container a[id*="ShowMore"]:hover,
-.featured-news .text-container a[id*="ShowMore"]:focus {
+.featured-news a[id*="ShowMore"]:hover,
+.featured-news [id*="ShowMore"]:focus {
     color: #020451;
     border-bottom-color: #3DD8A3;
 }
 .make-link em a:hover::after,
 .make-link em a:focus::after,
-.featured-news .text-container a[id*="ShowMore"]:hover::after,
-.featured-news .text-container a[id*="ShowMore"]:focus::after {
+.featured-news a[id*="ShowMore"]:hover::after,
+.featured-news a[id*="ShowMore"]:focus::after {
     color: #3DD8A3;
     margin-left: 14px;
     transition: .3s;
@@ -1436,24 +1436,24 @@ figure.fig-right {
 .featured-news ul li .title-row .col-md-9 {
     width: 100%;
 }
-.featured-news ul li {
+.featured-news-and-image {
     display: flex;
     align-items: center;
-    padding: 0;
-    border: none;
-
 }
-.featured-news ul li .img-container {
+.latest-news-featured {
     flex-basis: 40%;
     height: 300px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('https://hl-prod-ca-oc-download.s3-ca-central-1.amazonaws.com/CNA/2f975e7e-4a40-45ca-863c-5ebf0a138d5e/UploadedImages/images/featured-news.png');
 }
-.featured-news ul li .text-container {
+.featured-news {
     flex-basis: 60%;
     padding-left: 40px;
+}
+.featured-news .HLLandingControl ul li {
+    padding-bottom: 0;
+    border: none;
 }
 
 /* image container */

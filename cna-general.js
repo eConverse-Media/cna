@@ -217,14 +217,16 @@ function handleFeaturedNews() {
     $('.news-title .HtmlContent').clone().addClass('mobile make-buttons').insertAfter('.latest-news-list');
     $('.news-title .HtmlContent:not(.mobile)').addClass('desktop');
 
-    // handle featured news image
-    $('.featured-news .Content ul li').each(function () {
-        var self = $(this);
-        handleAjaxCall(self);
+    $('.latest-news-featured, .featured-news').wrapAll('<div class="featured-news-and-image" />');
 
-        $(self).find('.text-container').prepend('<h4>Featured</h4>');
-        $(self).find('p[id*="Description"] a[id*="ShowMore"]').appendTo($(self).find('.text-container')); 
-    });
+    // handle featured news image
+    // $('.featured-news .Content ul li').each(function () {
+    //     var self = $(this);
+    //     handleAjaxCall(self);
+
+    //     $(self).find('.text-container').prepend('<h4>Featured</h4>');
+    //     $(self).find('p[id*="Description"] a[id*="ShowMore"]').appendTo($(self).find('.text-container')); 
+    // });
 }
 
 function handleACLCommas() {
