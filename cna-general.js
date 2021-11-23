@@ -219,14 +219,14 @@ function handleFeaturedNews() {
 
     $('.latest-news-featured, .featured-news').wrapAll('<div class="featured-news-and-image" />');
 
-    // handle featured news image
-    // $('.featured-news .Content ul li').each(function () {
-    //     var self = $(this);
-    //     handleAjaxCall(self);
+    // handle featured news image and content
+    $('.featured-news .Content ul li').each(function () {
+        var self = $(this);
+        // handleAjaxCall(self);
 
-    //     $(self).find('.text-container').prepend('<h4>Featured</h4>');
-    //     $(self).find('p[id*="Description"] a[id*="ShowMore"]').appendTo($(self).find('.text-container')); 
-    // });
+        $(self).prepend('<h4>Featured</h4>');
+        $(self).find('p[id*="Description"] a[id*="ShowMore"]').appendTo($(self)); 
+    });
 }
 
 function handleACLCommas() {

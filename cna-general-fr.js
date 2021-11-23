@@ -3,11 +3,7 @@ function updateSearch() {
 }
 
 function updateFeaturedNews() {
-    $('.featured-news .Content ul li').each(function () {
-        var self = $(this);
-
-        $(self).find('.text-container h4').text('Apprendre plus');
-    });
+    $('.featured-news .Content ul li h4').text('En Vedette');
 }
 
 function updateProfileAndLogoutLinks() {
