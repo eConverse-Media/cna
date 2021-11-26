@@ -1414,9 +1414,6 @@ figure.fig-right {
 
 /*** featured news HTML ***/
 
-.latest-news-featured {
-    margin-top: 40px;
-}
 .latest-news-featured h4 {
     margin-bottom: 25px;
 }
@@ -1442,10 +1439,8 @@ figure.fig-right {
 }
 .latest-news-featured {
     flex-basis: 40%;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
 }
 .featured-news {
     flex-basis: 60%;
@@ -3207,6 +3202,15 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     }
     .bg-navy .featured-event .HtmlContent .img-container {
         margin-top: -50px;
+    }
+    .featured-news-and-image {
+        display: block;
+    }
+    .latest-news-featured {
+        margin-bottom: 40px;
+    }
+    .featured-news {
+        padding-left: 0;
     }
     .digest-viewer thead.table-thead-background {
         display: none;
