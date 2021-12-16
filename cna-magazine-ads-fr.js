@@ -103,7 +103,7 @@ function placeMobileAds() {
             return false;
         });
 
-        everyThirdParagraph.after("<div class='ad-container'><div class='advertisement-text-column'><span class='advertisement-text' >Advertisement</span><div class='upper-ad-container'></div></div>");
+        everyThirdParagraph.after("<div class='ad-container'><div class='advertisement-text-column'><span class='advertisement-text' >Publicité</span><div class='upper-ad-container'></div></div>");
         $(articleBody.parents('.blogs-block')[0]).attr('madsPlaced', 'true');
 
         var adsList = $('.ad-container').toArray();
@@ -144,7 +144,7 @@ function placeMobileAds() {
                 slotName = 'ad-container-' + i;
 
             $(newAd).attr('id', slotName);
-            $(newAd).before('<span class="advertisement-text">Advertisement</span>');
+            $(newAd).before('<span class="advertisement-text">Publicité</span>');
 
             createObserver(newAd);
         }
@@ -159,7 +159,7 @@ function handleDesktopAds() {
         parent = $(adContainer).parent();
 
     $(adContainer).attr('id', 'ad-container-0');
-    $(adContainer).before('<span class="advertisement-text">Advertisement</span>');
+    $(adContainer).before('<span class="advertisement-text">Publicité</span>');
 
     googletag.cmd.push(function () {
         var slot = googletag.defineSlot('/51158455/article-sidebar-upper-cont-fr', [[300, 250], [300, 600]], 'ad-container-0');
@@ -210,7 +210,7 @@ function handleDesktopAds() {
             slotName = 'ad-container-' + i;
 
         $(newAd).appendTo(parent);
-        $(newAd).before('<span class="advertisement-text">Advertisement</span>');
+        $(newAd).before('<span class="advertisement-text">Publicité</span>');
 
         $(newAd).attr('id', slotName);
 
