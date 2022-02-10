@@ -2440,13 +2440,13 @@ figure.fig-right {
 
 /************ leadership ************/
 
-.leadership .HtmlContent {
+.headshots .HtmlContent {
     display: flex;
     padding-bottom: 30px;
     margin-bottom: 30px;
     border-bottom: 1px solid #E6EEF3;
 }
-.leadership .img-container {
+.headshots .img-container {
     border-radius: 50%;
     width: 150px;
     height: 150px;
@@ -2458,29 +2458,29 @@ figure.fig-right {
     border: 2px solid transparent;
     transition: .3s;
 }
-.leadership .img-container img {
+.headshots .img-container img {
     width: 100%;
 }
-.leadership.is-hovered .img-container {
+.headshots.is-hovered .img-container {
     border-color: #3DD8A3;
     transition: .3s;
 }
-.leadership .text-container {
+.headshots .text-container {
     width: calc(100% - 190px);
 }
-.leadership .text-container h4 {
+.headshots .text-container h4 {
     margin-top: 0;
 }
-.leadership .text-container h3 a {
+.headshots .text-container h3 a {
     color: #020451;
     font-size: 26px;
     line-height: 32px;
     margin-bottom: 0;
 }
-.leadership .text-container h3 + p {
+.headshots .text-container h3 + p {
     color: #4F5266;
 }
-.leadership .text-container p {
+.headshots .text-container p {
     font-size: 16px;
     line-height: 22px;
 }
@@ -3367,13 +3367,13 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     .upcoming-events .HLLandingControl .Content ul li .title-row .calendary-number {
         font-size: 32px;
     }
-    .leadership .HtmlContent {
+    .headshots .HtmlContent {
         flex-direction: column;
     }
-    .leadership .HtmlContent .text-container {
+    .headshots .HtmlContent .text-container {
         width: 100%;
     }
-    .leadership .HtmlContent .img-container {
+    .headshots .HtmlContent .img-container {
         margin-bottom: 20px;
         margin-left: auto;
         margin-right: auto;

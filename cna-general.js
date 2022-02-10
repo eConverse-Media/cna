@@ -174,7 +174,7 @@ function toggleSideMenu() {
 }
 
 function handleLeadership() {
-    $('.leadership').each(function () {
+    $('.headshots').each(function () {
         // handle leadership HTML
         var self = $(this);
 
