@@ -2390,6 +2390,12 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     border-color: #020451;
 }
 
+/************ interior page ads ************/
+
+#MPRightAds {
+    padding-top: 70px;
+}
+
 /************ responsive ************/
 
 /****** mobile and desktop classes ******/
