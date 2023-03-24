@@ -19,8 +19,9 @@ function handleSearch() {
 
 function handleHero() {
     $('.hero-slide').each(function () {
-        $(this).find('.HtmlContent > *:not(img)').wrapAll('<div class="text-container" />');
-        $(this).find('.HtmlContent > img').wrapAll('<div class="img-container" />');
+        $(this).find('.HtmlContent img').wrap('<div class="img-container" />');
+        $(this).find('p .img-container').unwrap();
+        $(this).find('.HtmlContent > *:not(.img-container)').wrapAll('<div class="text-container" />');
     });
 
     $('.hero-slide').wrapAll('<div class="hero-slider slick-dotted" />');
