@@ -178,7 +178,8 @@ function handleLeadership() {
         // handle leadership HTML
         var self = $(this);
 
-        $(self).find('.HtmlContent > img').wrap('<div class="img-container" />');
+        $(self).find('.HtmlContent img').wrap('<div class="img-container" />');
+        $(self).find('p .img-container').unwrap();
         $(self).find('.HtmlContent > *:not(.img-container)').wrapAll('<div class="text-container" />');
         
         
