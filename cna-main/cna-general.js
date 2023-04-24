@@ -27,7 +27,8 @@ function handleTestimonials() {
     $('.testimonial').each(function () {
         var self = $(this);
 
-        $(self).find('.HtmlContent > em').wrap('<div class="testimonial-name-img" />');
+        $(self).find('.HtmlContent em').wrap('<div class="testimonial-name-img" />');
+        $(self).find('.HtmlContent p > .testimonial-name-img').unwrap();
         $(self).find('h5').appendTo($(self).find('.testimonial-name-img'));
         $(self).find('p').appendTo($(self).find('.testimonial-name-img'));
         $(self).find('.testimonial-name-img h5, .testimonial-name-img p').wrapAll('<div class="testimonial-name" />');

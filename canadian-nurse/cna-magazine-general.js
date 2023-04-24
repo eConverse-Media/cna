@@ -116,8 +116,9 @@ function handleHomepageBlogs() {
 }
 
 function handleCTA() {
-    $('.cta-section .HtmlContent > *:not(img)').wrapAll('<div class="text-container" />');
-    $('.cta-section .HtmlContent > img').wrapAll('<div class="img-container" />');
+    $('.cta-section .HtmlContent img').wrapAll('<div class="img-container" />');
+    $('.cta-section .HtmlContent p .img-container').unwrap();
+    $('.cta-section .HtmlContent > *:not(.img-container)').wrapAll('<div class="text-container" />');
 
     var imgContainer = $('.cta-section .img-container');
     var imgSrc = $('.cta-section img').attr('src');
