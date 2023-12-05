@@ -124,6 +124,13 @@ function handlePageClass() {
     $('#MPOuterMost').addClass('blog-viewer');
 }
 
+function handleLoginButton() {
+    var loginButton = $('.sign-in-to-comment a'),
+        link = $('#Welcome_LoginLink').attr('href');
+
+    $(loginButton).attr('href', link);
+}
+
 
 $(function () {
     // handleByLineAndImage();
@@ -133,4 +140,5 @@ $(function () {
     handleTags();
     handleLatestArticles();
     handlePageClass();
+    handleLoginButton();
 });
