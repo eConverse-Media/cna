@@ -287,7 +287,7 @@ $(function () {
     handleLeadership();
     handleEventsAndLatestNews();
     handleFeaturedNews();
-    handleACLCommas();
+    // handleACLCommas();
     handleAdSpace();
     handleDateThumbnails();
     handleProfileAndLogoutLinks();
