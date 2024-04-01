@@ -8,7 +8,8 @@ function handleFlexContentItems() {
     $('.flex-content-item').each(function () {
         var self = $(this).find('.HtmlContent');
 
-        $(self).find('> img').wrap('<div class="img-container" />');
+        $(self).find('img').wrap('<div class="img-container" />');
+        $(self).find('p > .img-container').unwrap();
         $(self).find('> *:not(.img-container)').wrapAll('<div class="text-container" />');
     });
 }
