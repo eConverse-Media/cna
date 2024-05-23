@@ -3,10 +3,10 @@
 }
 
 a[id*="NestedCommunity_BreadCrumbs"] {
-display:none
+    display: none
 }
 
-@media (min-width: 1151px) {  
+@media (min-width: 1151px) {
     #NAV {
         left: 300px;
         right: auto;
@@ -18,13 +18,15 @@ display:none
         right: 300px;
     }
 }
-#A1
-{
-display:none;
+
+#A1 {
+    display: none;
 }
 
-.blogs-block span[id$="IconFollow"], .blogs-block div[id$="pnlRating"]
-{display:none;}
+.blogs-block span[id$="IconFollow"],
+.blogs-block div[id$="pnlRating"] {
+    display: none;
+}
 
 /***** NSH fix 23.02.24 for bootstrap update ******/
 
