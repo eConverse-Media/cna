@@ -1,0 +1,33 @@
+#DesktopLogoDiv {
+    width: 255px;
+}
+
+a[id*="NestedCommunity_BreadCrumbs"] {
+display:none
+}
+
+@media (min-width: 1151px) {  
+    #NAV {
+        left: 300px;
+        right: auto;
+    }
+}
+
+@media (min-width: 1225px) {
+    #NAV {
+        right: 300px;
+    }
+}
+#A1
+{
+display:none;
+}
+
+.blogs-block span[id$="IconFollow"], .blogs-block div[id$="pnlRating"]
+{display:none;}
+
+/***** NSH fix 23.02.24 for bootstrap update ******/
+
+.col-md-12 {
+    float: none;
+}

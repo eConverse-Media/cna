@@ -1,0 +1,12 @@
+#A1
+{
+display:none;
+}
+.blogs-block span[id$="IconFollow"], .blogs-block div[id$="pnlRating"]
+{display:none;}
+
+/****** NSH fix 23.02.2024 for bootstrap update ******/
+
+.col-md-12 {
+      float: none;
+}

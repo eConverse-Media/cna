@@ -1,0 +1,22 @@
+#DesktopLogoDiv {
+    width: 255px;
+}
+
+@media (max-width: 1400px) and (min-width: 992px) {
+
+    #NAV {
+        bottom: 10px;
+    }
+
+    #NAV .navbar-nav {
+        float: right;
+        max-width: 840px;
+    }
+}
+#A1
+{
+display:none;
+}
+
+.blogs-block span[id$="IconFollow"], .blogs-block div[id$="pnlRating"] 
+{display:none;}

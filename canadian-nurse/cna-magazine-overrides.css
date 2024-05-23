@@ -1,0 +1,6 @@
+#A1
+{
+display:none;
+}
+.blogs-block span[id$="IconFollow"], .blogs-block div[id$="pnlRating"] 
+{display:none;}
