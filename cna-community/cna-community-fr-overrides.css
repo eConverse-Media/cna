@@ -33,3 +33,11 @@ a[id*="NestedCommunity_BreadCrumbs"] {
 .col-md-12 {
     float: none;
 }
+
+/************ NSH fix 23.05.2024 for footer alignment ************/
+
+#FOOTER {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
