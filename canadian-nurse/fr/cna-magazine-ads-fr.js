@@ -117,7 +117,7 @@ function placeMobileAds() {
                             slotName = $(target).attr('id');
     
                         if (!($(target).find('iframe').length)) {
-                            var slot = googletag.defineSlot('/51158455/article-sidebar-upper-cont', [[300, 250], [300, 600]], slotName);
+                            var slot = googletag.defineSlot('/51158455/article-sidebar-upper-cont-fr', [[300, 250], [300, 600]], slotName);
     
                             slot.addService(googletag.pubads());
     
