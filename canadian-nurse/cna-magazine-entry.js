@@ -23,33 +23,36 @@ function handleRelatedArticles() {
 
     $('.related-articles ul li').hide();
 
-    $('.related-articles ul li').each(function () {
-        var self = $(this),
-            tagsList = $(self).find('.label-search-tag').toArray(),
-            hasTag,
-            selfTitle = $(self).find('h3 a').text();
-
-        selfTitle = $.trim(selfTitle);
-
-        for (var j = 0; j < tags.length && !hasTag; j++) {
-            for (var k = 0; k < tagsList.length && !hasTag; k++) {
-                var text = $(tagsList[k]).text();
-
-                text = $.trim(text);
-                if ((tags[j] == text) && (count < 3) &&
-                !(blogTitle == selfTitle)) {
-                    $(self).show();
-                    count++;
-                    hasTag = true;
-
-                    // handle JS for link
-                    handleLink(self);
-
-                    break;
+    setTimeout(function () {
+        $('.related-articles ul li').each(function () {
+            var self = $(this),
+                tagsList = $(self).find('.label-search-tag').toArray(),
+                hasTag,
+                selfTitle = $(self).find('h3 a').text();
+    
+            selfTitle = $.trim(selfTitle);
+    
+            for (var j = 0; j < tags.length && !hasTag; j++) {
+                for (var k = 0; k < tagsList.length && !hasTag; k++) {
+                    var text = $(tagsList[k]).text();
+    
+                    text = $.trim(text);
+                    if ((tags[j] == text) && (count < 3) &&
+                    !(blogTitle == selfTitle)) {
+                        $(self).show();
+                        count++;
+                        hasTag = true;
+    
+                        // handle JS for link
+                        handleLink(self);
+    
+                        break;
+                    }
                 }
             }
-        }
-    });
+        });
+    }, 3000);
+
 }
 
 function handleCategory() {
