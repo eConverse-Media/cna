@@ -42,6 +42,9 @@ function handleRelatedArticles() {
                         $(self).show();
                         count++;
                         hasTag = true;
+
+                        // add image
+                        handleAjaxCall(self);
     
                         // handle JS for link
                         handleLink(self);

@@ -14,3 +14,17 @@
     margin-right: auto;
     float: none;
 }
+
+/************ NSH fixes 08.12.2025 for related articles ************/
+
+#MPOuterHeader p {
+    margin-bottom: 0;
+}
+
+.magazine-articles .HLLandingControl .Content ul li a {
+    padding: 0;
+    background: transparent;
+}
+.magazine-articles .HLLandingControl .Content ul li .TagGroupsList {
+    display: none;
+}
