@@ -41,3 +41,9 @@ a[id*="NestedCommunity_BreadCrumbs"] {
     margin-right: auto;
     float: none;
 }
+
+/************ NSH fixes 09.12.2025 for whitespace in header ************/
+
+#MPOuterHeader p {
+    margin-bottom: 0;
+}
